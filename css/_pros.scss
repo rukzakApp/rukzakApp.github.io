@@ -27,18 +27,7 @@
         }   
     }
 
-    .itemsImages {
-        display: flex;
-        position: absolute;
-        max-width: 514px;
-        overflow-x: hidden;
-        right: 0;
-        top: 1050px;
-
-        img {
-            height: 380px;
-        }
-    }
+    
 
     .benefits {
         margin-top: 100px;
@@ -158,20 +147,27 @@
 
     .benefits {
         text-align: center;
+
+        .title {
+            text-align: center;
+            width: 1000px;
+            transition: .5s;
+        }
         
         .benefitTexts {
             position: relative;
-            height: 503px;
-            
+            height: 503px;            
     
             &>div {
                 position: absolute;
                 margin-top: 35px;
+                width: 100%;
 
                 ul {
                     margin-top: 35px;
                     text-align: left;
                     max-width: 700px;
+                    overflow-x: hidden;
 
                     li:not(:last-child) {
                         margin-bottom: 30px;
@@ -180,30 +176,77 @@
             }
     
             .secondBenefit {
-                transform: translateX(3000px);
+                li {
+                    transform: translateX(-3000px);
+                }
+
+                .title {
+                    transform: translateX(-3000px);
+                }
             }
     
             .thirdBenefit {
-                transform: translateX(3000px);
+                li {
+                    transform: translateX(-3000px);
+                }
+
+                .title {
+                    transform: translateX(-3000px);
+                }
             }
     
             .fourthBenefit {
-                transform: translateX(3000px);
+                li {
+                    transform: translateX(-3000px);
+                }
+                
+                .title {
+                    transform: translateX(-3000px);
+                }
             }
         }
+    }
+
+    .benefitsContainer {
+        position: relative;
+
+        .itemsImages {
+            display: flex;
+            position: absolute;
+            max-width: 514px;
+            overflow-x: hidden;
+            right: -200px;
+            top: 110px;
+    
+            img {
+                height: 380px;
+                transition: 1s;
+                transform: translateX(0px);
+            }
+        }
+    }
+
+    .svgImages {
+        margin-top: 50px;
     }
 
     .svgItems {
         fill: white;
         transition: .3s;
+
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
     
         &:hover {
             fill: #75c8cc;
         }
 
-        .active {
-            fill: #75c8cc;
-        }
+        
+    }
+
+    .active {
+        fill: #75c8cc;
     }
     
 }

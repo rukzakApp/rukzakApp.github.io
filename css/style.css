@@ -575,6 +575,7 @@
   font-size: 44px;
   line-height: 1.3;
   margin-bottom: 50px;
+  height: 171px;
 }
 
 .monetization {
@@ -612,26 +613,6 @@
   width: 50%;
   height: 50px;
   text-align: center;
-}
-
-.try {
-  color: black;
-  font-size: 40px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: hidden;
-  width: 59px;
-}
-
-.try li {
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.try li:not(:last-child) {
-  margin-right: 20px;
 }
 
 .future {
@@ -692,21 +673,6 @@
           transform: translateX(0px);
   -webkit-transition: 1s;
   transition: 1s;
-}
-
-.pros .itemsImages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  max-width: 514px;
-  overflow-x: hidden;
-  right: 0;
-  top: 1050px;
-}
-
-.pros .itemsImages img {
-  height: 380px;
 }
 
 .pros .benefits {
@@ -879,6 +845,13 @@
   text-align: center;
 }
 
+.pros .benefits .title {
+  text-align: center;
+  width: 1000px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 .pros .benefits .benefitTexts {
   position: relative;
   height: 503px;
@@ -887,31 +860,75 @@
 .pros .benefits .benefitTexts > div {
   position: absolute;
   margin-top: 35px;
+  width: 100%;
 }
 
 .pros .benefits .benefitTexts > div ul {
   margin-top: 35px;
   text-align: left;
   max-width: 700px;
+  overflow-x: hidden;
 }
 
 .pros .benefits .benefitTexts > div ul li:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.pros .benefits .benefitTexts .secondBenefit {
-  -webkit-transform: translateX(3000px);
-          transform: translateX(3000px);
+.pros .benefits .benefitTexts .secondBenefit li {
+  -webkit-transform: translateX(-3000px);
+          transform: translateX(-3000px);
 }
 
-.pros .benefits .benefitTexts .thirdBenefit {
-  -webkit-transform: translateX(3000px);
-          transform: translateX(3000px);
+.pros .benefits .benefitTexts .secondBenefit .title {
+  -webkit-transform: translateX(-3000px);
+          transform: translateX(-3000px);
 }
 
-.pros .benefits .benefitTexts .fourthBenefit {
-  -webkit-transform: translateX(3000px);
-          transform: translateX(3000px);
+.pros .benefits .benefitTexts .thirdBenefit li {
+  -webkit-transform: translateX(-3000px);
+          transform: translateX(-3000px);
+}
+
+.pros .benefits .benefitTexts .thirdBenefit .title {
+  -webkit-transform: translateX(-3000px);
+          transform: translateX(-3000px);
+}
+
+.pros .benefits .benefitTexts .fourthBenefit li {
+  -webkit-transform: translateX(-3000px);
+          transform: translateX(-3000px);
+}
+
+.pros .benefits .benefitTexts .fourthBenefit .title {
+  -webkit-transform: translateX(-3000px);
+          transform: translateX(-3000px);
+}
+
+.pros .benefitsContainer {
+  position: relative;
+}
+
+.pros .benefitsContainer .itemsImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  max-width: 514px;
+  overflow-x: hidden;
+  right: -200px;
+  top: 110px;
+}
+
+.pros .benefitsContainer .itemsImages img {
+  height: 380px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.pros .svgImages {
+  margin-top: 50px;
 }
 
 .pros .svgItems {
@@ -920,11 +937,15 @@
   transition: .3s;
 }
 
+.pros .svgItems:not(:last-child) {
+  margin-right: 70px;
+}
+
 .pros .svgItems:hover {
   fill: #75c8cc;
 }
 
-.pros .svgItems .active {
+.pros .active {
   fill: #75c8cc;
 }
 

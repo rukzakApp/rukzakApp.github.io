@@ -39,6 +39,7 @@
                 font-size: 44px;     
                 line-height: 1.3;
                 margin-bottom: 50px;
+                height: 171px;
             }
         }
     }
@@ -76,29 +77,5 @@
             height: 50px;
             text-align: center;
         }
-
-        td:nth-child(odd) {
-            
-        }
     }
-}
-
-
-.try {
-    color: black;
-    font-size: 40px;
-    text-align: center;
-    display: flex;
-    overflow-x: hidden;
-    
-    width: 59px;
-    
-    li {
-        transition: .5s;
-    }
-    
-    li:not(:last-child) {
-        margin-right: 20px;
-    }
-    
 }
