@@ -931,6 +931,11 @@
   margin-top: 50px;
 }
 
+.pros .firstItem {
+  padding-top: 10px;
+  width: 104px;
+}
+
 .pros .svgItems {
   fill: white;
   -webkit-transition: .3s;
