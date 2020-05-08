@@ -1,267 +1,135 @@
-$(document).ready(function () {
-    $("body").on("click", "a", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
 
-        if (event.target.classList.contains('navLink')) {
-            //забираем идентификатор бока с атрибута href
-            var id = $(this).attr('href'),
 
-                //узнаем высоту от начала страницы до блока на который ссылается якорь
-                top = $(id).offset().top;
+/*const sit = document.querySelector('.situation');
 
-            //анимируем переход на расстояние - top за 1500 мс
-            $('body,html').animate({ scrollTop: top }, 600)
+observer = new IntersectionObserver((entries) => {
+    console.log(entries[0])
+    if(entries[0].intersectionRatio > 0) {
+        entries[0].target.style.animation = 'anim 4s forwards'
+    } else {
+        entries[0].target.style.animation = 'none'
+    }
+})
+
+observer.observe(sit);*/
+
+const arrowLeft = document.querySelector('.arrowLeft');
+const arrowRight = document.querySelector('.arrowRight');
+let page = document.querySelector('.about span');
+const aboutTexts = document.querySelectorAll('.about .texts p');
+let aboutPage = 0;
+
+arrowLeft.addEventListener('click', () => {
+    if(parseInt(page.innerHTML) > 1) {
+        page.innerHTML = '0' + (parseInt(page.innerHTML) - 1)
+        aboutTexts[aboutPage].style.animationName = 'rightOut';
+        aboutPage--
+        aboutTexts[aboutPage].style.animationName = 'leftIn';
+    }
+})
+
+arrowRight.addEventListener('click', () => {
+    if(parseInt(page.innerHTML) < 3) {
+        page.innerHTML = '0' + (parseInt(page.innerHTML) + 1)
+        aboutTexts[aboutPage].style.animationName = 'leftOut';
+        aboutPage++
+        aboutTexts[aboutPage].style.animationName = 'rightIn';
+    }
+})
+
+
+const numbers = document.querySelectorAll('.numbers p');
+const texts = document.querySelectorAll('.benefits .texts p');
+const titles = document.querySelectorAll('.titles h2');
+let vis = 0;
+const cont = document.querySelector('.benefits .container');
+
+numbers.forEach(e => e.addEventListener('click', (e) => {
+    if(vis !== parseInt(e.target.innerHTML - 1)) {
+        numbers[vis].classList.remove('numbersActive');
+        if(e.target.innerHTML - 1 > vis) {
+            cont.style.background = `url('../img/benefits${e.target.innerHTML}.png') no-repeat right 340px`;
+            texts[vis].style.animationName = 'leftOut';
+            titles[vis].style.animationName = 'leftOut';
+            texts[e.target.innerHTML - 1].style.animationName = 'rightIn';
+            titles[e.target.innerHTML - 1].style.animationName = 'rightIn';
+            vis = e.target.innerHTML - 1;
+        } else {
+            texts[vis].style.animationName = 'rightOut';
+            titles[vis].style.animationName = 'rightOut';
+            texts[e.target.innerHTML - 1].style.animationName = 'leftIn';
+            titles[e.target.innerHTML - 1].style.animationName = 'leftIn';
+            vis = e.target.innerHTML - 1;
         }
-    });
-});
+        numbers[vis].classList.add('numbersActive');
+    }
+}))
 
+const howTexts = document.querySelectorAll('.howItWorks .texts p');
+const howLeftBtn = document.querySelector('.arrowRoundLeft');
+const howRightBtn = document.querySelector('.arrowRoundRight');
+let howPage = 0;
+const howCont = document.querySelector('.howItWorks .container');
 
-let secondTextLi = document.querySelectorAll('#secondText li');
-let firstTextLi = document.querySelectorAll('#firstText li');
-let thirdTextLi = document.querySelectorAll('#thirdText li');
-let fourthTextLi = document.querySelectorAll('#fourthText li');
-let numberOne = document.querySelector('#numberOne');
-let numberTwo = document.querySelector('#numberTwo');
-let numberThree = document.querySelector('#numberThree');
-let numberFour = document.querySelector('#numberFour');
-
-let numbersImages = document.querySelectorAll('.numbersImages img');
-
-numbersImages.forEach((item, index) => {
-    item.style.transform = 'translateX(0px)'
-    //parseInt(item.style.transform.replace(/[^-\d]/g, ''))
+howLeftBtn.addEventListener('click', (e) => {
+    if(howPage > 0) {
+        /*howTexts[howPage].style.animationName = 'rightOut';
+        howPage--
+        howCont.style.background = `url('../img/how${howPage+1}.png') no-repeat right 220px`;
+        howTexts[howPage].style.animationName = 'leftIn';*/
+        howTexts[howPage].style.opacity = '0';
+        howPage--
+        howCont.style.background = `url('../img/how${howPage+1}.png') no-repeat right 220px`;
+        howTexts[howPage].style.opacity = '1';
+    }
 })
 
-firstTextLi.forEach((item, index) => {
-    item.style.transform = 'translateX(0px)';
-})
-
-const sliderOutLeft = (item, index) => {
-    if (item.style.transform === 'translateX(0px)') {
-        item.style.animation = `numbersAnimOutLeft 1s ${index / 30}s forwards`;
+howRightBtn.addEventListener('click', (e) => {
+    if(howPage < 3) {
+        howTexts[howPage].style.opacity = '0';
+        howPage++
+        howCont.style.background = `url('../img/how${howPage+1}.png') no-repeat right 220px`;
         setTimeout(() => {
-            item.style.transform = 'translateX(-3000px)';
-        }, 100);
+            howTexts[howPage].style.opacity = '1';
+        }, 200) 
     }
-}
+})
 
-const sliderInRight = (item, index) => {
-    if (item.style.transform !== 'translateX(0px)') {
-        item.style.animation = `numbersAnimInRight 1s ${index / 30}s forwards`;
-        setTimeout(() => {
-            item.style.transform = 'translateX(0)';
-        }, 100);
-    }
-}
+//new
 
-/*const sliderOutRight = (item, index) => {
-    if (item.style.transform === 'translateX(0px)') {
-        item.style.animation = `numbersAnimOutRight 1s ${index / 30}s forwards`;
-        item.style.transform = 'translateX(-3000px)';
-    }
-}
+var tl = new TimelineMax();
+var tl2 = new TimelineMax();
+const controller = new ScrollMagic.Controller();
 
-const sliderInLeft = (item, index) => {
-    if (item.style.transform !== 'translateX(0px)') {
-        item.style.animation = `numbersAnimInLeft 1s ${index / 30}s forwards`;
-        item.style.transform = 'translateX(0)';
-    }
-}*/
+tl.from('.situation', 1, {left: 0}, '=.5')
+tl.to('.situation1', 1, {left: 0}, '=-1')
 
 
-numberOne.addEventListener('click', () => {
-    numberTwo.classList.remove('active')
-    numberOne.classList.add('active')
-    numberThree.classList.remove('active')
-    numberFour.classList.remove('active')
+const scene = new ScrollMagic.Scene({
+  triggerElement: ".situations",
+            triggerHook: "onLeave",
+            duration: "100%"
+})
+  .setPin(".situations")
+  .setTween(tl)
+        .addTo(controller);
 
-    numbersImages.forEach((item, index) => {
-        item.style.transform = 'translateX(0px)'
+tl2.to('.content1', 1, {top: '-350px'}, '=1')
+tl2.to('.content2', 1, {top: 0}, '=-1')
+tl2.to('.images img', 1, {transform: 'translateX(-383px)'}, '=-1')
+tl2.to('.content2', 1, {top: '-350px'}, '=1')
+tl2.to('.content3', 1, {top: 0}, '=-1')
+tl2.to('.images img', 1, {transform: 'translateX(-766px)'}, '=-1')
+tl2.to('.images img', 1, {transform: 'translateX(-766px)'}, '=1')
+const scene2 = new ScrollMagic.Scene({
+    triggerElement: ".playersBlock",
+                triggerHook: "onLeave",
+                duration: 2000
     })
-
-    firstTextLi.forEach((item, index) => sliderInRight(item, index))
-    secondTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    thirdTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    fourthTextLi.forEach((item, index) => sliderOutLeft(item, index))
-})
-
-numberTwo.addEventListener('click', () => {
-    numberTwo.classList.add('active')
-    numberOne.classList.remove('active')
-    numberThree.classList.remove('active')
-    numberFour.classList.remove('active')
-
-    numbersImages.forEach((item, index) => {
-        item.style.transform = 'translateX(-548px)'
-    })
-
-    secondTextLi.forEach((item, index) => sliderInRight(item, index))
-    firstTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    thirdTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    fourthTextLi.forEach((item, index) => sliderOutLeft(item, index))
-})
-
-numberThree.addEventListener('click', () => {
-    numberTwo.classList.remove('active')
-    numberOne.classList.remove('active')
-    numberThree.classList.add('active')
-    numberFour.classList.remove('active')
-
-    numbersImages.forEach((item, index) => {
-        item.style.transform = `translateX(${-548 * 2}px)`
-    })
-
-    thirdTextLi.forEach((item, index) => sliderInRight(item, index))
-    firstTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    secondTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    fourthTextLi.forEach((item, index) => sliderOutLeft(item, index))
-})
-
-numberFour.addEventListener('click', () => {
-    numberTwo.classList.remove('active')
-    numberOne.classList.remove('active')
-    numberThree.classList.remove('active')
-    numberFour.classList.add('active')
-
-    numbersImages.forEach((item, index) => {
-        item.style.transform = `translateX(${-548 * 3}px)`
-    })
-
-    fourthTextLi.forEach((item, index) => sliderInRight(item, index))
-    firstTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    secondTextLi.forEach((item, index) => sliderOutLeft(item, index))
-    thirdTextLi.forEach((item, index) => sliderOutLeft(item, index))
-})
+    .setPin(".playersBlock")
+    .setTween(tl2)
+            .addTo(controller);
 
 
 
-
-let secondBenefit = document.querySelectorAll('.secondBenefit li');
-let firstBenefit = document.querySelectorAll('.firstBenefit li');
-let thirdBenefit = document.querySelectorAll('.thirdBenefit li');
-let fourthBenefit = document.querySelectorAll('.fourthBenefit li');
-let itemOne = document.querySelector('.firstItem');
-let itemTwo = document.querySelector('.secondItem');
-let itemThree = document.querySelector('.thirdItem');
-let itemFour = document.querySelector('.fourthItem');
-
-let itemsImages = document.querySelectorAll('.itemsImages img');
-
-let firstTitle = document.querySelector('.firstBenefit .title');
-let secondTitle = document.querySelector('.secondBenefit .title');
-let thirdTitle = document.querySelector('.thirdBenefit .title');
-let fourthTitle = document.querySelector('.fourthBenefit .title');
-
-firstTitle.style.transform = 'translateX(0px)';
-
-const titleOut = (item) => {
-    if (item.style.transform === 'translateX(0px)') {
-        item.style.animation = `numbersAnimOutLeft 1s forwards`;
-        setTimeout(() => {
-            item.style.transform = 'translateX(-3000px)';
-        }, 100);
-    }
-}
-
-const titleIn = (item) => {
-    if (item.style.transform !== 'translateX(0px)') {
-        item.style.animation = `numbersAnimInRight 1s forwards`;
-        setTimeout(() => {
-            item.style.transform = 'translateX(0)';
-        }, 100);
-    }
-}
-
-/*numbersImages.forEach((item, index) => {
-    item.style.transform = 'translateX(0px)'
-    //parseInt(item.style.transform.replace(/[^-\d]/g, ''))
-})*/
-
-firstBenefit.forEach((item, index) => {
-    item.style.transform = 'translateX(0px)';
-})
-
-itemOne.addEventListener('click', () => {
-    itemTwo.classList.remove('active')
-    itemOne.classList.add('active')
-    itemThree.classList.remove('active')
-    itemFour.classList.remove('active')
-
-    itemsImages.forEach((item, index) => {
-        item.style.transform = 'translateX(0px)'
-    })
-
-    titleIn(firstTitle)
-    titleOut(secondTitle)
-    titleOut(thirdTitle)
-    titleOut(fourthTitle)
-
-    firstBenefit.forEach((item, index) => sliderInRight(item, index))
-    secondBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    thirdBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    fourthBenefit.forEach((item, index) => sliderOutLeft(item, index))
-})
-
-itemTwo.addEventListener('click', () => {
-    itemTwo.classList.add('active')
-    itemOne.classList.remove('active')
-    itemThree.classList.remove('active')
-    itemFour.classList.remove('active')
-
-    itemsImages.forEach((item, index) => {
-        item.style.transform = 'translateX(-514px)'
-    })
-
-    titleIn(secondTitle)
-    titleOut(firstTitle)
-    titleOut(thirdTitle)
-    titleOut(fourthTitle)
-
-    secondBenefit.forEach((item, index) => sliderInRight(item, index))
-    firstBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    thirdBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    fourthBenefit.forEach((item, index) => sliderOutLeft(item, index))
-})
-
-itemThree.addEventListener('click', () => {
-    itemTwo.classList.remove('active')
-    itemOne.classList.remove('active')
-    itemThree.classList.add('active')
-    itemFour.classList.remove('active')
-
-    itemsImages.forEach((item, index) => {
-        item.style.transform = `translateX(${-514 * 2}px)`
-    })
-
-    titleIn(thirdTitle)
-    titleOut(firstTitle)
-    titleOut(secondTitle)
-    titleOut(fourthTitle)
-
-    thirdBenefit.forEach((item, index) => sliderInRight(item, index))
-    firstBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    secondBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    fourthBenefit.forEach((item, index) => sliderOutLeft(item, index))
-})
-
-itemFour.addEventListener('click', () => {
-    itemTwo.classList.remove('active')
-    itemOne.classList.remove('active')
-    itemThree.classList.remove('active')
-    itemFour.classList.add('active')
-
-    itemsImages.forEach((item, index) => {
-        item.style.transform = `translateX(${-514 * 3}px)`
-    })
-
-    titleIn(fourthTitle)
-    titleOut(firstTitle)
-    titleOut(thirdTitle)
-    titleOut(secondTitle)
-
-    fourthBenefit.forEach((item, index) => sliderInRight(item, index))
-    firstBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    secondBenefit.forEach((item, index) => sliderOutLeft(item, index))
-    thirdBenefit.forEach((item, index) => sliderOutLeft(item, index))
-})
+    
