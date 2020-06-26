@@ -70,6 +70,106 @@
     </div>
 
     <header class="header">
+        <ul class="mobMenuList">
+            <li class="mobMenuList__item mainMenu">
+                <ul class="pagesList">
+                    <li class="pagesList__item">
+                        Что такое КСФ
+                    </li>
+                    <li class="pagesList__item">
+                        Стать участником
+                    </li>
+                    <li class="pagesList__item">
+                        Стать клиентом
+                    </li>
+                    <li class="pagesList__item">
+                        Создание сайтов
+                    </li>
+                    <li class="pagesList__item">
+                        VIP
+                    </li>
+                </ul>
+    
+                <ul class="toList">
+                    <li onclick="forward(2)" class="toList__item">
+                        Наши услуги
+                    </li>
+                    <li onclick="forward(1)" class="toList__item">
+                        Наши курсы
+                    </li>
+                    <li onclick="forward(4)" class="toList__item">
+                        Навигация
+                    </li>
+                    <li onclick="forward(3)" class="toList__item">
+                        Контакты
+                    </li>
+                </ul>
+    
+                <a href="#" class="lkBtn">Личный кабинет</a>
+            </li>
+
+            <li class="mobMenuList__item courses">
+                <svg onclick="back(1)" class="menuArrowBack" width="18" height="28" viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.8401 0L0 14L13.8401 28L18 23.7927L8.31583 14L18 4.20734L13.8401 0Z" fill="white"/>
+                </svg>
+                <h3 class="menuTitle">Наши курсы</h3>
+                <ul class="coursesList">
+                    <li class="coursesList__item">
+                        Лендинги
+                    </li>
+                    <li class="coursesList__item">
+                        Контекстная реклама
+                    </li>
+                    <li class="coursesList__item">
+                        Таргетированная реклама Вконтакте
+                    </li>
+                    <li class="coursesList__item">
+                        Таргетированная реклама Facebook
+                    </li>
+                    <li class="coursesList__item">
+                        Запуск инфопродуктов
+                    </li>
+                    <li class="coursesList__item">
+                        Продающий текст
+                    </li>
+                    <li class="coursesList__item">
+                        Ведение инстаграма
+                    </li>
+                    <li class="coursesList__item">
+                        Партнерские продажи
+                    </li>
+                    <li class="coursesList__item">
+                        Геймифицированные автоворонки
+                    </li>
+                </ul>
+            </li>
+
+            <li class="mobMenuList__item services">
+                <h3 class="menuTitle">Наши услуги</h3>
+
+                <ul class="servicesList">
+                    <li class="servicesList__item">
+                        Лендинги и сайты
+                    </li>
+                    <li class="servicesList__item">
+                        Контекстная реклама
+                    </li>
+                    <li class="servicesList__item">
+                        Таргетированная реклама
+                    </li>
+                    <li class="servicesList__item">
+                        Запуск инфопродуктов
+                    </li>
+                    <li class="servicesList__item">
+                        Продвижение социальных сетей
+                    </li>
+                    <li class="servicesList__item">
+                        Автоворонки
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
         <div class="container">
             <div class="row d-flex justify-content-sm-between">
                 <div class="d-flex align-items-center">
@@ -80,10 +180,10 @@
                     <a href="tel:+78001234567" class="tel">+7 800 123-45-67</a>
                     <a href="#" class="lkBtn text">Личный кабинет</a>
                     <svg class="burger" width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="6" fill="#828282"/>
-                        <rect y="11" width="32" height="6" fill="#828282"/>
-                        <rect y="11" width="32" height="6" fill="#828282"/>
-                        <rect y="22" width="32" height="6" fill="#828282"/>
+                        <rect class="burgerSide" width="32" height="6" fill="#828282"/>
+                        <rect class="crossRight" y="11" width="32" height="6" fill="#828282"/>
+                        <rect class="crossLeft" y="11" width="32" height="6" fill="#828282"/>
+                        <rect class="burgerSide" y="22" width="32" height="6" fill="#828282"/>
                     </svg>     
                 </div>
             </div>

@@ -111,6 +111,37 @@
   opacity: 0;
 }
 
+.header .mobMenuList__item {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 4;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.header .mobMenuList__item:first-child {
+  -webkit-transform: translateY(74px) translateX(100%);
+          transform: translateY(74px) translateX(100%);
+}
+
+.header .mobMenuList .courses {
+  background-color: #007550;
+  z-index: 5;
+}
+
+.header .mobMenuList .services {
+  background-color: #001E20;
+  z-index: 5;
+}
+
+.header .container {
+  z-index: 6;
+}
+
 .header__logo {
   width: 116px;
   height: 36px;
@@ -118,6 +149,30 @@
 
 .header .burger {
   display: none;
+  z-index: 10;
+}
+
+.header .rotateRight {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.header .rotateLeft {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.header .burgerExpand {
+  opacity: 0;
+}
+
+.header rect {
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .header .container {

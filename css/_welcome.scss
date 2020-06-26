@@ -94,7 +94,40 @@
     opacity: 0;
 }
 
+
+
 .header {
+
+    .mobMenuList {
+        &__item {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $white;
+            z-index: 4;
+            transition: .5s;
+            transform: translateX(100%);
+            
+            &:first-child {
+                transform: translateY(74px) translateX(100%);
+            }
+        }
+
+        .courses {
+            background-color: $green;
+            z-index: 5;
+        }
+
+        .services {
+            background-color: $black;
+            z-index: 5;
+        }
+    }
+
+    .container {
+        z-index: 6;
+    }    
+    
     &__logo {
         width: 116px;
         height: 36px;
@@ -102,6 +135,25 @@
 
     .burger {
         display: none;
+        z-index: 10;
+    }
+
+    .rotateRight {
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+
+    .rotateLeft {
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+
+    .burgerExpand {
+        opacity: 0;
+    }
+
+    rect {
+        transition: .3s;
     }
 
     .container {
