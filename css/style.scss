@@ -77,6 +77,16 @@ ul, li {
 }
 
 @media (max-width: 768px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .hashtag-title {
         font-size: 26px;
         font-weight: 900;
