@@ -1,108 +1,283 @@
-.mail {
+.navBar {
+    z-index: 5;
+    height: 486px;
+    width: 286px;
+    
+    font-weight: 900;
     position: fixed;
-    bottom: 15%;
-    left: 1%;
-    transform: rotate(-90deg);
-    z-index: 6;
-    color: rgb(255, 255, 255);
-    mix-blend-mode: difference;
-
-    &:hover {
-        color: $accentColor;
-    }
-}
-
-.logo {
-    height: 100px;
-    width: 100px;
-}
-
-
-
-
-.welcome {
-    background: $darkBg1;
-    color: $brightText;
-    height: 100vh;
-    position: relative;
+    left: 0px;
+    top: 25%;
+    background-color: $yellow;
     display: flex;
-    align-items: center;
-    
-    .container {
-        width: 100%;
-        flex-direction: column;
-    }
+    justify-content: center;
+    text-transform: uppercase;
+    transition: .3s;
+    transform: translateX(-236px);
 
-    h1 {
-        margin-bottom: 50px;
-    }
+    .sideNavContainer {
+        position: relative;
+        display: flex;
+        width: 286px;
 
-    span {
-        color: $accentColor;
-    }
-}
+        .navBarMenu {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            text-transform: uppercase;
+            transition: .6s;
+        }
 
-.situations {
-    position: relative;
-    height: 100vh;
-}
+        li {
+            &:not(:nth-last-child(-n+2)) {
+                margin-bottom: 5px;
+            }
 
-.situation {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: -100vw;
-    background: url(../img/countries.png) no-repeat center 60%, $darkBg1;
-    color: $brightText;
-    display: flex;
-    align-items: center;
+            &:last-child {
+                display: flex;
+                align-items: center;
+            }
 
-    .container {
-        width: 100%;
-        div {
-            margin-top: 65px;
-            display: flex;
-            justify-content: space-between;
-            
-            .title2 {
-                color: $accentColor;
-                margin-bottom: 20px;
+            .navBarArrow {
+                span {
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+
+            a {
+                transition: .3s;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border: 10px solid transparent; 
+                    border-left: 20px solid transparent;
+                    left: -40px;
+                    top: 1px;
+                    height: 10px;
+                    width: 10px;
+                    transition: .5s;
+                }
+
+                &:hover {
+                    font-weight: 500;
+                    
+                    &::after {
+                        border-left: 18px solid $green;
+                        left: -30px;
+                    }
+                }
             }
         }
     }
 
-    span {
-        color: $accentColor;
+
+    p {
+        transition: .3s;
+        transform: rotate(-90deg) translateY(118px);
+        width: 300px;
+        font-size: 18px;
+        color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-.situation1 {
-    position: absolute;
-    z-index: 1;
-    
-    left: 100vw;
-    height: 100vh;
-    width: 100vw;
-    background: url(../img/countries.png) no-repeat center 60%, $darkBg1;
-    color: $brightText;
-    display: flex;
-    align-items: center;
+.navBar__expand {
+    transform: translateX(0)
+}
+
+.navBarP__expand {
+    opacity: 0;
+}
+
+.header {
+    &__logo {
+        width: 116px;
+        height: 36px;
+    }
+
+    .burger {
+        display: none;
+    }
 
     .container {
-        width: 100%;
-        div {
-            margin-top: 65px;
-            display: flex;
-            justify-content: space-between;
-            
-            .title2 {
-                color: $accentColor;
-                margin-bottom: 20px;
+        padding: 19px 0;
+    }
+
+    .tel {
+        font-size: 20px;
+        font-weight: 500;
+        padding-left: 26px;
+        background: url("../assets/tel.svg") no-repeat left center;
+        margin-right: 32px;
+    }
+
+    .lkBtn {
+        padding: 6px 12px 9px;
+        border: 1px solid $black;
+        position: relative;
+
+        &:hover {
+            color: $white;
+
+            &::before {
+                height: 100%;
+            }
+
+            &::after {
+                background-color: $white;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            left: 0;
+            bottom: 0px;
+            background-color: $black;
+            transition: .4s;
+        }
+
+        &:before {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            left: 0;
+            bottom: 0px;
+            background-color: $black;
+            transition: .4s;
+        }
+    }
+}
+
+.navContainer {
+    color: #BDBDBD;
+    background-color: $black;
+    padding: 15px 0;
+    
+    li:not(:last-child) {
+        margin-right: 58px;
+    }
+
+    a {
+        padding: 5px 0;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+
+        &:hover {  
+            color: $white;
+            border-top: 2px solid $white;
+            border-bottom: 2px solid $white;
+        }
+    }
+}
+
+.welcomePage {
+    padding: 120px 0 95px;
+    background: url("../assets/welcomePageBg.svg") no-repeat center top / cover;
+
+    .welcomeSubtitle {
+        display: none;
+    }
+
+    .hashtag-title {
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+
+    .features__item {
+        padding: 0;
+
+        &:nth-last-child(-n+2) {
+            .features__subtitle {
+                color: $red;
             }
         }
     }
 
-    span {
-        color: $accentColor;
+    img {
+        max-width: 165px;
+        max-height: 92px;
+    }
+
+    .features__title {
+        max-width: 192px;
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .features__subtitle {
+        font-size: 18px;
+        color: $green;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        &:first-child {
+            color: $red;
+        }
+    }
+
+    .comment {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        display: none;
+    }
+
+    .header {
+        .tel {
+            display: none;
+        }
+
+        .lkBtn {
+            display: none;
+        }
+
+        .navContainer {
+            display: none;
+        }
+
+        .burger {
+            display: block;
+        }
+    }
+
+    .welcomePage {
+        background: url("../assets/welcomeMobBg.svg") no-repeat right top / cover;
+        padding: 60px 0;
+
+        .hashtag-title {
+            margin-bottom: 10px;
+        }
+
+        .welcomeSubtitle {
+            display: inline-block;
+            color: $green;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 40px; 
+        }
+
+        .features__title {
+            max-width: 150px;
+            margin-right: 0;
+        }
     }
 }

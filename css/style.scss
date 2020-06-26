@@ -1,7 +1,8 @@
-
-@import './variables';
-@import './welcome';
-@import './problem';
+@import "./variables";
+@import "./welcome";
+@import "./newLvl";
+@import "./footer";
+@import "./features";
 
 html {
     box-sizing: border-box; /* width и height включают в себя значения полей и границ */
@@ -15,22 +16,17 @@ html {
 }
 
 body {
-    min-width: 320px; /* body не адаптируется под ширину экрана менее 1000px */
-    background: $darkBg1; /* основной цвет фона */
-    font-family: "Monserrat", sans-serif; /* основной шрифт */
-    font-size: 16px; /* основной размер шрифта */
-    line-height: 1.5; /* высота линии для всего документа */
-    color: #000; /* основной цвет шрифта */
     overflow-x: hidden;
-    padding-bottom: 103px;
+    background-color: $white;
+    line-height: 1.5;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif; /* основной шрифт */
 }
 
-body.modal-active {
-    overflow: hidden;
-}
-
-body.modal-active {
-    overflow: hidden; /* скрывает лишнее */
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
 }
 
 img {
@@ -40,39 +36,62 @@ img {
 a {
     text-decoration: none; /* убирает подчеркивание ссылки */
     color: inherit; /* позволяет наследовать цвет шрифта от родительского элемента */
+    transition: .3s;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
-li {
-    display: inline; /* располагает пункты горизонтально */
-}
-
-h1, h2, h3, h4, p, ul {
+ul, li {
+    display: block;
     margin: 0;
     padding: 0;
 }
 
-.visually-hidden { /* доступно скрывает элемент */
-    position: absolute; 
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0 !important;
-    border: 0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
+.hashtag-title {
+    font-weight: 900;
+    font-size: 64px;
+    text-transform: uppercase;
 }
 
-.container { 
-    max-width: 1108px;
-    min-width: 320px; /* ширина основного контента */
-    margin: 0 auto;
-    padding: 0 20px; /* центрирование */
+.subtitle {
+    font-weight: 700;
+    font-size: 24px;
 }
 
-.clearfix:after { /* лечит нулевую высоту div при использовании параметра float */
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+.hashtag-nav {
+    font-size: 18px;
+    font-weight: 400;
 }
+
+.text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.bold-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .hashtag-title {
+        font-size: 26px;
+        font-weight: 900;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        font-weight: 900;
+    }
+    
+    .text {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+    }
+}
+
+
+

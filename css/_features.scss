@@ -1,0 +1,184 @@
+.price {
+    background-color: $yellow;
+
+    .container {
+        padding: 100px 0;
+
+        .rulesList {
+            display: flex;
+            align-items: center;
+            margin-top: 58px;
+
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                .point {
+                    font-size: 41px;
+                    font-weight: 900;
+                    line-height: 0.75;
+                    margin-right: 25px;
+                }
+
+                .text {
+                    line-height: 0.9;
+                    height: 30px;
+                    
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .sale {
+            margin-top: 82px;
+            margin-bottom: 50px;
+
+            span {
+                color: $green;
+            }
+        }
+
+        .cardsList {
+            text-transform: uppercase;
+            
+
+            li {
+                background-color: $white;
+                padding: 35px 30px 30px;
+                max-width: 457px;
+                max-height: 280px;
+                display: flex;
+                flex-direction: column;
+
+                path {
+                    transition: .3s;
+                }
+                svg:hover path {
+                    fill: #007550;
+                }
+
+                &:nth-child(2) {
+                    background: url("../assets/warrantyIcon.svg") no-repeat 84% 28% $white;
+                }
+
+                &:nth-child(3) {
+                    background: url("../assets/oneGiftIcon.svg") no-repeat 86% 25% $black;
+                    border: 10px solid $green;
+                    color: $white;
+                    padding: 25px 20px 20px;
+
+                    .cardHeader {
+                        color: #f2f2f2;
+                    }
+
+                    .cardPrice {
+                        color: $white;
+                    }
+
+                    .gift {
+                        margin-bottom: 12px;
+                    }
+                }
+
+                &:nth-child(4) {
+                    background: url("../assets/threeGiftsIcon.svg") no-repeat 85% 24% $black;
+                    border: 10px solid $red;
+                    color: $white;
+                    padding: 25px 20px 20px;
+
+                    .cardHeader {
+                        color: #f2f2f2;
+                    }
+
+                    .cardPrice {
+                        color: $white;
+                    }
+
+                    .gift {
+                        margin-bottom: 12px;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    margin-right: 30px;
+                }
+
+                &:nth-child(-n+2) {
+                    margin-bottom: 30px;
+                }
+
+                &:first-child {
+                    .cardPrice {
+                        margin-bottom: 64px;
+                    }
+                }
+            }
+
+            .cardHeader {
+                color: #333;
+                font-weight: 900;
+                font-size: 24px;
+            }
+
+            .cardPrice {
+                color: $green;
+                font-size: 40px;
+                margin-bottom: 14px;
+            }
+
+            .gift {
+                text-transform: none;
+                margin-bottom: 15px;
+
+                span {
+                    border-bottom: 2px dotted $black;
+                }
+            }
+
+            .chooseOptionBtn {
+                justify-self: flex-end;
+                display: block;
+                text-align: center;
+                color: $white;
+                z-index: 2;
+                font-weight: 700;
+                font-size: 18px;
+                padding: 15px 59px;
+                position: relative;
+
+                &:hover {
+                    &:before {
+                        height: 100%;
+                    }
+                }
+        
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    z-index: -2;
+                    left: 0;
+                    bottom: 0px;
+                    background-color: $red;
+                }
+        
+                &:before {
+                    z-index: -1;
+                    content: "";
+                    position: absolute;
+                    height: 0px;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                    border-bottom: 6px solid #D61400;
+                    background-color: #D61400;
+                    transition: .4s ease;
+                }
+            }
+        }
+    }
+}
