@@ -24,19 +24,18 @@ burger.addEventListener('click', () => {
     burgerExpanded = !burgerExpanded
 
     if(!burgerExpanded) {
-        mobMenuListItems.forEach(e => e.style.transform = 'translateX(100%)')
-        mobMenuListItems[0].style.transform = 'translateY(74px) translateX(100%)'
+        mobMenuListItems.forEach(e => e.style.left = '100%')
     } else {
-        mobMenuListItems[0].style.transform = 'translateY(74px) translateX(0)'
+        mobMenuListItems[0].style.left = '0'
     }
 })
 
 const forward = (num) => {
-    mobMenuListItems[num].style.transform = "translateX(0)";
+    mobMenuListItems[num].style.left = "0";
 }
 
 const back = (num) => {
-    mobMenuListItems[num].style.transform = "translateX(100%)";
+    mobMenuListItems[num].style.left = "100%";
 }
 
 console.log(mobMenuListItems[1])
