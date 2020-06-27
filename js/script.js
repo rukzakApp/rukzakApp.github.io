@@ -31,7 +31,7 @@ burger.addEventListener('click', () => {
         
     } else {
         mobMenuListItems[0].style.left = '0';
-        mobMenuList.style.zIndex = "2";
+        mobMenuList.style.zIndex = "5";
     }
 })
 
@@ -51,7 +51,7 @@ const forward = (num) => {
 
 const back = (num) => {
     mobMenuListItems[num].style.left = "100%";
-    setTimeout(() => mobMenuList.style.zIndex = "2", 500)
+    setTimeout(() => mobMenuList.style.zIndex = "5", 500)
 }
 
 console.log(mobMenuListItems[1])

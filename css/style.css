@@ -588,6 +588,13 @@
 }
 
 @media (max-width: 768px) {
+  .mobNavFixed {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 4;
+  }
   .navBar {
     display: none;
   }
