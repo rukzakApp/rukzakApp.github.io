@@ -811,10 +811,6 @@
 .results .container .resultsList {
   margin-top: 30px;
   margin-bottom: 60px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .results .container .resultsList__item:not(:last-child) {
@@ -1012,9 +1008,13 @@
   .results .container .resultsList {
     margin-top: 50px;
     margin-bottom: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .results .container .resultsList__item {
-    height: 157px;
+    min-height: 430px;
   }
   .results .container .resultsList__item:not(:last-child) {
     margin-bottom: 40px;
