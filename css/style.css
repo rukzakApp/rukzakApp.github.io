@@ -318,7 +318,7 @@
 
 @media (max-width: 576px) {
   .welcomePage .hashtag-title {
-    max-width: 235px;
+    max-width: 350px;
   }
 }
 
@@ -1039,7 +1039,7 @@ ul, li {
     padding-right: 20px;
   }
   .hashtag-title {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 900;
   }
   .subtitle {
