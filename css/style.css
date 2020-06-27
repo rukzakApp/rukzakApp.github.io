@@ -1021,12 +1021,13 @@
   }
   .results .container .resultsList__item .person {
     padding: 10px 10px 20px;
-    height: 157px;
+    min-height: 157px;
   }
   .results .container .resultsList__item .person .ava {
     -webkit-box-ordinal-group: -1;
         -ms-flex-order: -2;
             order: -2;
+    margin-bottom: 10px;
   }
   .results .container .resultsList__item .person .prof {
     font-size: 12px;
@@ -1076,6 +1077,7 @@
   }
   .results .container .resultsList__item .review {
     padding-bottom: 30px;
+    min-height: 270px;
   }
   .results .container .resultsList__item .review a {
     position: relative;
