@@ -10,6 +10,7 @@ navBar.addEventListener('click', () => {
 })
 
 const burger = document.querySelector('.burger');
+const body = document.querySelector('body');
 const crossRight = document.querySelector('.crossRight');
 const crossLeft = document.querySelector('.crossLeft');
 const burgerSide = document.querySelectorAll('.burgerSide');
@@ -27,16 +28,19 @@ burger.addEventListener('click', () => {
 
     if(!burgerExpanded) {
         mobMenuListItems.forEach(e => e.style.left = '100%')
+        body.style.overflowY = "visible";
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         
     } else {
         mobMenuListItems[0].style.left = '0';
         mobMenuList.style.zIndex = "5";
+        body.style.overflowY = "hidden";
     }
 })
 
 crosses.forEach(e => e.addEventListener('click', () => {
     mobMenuListItems.forEach(e => e.style.left = '100%')
+    body.style.overflowY = "visible";
     setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
     crossLeft.classList.remove('rotateLeft')
     crossRight.classList.remove('rotateRight')
@@ -47,6 +51,7 @@ crosses.forEach(e => e.addEventListener('click', () => {
 const forward = (num) => {
     mobMenuListItems[num].style.left = "0";
     mobMenuList.style.zIndex = "10";
+    body.style.overflowY = "hidden";
 }
 
 const back = (num) => {
@@ -54,4 +59,26 @@ const back = (num) => {
     setTimeout(() => mobMenuList.style.zIndex = "5", 500)
 }
 
-console.log(mobMenuListItems[1])
+
+//Page transition
+
+const transBtn = document.querySelectorAll('.transBtn')
+const header = document.querySelector('.header')
+
+$(document).ready(function(){
+    transBtn.forEach(e => e.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        body.style.overflowY = "visible";
+        mobMenuListItems.forEach(e => e.style.left = '100%')
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top - header.offsetHeight;
+        $('body,html').animate({scrollTop: top}, 700);
+
+        
+    }));
+});
+
+
+

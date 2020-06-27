@@ -111,6 +111,10 @@
   opacity: 0;
 }
 
+.mobNavFixed {
+  display: none;
+}
+
 .mobMenuList {
   height: 100vh;
   width: 100%;
@@ -807,9 +811,6 @@
 .results .container .resultsList {
   margin-top: 30px;
   margin-bottom: 60px;
-}
-
-.results .container .resultsList__item {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1228,7 +1229,7 @@
 }
 
 .price {
-  background-color: #ffc856;
+  background: url("../assets/priceBg.svg") no-repeat center/auto 100% #ffc856;
 }
 
 .price .container {
@@ -1276,12 +1277,58 @@
 
 .price .container .cardsList {
   text-transform: uppercase;
-  width: 100%;
+}
+
+.price .container .cardsList .row:first-child li:nth-child(1) .cardPrice {
+  margin-bottom: 64px;
+}
+
+.price .container .cardsList .row:first-child li:nth-child(2) {
+  background: url("../assets/warrantyIcon.svg") no-repeat 84% 28% #fff;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(1) {
+  background: url("../assets/oneGiftIcon.svg") no-repeat 86% 25% #001E20;
+  border: 10px solid #007550;
+  color: #fff;
+  padding: 25px 20px 20px;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(1) .cardHeader {
+  color: #f2f2f2;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(1) .cardPrice {
+  color: #fff;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(1) .gift {
+  margin-bottom: 12px;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(2) {
+  background: url("../assets/threeGiftsIcon.svg") no-repeat 85% 24% #001E20;
+  border: 10px solid #FF513F;
+  color: #fff;
+  padding: 25px 20px 20px;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(2) .cardHeader {
+  color: #f2f2f2;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(2) .cardPrice {
+  color: #fff;
+}
+
+.price .container .cardsList .row:last-child li:nth-child(2) .gift {
+  margin-bottom: 12px;
 }
 
 .price .container .cardsList li {
   background-color: #fff;
   padding: 35px 30px 30px;
+  max-width: 458px;
   max-height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1301,58 +1348,12 @@
   fill: #007550;
 }
 
-.price .container .cardsList li:nth-child(2) {
-  background: url("../assets/warrantyIcon.svg") no-repeat 84% 28% #fff;
-}
-
-.price .container .cardsList li:nth-child(3) {
-  background: url("../assets/oneGiftIcon.svg") no-repeat 86% 25% #001E20;
-  border: 10px solid #007550;
-  color: #fff;
-  padding: 25px 20px 20px;
-}
-
-.price .container .cardsList li:nth-child(3) .cardHeader {
-  color: #f2f2f2;
-}
-
-.price .container .cardsList li:nth-child(3) .cardPrice {
-  color: #fff;
-}
-
-.price .container .cardsList li:nth-child(3) .gift {
-  margin-bottom: 12px;
-}
-
-.price .container .cardsList li:nth-child(4) {
-  background: url("../assets/threeGiftsIcon.svg") no-repeat 85% 24% #001E20;
-  border: 10px solid #FF513F;
-  color: #fff;
-  padding: 25px 20px 20px;
-}
-
-.price .container .cardsList li:nth-child(4) .cardHeader {
-  color: #f2f2f2;
-}
-
-.price .container .cardsList li:nth-child(4) .cardPrice {
-  color: #fff;
-}
-
-.price .container .cardsList li:nth-child(4) .gift {
-  margin-bottom: 12px;
-}
-
 .price .container .cardsList li:nth-child(odd) {
   margin-right: 30px;
 }
 
 .price .container .cardsList li:nth-child(-n+2) {
   margin-bottom: 30px;
-}
-
-.price .container .cardsList li:first-child .cardPrice {
-  margin-bottom: 64px;
 }
 
 .price .container .cardsList .cardHeader {
@@ -1418,6 +1419,9 @@
 }
 
 @media (max-width: 768px) {
+  .price {
+    background: #ffc856;
+  }
   .price .container {
     padding-top: 50px;
   }
@@ -1449,32 +1453,28 @@
   .price .container .cardsList {
     padding: 0;
   }
-  .price .container .cardsList li {
-    padding: 30px 20px 20px;
-  }
-  .price .container .cardsList li:nth-child(odd) {
-    margin-right: 0;
-  }
-  .price .container .cardsList li:nth-child(2) {
-    background-position: 94% 40%;
-  }
-  .price .container .cardsList li:nth-child(3) {
-    background-position: 96% 40%;
-    padding: 20px 11px 20px;
-  }
-  .price .container .cardsList li:nth-child(4) {
+  .price .container .cardsList .row:last-child li:last-child {
+    margin-bottom: 0;
     padding: 20px 12px 20px;
     background-position: 96% 40%;
     background-size: 27% 27%;
   }
-  .price .container .cardsList li:first-child .cardPrice {
+  .price .container .cardsList .row:last-child li:nth-child(1) {
+    background-position: 96% 40%;
+    padding: 20px 11px 20px;
+  }
+  .price .container .cardsList .row:first-child li:nth-child(2) {
+    background-position: 94% 40%;
+  }
+  .price .container .cardsList .row:first-child li:first-child .cardPrice {
     margin-bottom: 60px;
   }
-  .price .container .cardsList li:nth-child(-n+2) {
-    margin-bottom: 0;
-  }
-  .price .container .cardsList li:not(:last-child) {
+  .price .container .cardsList li {
+    padding: 30px 20px 20px;
     margin-bottom: 20px;
+  }
+  .price .container .cardsList li:nth-child(odd) {
+    margin-right: 0;
   }
   .price .container .cardsList li .cardPrice {
     font-size: 42px;
