@@ -803,7 +803,10 @@
 }
 
 .results .container .resultsList__item {
-  height: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .results .container .resultsList__item:not(:last-child) {
