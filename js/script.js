@@ -75,7 +75,7 @@ $(document).ready(function(){
         var id  = $(this).attr('href'),
             top = $(id).offset().top - header.offsetHeight;
         $('body,html').animate({scrollTop: top}, 700);
-
+        setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         
     }));
 });
