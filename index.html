@@ -277,7 +277,9 @@
                 </div>
 
                 <div class="d-flex ml-auto align-items-center">
-                    <a href="tel:+78001234567" class="tel">+7 800 123-45-67</a>
+                    <div class="tel">
+                        <a href="tel:+78001234567">+7 800 123-45-67</a>
+                    </div>
                     <a href="#" class="lkBtn text">Личный кабинет</a>
                     <svg class="burger" width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect class="burgerSide" width="32" height="6" fill="#828282"/>
@@ -314,14 +316,14 @@
     <section class="welcomePage" id="welcomePage">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-8 col-xl-7">
+                <div class="row col-12 col-lg-8 col-xl-7 d-flex flex-column">
                     <h1 class="hashtag-title">Новый уровень обучения в&nbspмире digital</h1>
                     <h2 class="welcomeSubtitle">Крупнейший в СНГ<br/>клуб маркетологов</h2>
                 </div>
             </div>
 
             <div class="row">
-                <ul class="col-md-9 col-12 features d-flex flex-wrap">
+                <ul class="row col-md-9 col-12 features d-flex flex-wrap">
                     <li class="col-6 col-md-4 features__item">
                         <img src="./assets/welcomeIcon1.svg" alt="">
                         <p class="features__title">Активных участников</p>
@@ -342,7 +344,8 @@
 
                     <li class="col-6 col-md-4 features__item">
                         <img src="./assets/welcomeIcon4.svg" alt="Иконка">
-                        <p class="features__title">С нуля<br/>до первого дохода</p>
+                        <p class="features__title">С нуля до<br/>первого дохода</p>
+                        
                         <p class="features__subtitle">12 дней</p>
                     </li>
 
@@ -358,7 +361,7 @@
                         <p class="features__subtitle">250 000 ₽</p>
                     </li>
                 </ul>
-                <div class="col-12">
+                <div class="row col-12">
                     <p class="comment text">* статистика представлена на основе 386 участников КСФ, обновляется в реальном времени</p>
                 </div>
             </div>
@@ -368,11 +371,13 @@
     <section class="newLvl" id="newLvl">
         <div class="intro">
             <div class="container">
-                <h2 class="hashtag-title">#Новый<span>уровень</span></h2>
+                <div class="row">
+                    <h2 class="hashtag-title">#Новый<span>уровень</span></h2>
                 <p class="subtitle sub__desktop"><span>Клуб Сытых Фрилансеров (КСФ)</span> - это тот уровень обучения
                     и маркетинговых услуг, к которому уже&nbspдавно готов российский бизнес</p>
                 <p class="subtitle sub__mobile"><span>Клуб Сытых<br/>Фрилансеров (КСФ)</span> -<br/>это тот уровень<br/>обучения<br/>
                     и маркетинговых<br/>услуг, к которому<br/>уже давно готов<br/>российский <br/>бизнес</p>
+                </div>
             </div>
         </div> 
         
@@ -406,7 +411,7 @@
     <section class="results">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-8 title">
+                <div class="row col-12 col-lg-8 title">
                     <h2 class="hashtag-title">#Результаты</h2>
                     <p class="subtitle">Вот таких результатов достигают участники Клуба, когда работают «в&nbspпоте лица»</p>
                     <p class="text">А те, кто филонят - долго в нашем Клубе не&nbspзадерживаются</p>
@@ -414,7 +419,7 @@
             </div>
 
             
-            <ul class="resultsList d-flex flex-column">
+            <ul class="resultsList row d-flex flex-column">
                 <li class="resultsList__item col-12 d-flex">
                     <div class="personContainer col-12 col-lg-4">
                         <div class="person d-flex flex-wrap ">                     
@@ -554,7 +559,490 @@
         </div>
     </section>
 
-    <div class="price" id="price">
+    <!--<section class="community">
+        <div class="attention">
+            <p class="title">Внимание!</p>
+            <p class="descr text">Вступаешь в клуб<br/>— готовься к тому, что:</p>
+            <p class="text point">У нас есть общий чат, где тебе<br/> все рады</p>
+            <p class="text point">Мы регулярно “бухаем по скайпу”<br/>(бухать не обязательно,<br/>но весело)</p>
+            <p class="text point">Атмосфера хоть и рабочая,<br/>но дружная и даже семейная</p>
+        </div>
+
+        <div class="hoodie">
+            <a href="#" class="hoodie__btn">Причем тут толстовка?</a>
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="11.5" fill="none" stroke="#001E20"/>
+                <path d="M7.99 10.198H9.502C9.592 8.614 10.186 7.318 12.022 7.318C13.372 7.318 14.218 8.182 14.218 9.586C14.218 10.342 13.966 10.882 13.192 11.656C11.716 13.132 11.212 13.6 11.212 15.778V15.886H12.688C12.688 13.78 13.228 13.546 14.434 12.412C15.316 11.584 15.838 10.756 15.838 9.406C15.838 7.3 14.344 5.95 12.04 5.95C9.286 5.95 7.99 7.84 7.99 10.198ZM12.868 17.182H10.978V19H12.868V17.182Z" fill="#001E20"/>
+            </svg>
+        </div>
+
+        <div class="community__container">
+            <div class="container">
+                <div class="row d-flex flex-column">
+                    <h2 class="hashtag-title">#Комьюнити</h2>
+                    <div class="row col-6 extra">
+                        <p class="subtitle">КСФ - это в первую очередь люди</p>
+                        <p class="text">Клуб даёт все необходимые инструкции и знания для развития, но давай по-честному:</p>
+                        <p class="bold-text">Всё это не имело бы смысла без атмосферы.</p>
+                    </div>
+                    <div class="text">
+                        <p>КСФ - это семья. Мы создали ту среду, в которой хочется развиваться и в которой это делать проще</p>
+                        <p>Каждый получает здесь то, чего не хватает именно ему для крутых результатов.</p>
+                        <p>Поддержка? Помощь? Совет?<br/>— Да</p>
+                        <p>Пинок? Мотивация? Разбор от профи?<br/>— Тоже да</p>
+                    </div>
+                </div>
+    
+                <img class="row frame" src="./assets/communityFrame.svg" alt="">
+    
+                <div class="row help d-flex flex-column">
+                    <p class="subtitle title">Все обучаются вместе и помогают друг другу</p>
+                    <div class="text">
+                        <p>Новичкам полезно общение с профессионалами - есть пример, можно задать вопрос, попросить совета, попросить критики, перенять опыт.</p>
+                        <p>Профи полезно общение с предпринимателями - они могут лучше понять их потребности, протестировать на них свои оферы, найти новых клиентов.</p>
+                        <p>Предпринимателям полезно общение с маркетологами - всегда можно задать свои вопросы действующим специалистам и получить ответы “как есть”, а не через призму “потенциального клиента”.</p>
+                    </div>
+                    
+                    <div class="subtitle quote">Каждый здесь найдет себя, свой путь и инструменты для достижения своих целей.</div>
+                </div>
+
+                <a href="#" class="row payBtn">Оплатить участие в клубе</a>
+            </div>
+        </div>
+    </section>-->
+
+    <!--<section class="education">
+        <div class="container">
+            <div class="row">
+                <div class="row col-8">
+                    <h2 class="hashtag-title">#Обучение</h2>
+                    <p class="subtitle title">
+                        Мы создаем универсальных бойцов, способных на всё
+                    </p>
+
+                    <div class="text">
+                        <p>КСФ - это комплексное обучение маркетологов</p>
+                        <p>Научиться технической части, разобраться в интерфейсе рекламных кабинетов ты можешь и в гугле, причем бесплатно</p>
+                        <p>Мы же учим разбираться в сути, понимать глубинные механизмы маркетинга, напрямую влиять на прибыль своих клиентов, но и технической части мы тоже научим</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 redBlock">
+                    <p class="subtitle">В КСФ собраны все необходимые и&nbspактуальные знания</p>
+                </div>
+
+                <div class="row col-12 profs">
+                    <p class="subtitle">Профессии, которые ты можешь получить в Клубе:</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <ul class="profsList mainProfs col-12 d-flex flex-wrap">
+                    <li class="black">
+                        <h3 class="profTitle">
+                            Создатель сайтов и&nbspлендингов
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь создавать продающие сайты и&nbspприводить клиентов из интернета 
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            smm<br/>специалист
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь вести социальные сети и создавать комьюнити вокруг бизнеса клиента
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            таргетолог<br/>вконтакте
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь настраивать рекламу с&nbspctr >3% и&nbspкликами по 2-3 рубля
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            таргетолог facebook<br/>и instagram
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь получать сотни и тысячи заявок в день
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>  
+                    
+                    <li class="">
+                        <h3 class="profTitle">
+                            контекстолог<br/>в яндекс директ<br/>и google ads
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь приводить самых<br/>горячих клиентов
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            геймификатор<br/>автоворонщик
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь создавать интерактивные игры,<br/>которые будут продавать
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            продюсер запусков<br/>инфопродуктов
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь запустить любой продукт<br/>на >500% окупаемости
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            партнерский<br/>маркетолог
+                        </h3>
+
+                        <p class="profDescr">
+                            Cможешь приводить готовых клиентов<br/>в любой бизнес за процент
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row d-flex flex-column">
+                <p class="subtitle">Курсы, направленные на создание потоков заявок на эти профессии:</p>
+                <div class="text marketText">
+                    <p>Маркетолог без “упаковки”, как сайт без трафика -<br/>молодец, но никто об этом не узнает :)</p>
+                    <p>Все хотят быть миллионерами, но мало кто умеет заключать милионные сделки<br/>и понимать настоящие потребности клиентов</p>
+                </div>
+                
+                <div class="subtitle">Поэтому КСФ обучает и правильной продаже маркетинговых услуг:</div>
+            </div>
+
+            <div class="row">
+                <ul class="profsList marketProfs col-12 d-flex">
+                    <li class="">
+                        <h3 class="profTitle">
+                            курс для новичков:<br/>от 0₽ до 70к в месяц
+                        </h3>
+
+                        <p class="profDescr">
+                            С чего начать<br/>и как заработать первые деньги 
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            продвинутый курс:<br/>от 70к до 1+ млн ₽ в месяц 
+                        </h3>
+
+                        <p class="profDescr">
+                            Как продавать свои услуги дорого<br/>и стать экспертом
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="">
+                        <h3 class="profTitle">
+                            личный бренд
+                        </h3>
+
+                        <p class="profDescr">
+                            История о том, как построить очередь<br/>из клиентов на твои услуги
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <p class="subtitle">Вспомогательные курсы, направленные на усилиение тебя, как личности:</p>
+
+                <ul class="profsList personProfs col-12 d-flex">
+                    <li class="black">
+                        <h3 class="profTitle">
+                            технология<br/>продающих текстов
+                        </h3>
+
+                        <p class="profDescr">
+                            Как писать так, чтобы тебя читали,<br/>а после - покупали
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+
+                    <li class="black">
+                        <h3 class="profTitle">
+                            технология<br/>эффективной жизни
+                        </h3>
+
+                        <p class="profDescr">
+                            Создан ТОП-врачом по нашему заказу<br/>с учетом фрилансерской специфики
+                        </p>
+
+                        <a href="#" class="profBtn">Подробнее о курсе</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="featuresPage">
+        <div class="container">
+            <div class="row">
+                <p class="subtitle">Особенности всех курсов:</p>
+
+                <ul class="featuresList col-12 d-flex flex-wrap">
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+                    
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+
+                    <li class="col-6">
+                        <p class="point">1</p>
+                        <p class="title">переход от разовых проектов к абонентской плате</p>
+                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    </li>
+                </ul>
+
+                <a href="#" class="payBtn">Оплатить участие в клубе</a>
+            </div>
+        </div>
+    </section>-->
+
+    <section class="allIn">
+        <div class="container">
+            <div class="row d-flex flex-column">
+                <h2 class="hashtag-title">
+                    <span>#Все</span>включено
+                </h2>
+                <p class="subtitle title">
+                    Мы - сообщество, а значит уровень знаний и&nbspвозможностей должен быть одинаковым для&nbspвсех
+                </p>
+                <p class="text descr">
+                    Поэтому у нас нет трёх пакетов доступа на&nbspвыбор, чтобы все покупали средний.
+                </p>
+                <p class="subtitle extra col-12 col-lg-8">
+                    Абсолютно всё, что&nbspперечислено на&nbspсайте&nbsp- доступно <span>каждому участнику КСФ</span> без всяких доплат в рамках подписки.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--<div class="employment">
+        <div class="container">
+            <div class="row d-flex flex-column">
+                <h2 class="hashtag-title">#Трудоустройство</h2>
+                <p class="subtitle title">Мы считаем, что деньги должны оставаться в семье</p>
+                <p class="text descr">Поэтому мы сделали максимум, чтобы участники всегда были обеспечены работой</p>
+                <p class="subtitle sources">Источники клиентов для участников Клуба:</p>
+            </div>
+
+            <div class="col-12 row">
+                <ul class="sourcesList row">
+                    <li class="col-6 row">
+                        <p class="list__title subtitle">Клиенты от другого участника или основателя</p>
+                        <p class="text list__descr">Если участник не хочет брать клиента, который к нему пришел — он просто передает его другому участнику КСФ. Основатели делают так же, только чеки обычно от 100 000 рублей :)</p>
+                    </li>
+
+                    <li class="col-6 row">
+                        <p class="list__title subtitle">Клиенты от другого участника или основателя</p>
+                        <p class="text list__descr">Если участник не хочет брать клиента, который к нему пришел — он просто передает его другому участнику КСФ. Основатели делают так же, только чеки обычно от 100 000 рублей :)</p>
+                    </li>
+
+                    <li class="col-6 row">
+                        <p class="list__title subtitle">Клиенты от другого участника или основателя</p>
+                        <p class="text list__descr">Если участник не хочет брать клиента, который к нему пришел — он просто передает его другому участнику КСФ. Основатели делают так же, только чеки обычно от 100 000 рублей :)</p>
+                    </li>
+
+                    <li class="col-6 row">
+                        <p class="list__title subtitle">Клиенты от другого участника или основателя</p>
+                        <p class="text list__descr">Если участник не хочет брать клиента, который к нему пришел — он просто передает его другому участнику КСФ. Основатели делают так же, только чеки обычно от 100 000 рублей :)</p>
+                    </li>
+                </ul>
+
+                <p class="warranty subtitle row">
+                    Это гарантирует, что каждый толковый участник КСФ в любом случае получит здесь не только обучение и комьюнити, но и мощный поток заказов.
+                </p>
+
+                <a href="#" class="payBtn">Оплатить участие в клубе</a>
+            </div>1
+            
+        </div>
+    </div>-->
+
+    <section class="roadMap">
+        <div class="container">
+            <div class="row">
+                <h2 class="hashtag-title">#Дорожнаякарта</h2>
+                <p class="subtitle title desktopTitle">Я думаю, что уже&nbspстало очевидно, что&nbspу&nbspнас в&nbspклубе очень много всего. 13&nbspкурсов, много дополнительных сервисов, постоянные мероприятия и&nbspвебинары.</p>
+                <p class="subtitle title mobTitle">Я думаю, что уже&nbspстало очевидно, что&nbspу&nbspнас в&nbspклубе очень много всего.<br/>Более 12&nbspкурсов, куча дополнительных сервисов, постоянные мероприятия и&nbspвебинары.</p>
+                <div class="text">
+                    <p>В этом круговороте очень легко запутаться, поэтому мы придумали “дорожную карту”</p>
+                    <p>Это такая отдельная страница в&nbspличном кабинете, на&nbspкоторой списком обозначены все твои задачи и&nbspдействия на&nbspближайшие несколько месяцев с&nbspграфиком выполнения, процентами завершения, порядком действий</p>
+                    <p>Просто следуй этому списку, закрывай задачи последовательно и&nbspты&nbspзаработаешь +100 000 рублей за&nbspтри месяца обучения в&nbspКСФ</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="warranty">
+        <div class="container">
+            <div class="row d-flex flex-column warrantyMarkCont">
+                <img src="./assets/warrantyMarkMob.svg" alt="">
+                <h2 class="hashtag-title">#Гарантии</h2>
+                <p class="subtitle firstWarranty">Ты заработаешь +100 000 ₽ к&nbspсвоему доходу, либо мы вернем тебе деньги за&nbspобучение</p>
+            </div>
+
+            <div class="pointsBlock col-xl-7 row">
+                <p class="subtitle">Чтобы получить гарантию, необходимо:</p>
+                
+                <ul class="pointsList">
+                    <li>
+                        <p class="point">1</p>
+                        <p class="descr text">
+                            <span>Оплатить участие в&nbspКСФ на&nbspтри&nbspмесяца вперед</span>, ибо именно за&nbspтакой срок 100% участников выходят на&nbspстабильные доходы.
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <p class="point">2</p>
+                        <p class="descr text">
+                            <span>Пройти курс «Технология Удаленной Работы» на&nbsp100%</span> и&nbspсдать по&nbspнему все практические задания, чтобы&nbspполучить все базовые знания, необходимые для&nbspработы на&nbspфрилансе и&nbsp20 проверенных способов поиска клиентов.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p class="point">3</p>
+                        <p class="descr text">
+                            <span>Пройти два любых профильных курса по&nbspсвоему выбору</span> так&nbspже на&nbsp100% и&nbspсдать все практические задания. Чтобы научиться не&nbspтолько продавать свои услуги, но&nbspи&nbspс&nbspвысоким качеством их&nbsp«отрабатывать»
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row profilesBlock d-flex flex-column">
+                <p class="subtitle listTitle">Список профильных курсов:</p>
+
+                <ul class="profilesList">
+                    <li>
+                        <p>Создание сайтов, лендингов и&nbspквизов</p>
+                    </li>
+
+                    <li>
+                        <p>Настройка контекстной рекламы Яндекс и&nbspGoogle</p>
+                    </li>
+
+                    <li>
+                        <p>Настройка таргетированной рекламы Вконтакте</p>
+                    </li>
+
+                    <li>
+                        <p>Настройка таргетированной рекламы Facebook и&nbspInstagram</p>
+                    </li>
+
+                    <li>
+                        <p>Ведение Instagram</p>
+                    </li>
+
+                    <li>
+                        <p>Запуск инфопродуктов</p>
+                    </li>
+
+                    <li>
+                        <p>Создание геймифицированных Автоворонок</p>
+                    </li>
+
+                    <li>
+                        <p>Партнерский маркетинг</p>
+                    </li>
+                </ul>
+
+                <p class="subtitle shield">
+                    Если <span>все эти условия выполнены</span> в&nbspтечение трех первых месяцев участия в&nbspКСФ, но&nbspпри&nbspэтом у&nbspтебя все&nbspеще&nbspнет&nbspсотки сверху твоих обычных доходов — мы без вопросов <span>возвращаем тебе деньги за&nbspобучение</span> в&nbspКСФ.
+                </p>
+            </div>    
+        </div>
+    </section>
+
+    <!--<section class="founders">
+        <div class="container">
+            <div class="row">
+                
+            </div>
+        </div>
+    </section> -->
+
+    <section class="price" id="price">
         <div class="container">
             <div class="row">
                 <div class="col-9 col-xl-9">

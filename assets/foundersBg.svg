@@ -1,0 +1,18 @@
+<svg width="5760" height="1371" viewBox="0 0 5760 1371" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1920" width="1920" height="1371" fill="#001E20"/>
+<rect x="3840" width="1920" height="1371" fill="#001E20"/>
+<rect width="1920" height="1371" fill="#001E20"/>
+<g style="mix-blend-mode:multiply" opacity="0.32">
+<path d="M2040.5 522.222L643.5 1371H1920H3840H5302.5L3840 364.041L3788.5 419.926L3460.5 201L2773.5 849.43L2040.5 522.222Z" fill="#001E20"/>
+</g>
+<path opacity="0.38" d="M1920 596.811L2040.5 522.222L2773.5 849.43L3460.5 201L3788.5 419.926L3612 378.5L3635.5 555.5L3460.5 378.5L3388.5 450L3334 406L2773.5 849.43L2227.5 668.5L2204.5 739L2074.5 638.5L1978 722V646.5L643.5 1371L1920 596.811Z" fill="#003639"/>
+<g style="mix-blend-mode:screen" opacity="0.15">
+<circle cx="2059.5" cy="275.5" r="129.5" fill="#001E20"/>
+</g>
+<g style="mix-blend-mode:screen" opacity="0.2">
+<circle cx="3255.5" cy="122.5" r="68.5" fill="#001E20"/>
+</g>
+<g style="mix-blend-mode:screen" opacity="0.2">
+<circle cx="3604" cy="197" r="25" fill="#001E20"/>
+</g>
+</svg>
