@@ -58,12 +58,27 @@
                     <svg class="navBarArrow" width="126" height="20" viewBox="0 0 126 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <style>
-                                
+                                .arrowBtn {
+                                    fill: white;
+                                }
+
+                                svg:hover .arrowBtn {
+                                    fill: green;
+                                }
+
+                                svg:hover .bruh {
+                                    color: green;
+                                }
+
+                                svg {
+                                    cursor: pointer;
+                                }
                             </style>
                         </defs>
-                        <path d="M0.646446 3.64645C0.451187 3.84171 0.451187 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53554 7.53553C4.7308 7.34027 4.7308 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.7308 0.976311 4.7308 0.659728 4.53554 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM126 3.5L1 3.5V4.5L126 4.5V3.5Z" fill="white"/>
+                        <path class="arrowBtn" d="M0.646446 3.64645C0.451187 3.84171 0.451187 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53554 7.53553C4.7308 7.34027 4.7308 7.02369 4.53554 6.82843L1.70711 4L4.53554 1.17157C4.7308 0.976311 4.7308 0.659728 4.53554 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM126 3.5L1 3.5V4.5L126 4.5V3.5Z" fill="white"/>
                         <span class="hashtag-nav bruh">Свернуть</span>
                     </svg>
+                    
                 </li>
             </ul>
         </div>
@@ -299,7 +314,7 @@
                             <a href="#">Что такое КСФ</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#">Стать участником</a>
+                            <a href="#" class="active">Стать участником</a>
                         </li>
                         <li class="menu__item">
                             <a href="#">Стать клиентом</a>
@@ -570,13 +585,13 @@
                             mix-blend-mode: difference;
                         }
 
-                        path {
+                        .quest {
                             fill: white;
                             mix-blend-mode: difference;
                         }
                     </style>
                     <circle cx="12" cy="12" r="11.5" fill="none" stroke="#001E20"/>
-                    <path d="M7.99 10.198H9.502C9.592 8.614 10.186 7.318 12.022 7.318C13.372 7.318 14.218 8.182 14.218 9.586C14.218 10.342 13.966 10.882 13.192 11.656C11.716 13.132 11.212 13.6 11.212 15.778V15.886H12.688C12.688 13.78 13.228 13.546 14.434 12.412C15.316 11.584 15.838 10.756 15.838 9.406C15.838 7.3 14.344 5.95 12.04 5.95C9.286 5.95 7.99 7.84 7.99 10.198ZM12.868 17.182H10.978V19H12.868V17.182Z" fill="#001E20"/>
+                    <path class="quest" d="M7.99 10.198H9.502C9.592 8.614 10.186 7.318 12.022 7.318C13.372 7.318 14.218 8.182 14.218 9.586C14.218 10.342 13.966 10.882 13.192 11.656C11.716 13.132 11.212 13.6 11.212 15.778V15.886H12.688C12.688 13.78 13.228 13.546 14.434 12.412C15.316 11.584 15.838 10.756 15.838 9.406C15.838 7.3 14.344 5.95 12.04 5.95C9.286 5.95 7.99 7.84 7.99 10.198ZM12.868 17.182H10.978V19H12.868V17.182Z" fill="#001E20"/>
                 </svg>
             </div>
             
@@ -630,7 +645,7 @@
     <!--<section class="education">
         <div class="container">
             <div class="row">
-                <div class="row col-8">
+                <div class="row begin col-12 col-lg-8">
                     <h2 class="hashtag-title">#Обучение</h2>
                     <p class="subtitle title">
                         Мы создаем универсальных бойцов, способных на всё
@@ -638,17 +653,18 @@
 
                     <div class="text">
                         <p>КСФ - это комплексное обучение маркетологов</p>
-                        <p>Научиться технической части, разобраться в интерфейсе рекламных кабинетов ты можешь и в гугле, причем бесплатно</p>
-                        <p>Мы же учим разбираться в сути, понимать глубинные механизмы маркетинга, напрямую влиять на прибыль своих клиентов, но и технической части мы тоже научим</p>
+                        <p>Научиться технической части, разобраться в&nbspинтерфейсе рекламных кабинетов ты можешь и&nbspв&nbspгугле, причем бесплатно</p>
+                        <p>Мы же учим разбираться в&nbspсути, понимать глубинные механизмы маркетинга, напрямую влиять на&nbspприбыль своих клиентов, но и&nbspтехнической части мы тоже научим</p>
                     </div>
                 </div>
 
-                <div class="col-lg-6 redBlock">
+                <div class="col-9 col-lg-6 redBlock">
                     <p class="subtitle">В КСФ собраны все необходимые и&nbspактуальные знания</p>
+                    <img src="./assets/educationMobBg.svg" alt="">
                 </div>
 
                 <div class="row col-12 profs">
-                    <p class="subtitle">Профессии, которые ты можешь получить в Клубе:</p>
+                    <p class="subtitle beginning">Профессии, которые ты можешь получить в&nbspКлубе:</p>
                 </div>
             </div>
 
@@ -659,7 +675,7 @@
                             Создатель сайтов и&nbspлендингов
                         </h3>
 
-                        <p class="profDescr">
+                        <p class="profDescr">   
                             Cможешь создавать продающие сайты и&nbspприводить клиентов из интернета 
                         </p>
 
@@ -832,7 +848,7 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> 
 
     <section class="featuresPage">
         <div class="container">
@@ -840,52 +856,68 @@
                 <p class="subtitle">Особенности всех курсов:</p>
 
                 <ul class="featuresList col-12 d-flex flex-wrap">
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">1</p>
+                            <p class="title">переход от&nbspразовых проектов к&nbspабонентской плате</p>
+                        </div>
+                        <p class="descr text">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с&nbspклиентами</p>
                     </li>
                     
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">2</p>
+                            <p class="title">20+ методов поиска клиентов с&nbspчёткими инструкциями</p>
+                        </div>
+                        <p class="descr text">Помимо бирж фриланса, про&nbspкоторые говорится отдельно</p>
                     </li>
 
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">3</p>
+                            <p class="title">Переговоры с&nbspклиентами и&nbspкрупными компаниями</p>
+                        </div>
+                        <p class="descr text">Как вести себя на&nbspпереговорах, чтобы сделка состоялась</p>
                     </li>
 
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">4</p>
+                            <p class="title">закрытые вебинары от&nbspэкспертов раз в&nbspнеделю</p>
+                        </div>
+                        <p class="descr text">Дополнительные темы: от&nbspаналитики до&nbspпсихологии</p>
                     </li>
 
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">5</p>
+                            <p class="title">практические задания и&nbspтестирование в&nbspкаждом курсе </p>
+                        </div>
+                        <p class="descr text">Чтобы информация лучше запоминалась</p>
                     </li>
 
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">6</p>
+                            <p class="title">проверка каждого домашнего задания основателями КСФ</p>
+                        </div>
+                        <p class="descr text">Вместо кураторов - эксперты с доходом 2+ млн ₽</p>
                     </li>
 
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">7</p>
+                            <p class="title">все курсы регулярно обновляются</p>
+                        </div>
+                        <p class="descr text">В курсах всегда представлена самая актуальная информация на&nbspданный момент</p>
                     </li>
 
-                    <li class="col-6">
-                        <p class="point">1</p>
-                        <p class="title">переход от разовых проектов к абонентской плате</p>
-                        <p class="descr">*Абонентка - это когда один клиент платит тебе годами. Мы учим выстраивать такие отношения с клиентами</p>
+                    <li class="">
+                        <div class="top d-flex">
+                            <p class="point">8</p>
+                            <p class="title">все написано подробно, при этом легко</p>
+                        </div>
+                        <p class="descr text">Новички в&nbspКлубе отмечают, что курсы написаны простым для понимания языком, в&nbspтоже время подробны и&nbspдетальны.</p>
                     </li>
                 </ul>
 
@@ -1071,32 +1103,32 @@
             <ul class="row videoList d-flex flex-wrap">
                 <li class="">
                     <iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239216&hash=75aa4f478f4cdbff" frameborder="0" allowfullscreen></iframe>
-                    <a href="#" class="hashtag-nav">Евгения Павличенко</a>
+                    <p><a href="#" class="hashtag-nav">Евгения Павличенко</a></p>
                 </li>
                 
                 <li class="">
                     <iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239209&hash=e4c09c3cbbaedaf2" frameborder="0" allowfullscreen></iframe>
-                    <a href="#" class="hashtag-nav">Юрий Угаров</a>
+                    <p><a href="#" class="hashtag-nav">Юрий Угаров</a></p>
                 </li>
 
                 <li class="">
                     <iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239217&hash=b812289abfac1118" frameborder="0" allowfullscreen></iframe>
-                    <a href="#" class="hashtag-nav">Жадыра Жумагалиева</a>
+                    <p><a href="#" class="hashtag-nav">Жадыра Жумагалиева</a></p>
                 </li>
                 
                 <li class="">
                     <iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239220&hash=97cb376ef72355ce" frameborder="0" allowfullscreen></iframe>
-                    <a href="#" class="hashtag-nav">Олег Архипов</a>
+                    <p><a href="#" class="hashtag-nav">Олег Архипов</a></p>
                 </li>
 
                 <li class="">
                     <iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239227&hash=8117f74857676624" frameborder="0" allowfullscreen></iframe>
-                    <a href="#" class="hashtag-nav">Виктор Бандалет</a>
+                    <p><a href="#" class="hashtag-nav">Виктор Бандалет</a></p>
                 </li>
                 
                 <li class="">
                     <iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239224&hash=48cb1d8284039492" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-                    <a href="#" class="hashtag-nav">Илья Юдашкин</a>
+                    <p><a href="#" class="hashtag-nav">Илья Юдашкин</a></p>
                 </li>
             </ul>
 
@@ -1421,7 +1453,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
         <div class="container">

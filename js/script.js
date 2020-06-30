@@ -27,7 +27,7 @@ burger.addEventListener('click', () => {
     burgerExpanded = !burgerExpanded
 
     if(!burgerExpanded) {
-        mobMenuListItems.forEach(e => e.style.left = '100%')
+        mobMenuListItems.forEach(e => e.style.left = '100vw')
         body.style.overflowY = "visible";
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         
@@ -39,7 +39,7 @@ burger.addEventListener('click', () => {
 })
 
 crosses.forEach(e => e.addEventListener('click', () => {
-    mobMenuListItems.forEach(e => e.style.left = '100%')
+    mobMenuListItems.forEach(e => e.style.left = '100vw')
     body.style.overflowY = "visible";
     setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
     crossLeft.classList.remove('rotateLeft')
@@ -55,7 +55,7 @@ const forward = (num) => {
 }
 
 const back = (num) => {
-    mobMenuListItems[num].style.left = "100%";
+    mobMenuListItems[num].style.left = "100vw";
     setTimeout(() => mobMenuList.style.zIndex = "5", 500)
 }
 
@@ -70,22 +70,14 @@ $(document).ready(function(){
         event.preventDefault();
 
         body.style.overflowY = "visible";
-        mobMenuListItems.forEach(e => e.style.left = '100%')
+        mobMenuListItems.forEach(e => e.style.left = '100vw')
 
         var id  = $(this).attr('href'),
-            top = $(id).offset().top - header.offsetHeight;
+            top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 700);
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         
     }));
 });
-
-const videoFrame = document.querySelector('.videoFrame')
-
-videoFrame.addEventListener('click', (e) => {
-    e.preventDefault()
-    alert('asd')
-})
-
 
 
