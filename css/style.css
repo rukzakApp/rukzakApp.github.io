@@ -2713,6 +2713,70 @@
   padding-bottom: 100px;
 }
 
+.reviews .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.reviews .videoList {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.reviews .videoList li {
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  background: url("../assets/videoBg.svg") no-repeat center/cover;
+  width: 555px;
+  height: 340px;
+}
+
+.reviews .videoList li iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reviews .videoList li:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.reviews .videoList li:not(:nth-last-child(-n+2)) {
+  margin-bottom: 30px;
+}
+
+.reviews .videoList li p {
+  position: absolute;
+  bottom: 12px;
+  padding-left: 28px;
+  background: url("../assets/videoDescrBg.svg") no-repeat left 5px;
+  left: 42px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.reviews .reviewsList {
+  padding: 0;
+}
+
+.reviews .reviewsList li {
+  padding: 0;
+  max-width: 555px;
+}
+
+.reviews .reviewsList li:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.reviews .reviewsList li:not(:nth-last-child(-n+2)) {
+  margin-bottom: 30px;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
