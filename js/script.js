@@ -80,5 +80,12 @@ $(document).ready(function(){
     }));
 });
 
+const videoFrame = document.querySelector('.videoFrame')
+
+videoFrame.addEventListener('click', (e) => {
+    e.preventDefault()
+    alert('asd')
+})
+
 
 
