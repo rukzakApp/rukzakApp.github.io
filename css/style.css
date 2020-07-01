@@ -1084,7 +1084,8 @@
   line-height: 1.1;
 }
 
-.results .container .resultsList__item .review a {
+.results .container .resultsList__item .review .exp {
+  cursor: pointer;
   position: absolute;
   right: 20px;
   bottom: 15px;
@@ -1099,7 +1100,7 @@
   transition: .3s;
 }
 
-.results .container .resultsList__item .review a:hover {
+.results .container .resultsList__item .review .exp:hover {
   color: #001E20;
   font-weight: 500;
 }
@@ -1185,7 +1186,7 @@
   .results .container .resultsList__item .review .text {
     font-size: 16px;
   }
-  .results .container .resultsList__item .review a {
+  .results .container .resultsList__item .review .exp {
     font-weight: 500;
   }
 }
@@ -1324,7 +1325,7 @@
     padding-bottom: 75px;
     position: relative;
   }
-  .results .container .resultsList__item .review a {
+  .results .container .resultsList__item .review .exp {
     font-size: 18px;
     padding-right: 17px;
     font-weight: 500;
@@ -1372,7 +1373,7 @@
   .results .container .resultsList__item .review {
     padding-bottom: 60px;
   }
-  .results .container .resultsList__item .review a {
+  .results .container .resultsList__item .review .exp {
     font-size: 14px;
     bottom: 20px;
   }
@@ -1388,8 +1389,180 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 90;
+  z-index: -1;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.resultsExp .resultsCross {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.resultsExp .resultsExpContainer {
+  width: 945px;
+  max-height: 800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-color: #fff;
+}
+
+.resultsExp .personContainer {
+  position: relative;
+  background-color: #001E20;
+  color: #fff;
+  padding: 20px;
+  padding-right: 55px;
+}
+
+.resultsExp .review {
+  overflow-y: scroll;
+  max-height: 538px;
+  padding-right: 30px;
+}
+
+.resultsExp .reviewContainer {
+  padding: 70px 40px 40px;
+  background: url("../assets/quoteIcon.svg") no-repeat 40px 20px;
+  height: 650px;
+}
+
+.resultsExp .person .ava {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-right: 28px;
+  margin-bottom: 10px;
+}
+
+.resultsExp .person .ava .avaBorder {
+  background: url("../assets/avaBorder.svg") no-repeat center;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.resultsExp .person .ava img {
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.resultsExp .person .prof {
+  font-size: 14px;
+  margin-left: 30px;
+  letter-spacing: .3px;
+  padding: 0;
+  margin: 0;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  color: #ffc856;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.resultsExp .person .prof p {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.resultsExp .person .achiev {
+  margin-left: 47px;
+  font-size: 14px;
+  line-height: 1;
+  padding-left: 17px;
+  padding: 0;
+  margin: 0;
+  color: #ffc856;
+  text-transform: uppercase;
+}
+
+.resultsExp .person .achiev p {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-top: 8px;
+  line-height: 0.8;
+}
+
+.resultsExp .person .vkLink {
+  position: relative;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+}
+
+.resultsExp .person .vkLink svg {
+  width: 24px;
+  height: 24px;
+}
+
+.resultsExp .person .break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.resultsExp .resultsCross {
+  cursor: pointer;
+}
+
+.resultsExpand {
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .resultsExp .resultsExpContainer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .resultsExp .personContainer {
+    padding-right: 45px;
+  }
+  .resultsExp .person .prof {
+    max-width: 140px;
+    font-size: 12px;
+  }
+  .resultsExp .person .prof .name {
+    font-size: 16px;
+  }
+  .resultsExp .person .vkLink {
+    margin-left: 8px;
+    margin-top: 20px;
+  }
+  .resultsExp .person .ava {
+    margin-right: 8px;
+    width: 60px;
+    height: 60px;
+  }
+  .resultsExp .person .ava .avaBorder {
+    width: 60px;
+    height: 60px;
+    background-size: 100% 100%;
+  }
+  .resultsExp .person .achiev {
+    font-size: 12px;
+  }
+  .resultsExp .person .achiev p {
+    font-size: 22px;
+  }
 }
 
 .footer {
@@ -1549,6 +1722,10 @@
   z-index: -90;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.warrantyExpandable .warrantyCross {
+  cursor: pointer;
 }
 
 .warrantyExpandable .warrantyContainer {

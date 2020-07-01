@@ -170,14 +170,37 @@ const opener = document.querySelector('.opener');
 
 warrantyCross.addEventListener('click', () => {
     warrantyExpandable.classList.remove('warrantyExp')
-    body.style.overflowY = "visible";
     setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
 })
 
 opener.addEventListener('click', () => {
     warrantyExpandable.style.zIndex = "90"
     warrantyExpandable.classList.add('warrantyExp')
-    body.style.overflowY = "hidden";
 })
+
+const resultsCross = document.querySelectorAll('.resultsCross');
+const resultsExpandable = document.querySelectorAll('.resultsExp');
+const resultsOpener = document.querySelectorAll('.exp');
+
+resultsCross.forEach(e => e.addEventListener('click', () => {
+    resultsExpandable.forEach(e => e.classList.remove('resultsExpand'))
+    setTimeout(() => resultsExpandable.forEach(e => e.style.zIndex = "-90", 500))
+}))
+
+resultsOpener[0].addEventListener('click', () => {
+    resultsExpandable[0].style.zIndex = "90"
+    resultsExpandable[0].classList.add('resultsExpand')
+})
+
+resultsOpener[1].addEventListener('click', () => {
+    resultsExpandable[1].style.zIndex = "90"
+    resultsExpandable[1].classList.add('resultsExpand')
+})
+
+resultsOpener[2].addEventListener('click', () => {
+    resultsExpandable[2].style.zIndex = "90"
+    resultsExpandable[2].classList.add('resultsExpand')
+})
+
 
 
