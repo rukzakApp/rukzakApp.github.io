@@ -17,14 +17,15 @@
   text-transform: uppercase;
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-transform: translateX(-236px);
-          transform: translateX(-236px);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   -webkit-box-shadow: 2px 2px 12px #4f4f4f;
           box-shadow: 2px 2px 12px #4f4f4f;
 }
 
 .navBar .navBarArrow {
   cursor: pointer;
+  opacity: 0;
 }
 
 .navBar .navBarArrow .bruh {
@@ -63,6 +64,7 @@
   text-transform: uppercase;
   -webkit-transition: .6s;
   transition: .6s;
+  opacity: 1;
 }
 
 .navBar .sideNavContainer li:not(:nth-last-child(-n+2)) {
@@ -119,6 +121,7 @@
 }
 
 .navBar p {
+  opacity: 0;
   -webkit-transition: .3s;
   transition: .3s;
   -webkit-transform: rotate(-90deg) translateY(118px) translateX(-220px);
@@ -138,13 +141,20 @@
           align-items: center;
 }
 
-.navBar__expand {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.navBarP__expand {
-  opacity: 0;
+@media (max-width: 1900px) {
+  .navBar__expand {
+    -webkit-transform: translateX(-236px);
+            transform: translateX(-236px);
+  }
+  .navBar .sideNavContainer .navBarMenu {
+    opacity: 0;
+  }
+  .navBar .sideNavContainer .navBarP__expand {
+    opacity: 1;
+  }
+  .navBar .sideNavContainer .navBarP__expand .navBarArrow {
+    opacity: 1;
+  }
 }
 
 .mobNavFixed {
@@ -551,7 +561,6 @@
 .header .tel a:hover {
   color: #001E20;
   border-bottom: 2px dashed #001E20;
-  font-weight: 600;
 }
 
 .header .lkBtn {
@@ -2063,6 +2072,7 @@
 }
 
 .price .container .cardsList .chooseOptionBtn {
+  cursor: pointer;
   justify-self: flex-end;
   display: block;
   text-align: center;
@@ -2211,6 +2221,142 @@
   }
   .price .container .cardsList .chooseOptionBtn {
     font-size: 12px;
+  }
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  color: #fff;
+  z-index: -5;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.modal .subtitle {
+  color: #FF513F;
+  margin-bottom: 25px;
+}
+
+.modal .text {
+  margin-bottom: 20px;
+}
+
+.modal .second {
+  margin-top: 50px;
+}
+
+.modal__window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  max-width: 550px;
+  background: url("../assets/modalBg.svg") no-repeat center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 60px 100px 100px;
+}
+
+.modal .modalCross {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal a {
+  width: 350px;
+  height: 60px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.modal a:hover:after {
+  height: 100%;
+}
+
+.modal a img {
+  z-index: 1;
+}
+
+.modal a:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.modal a:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 6px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc856;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.modal .red:after {
+  background-color: #FF513F;
+}
+
+.modal .noMarg {
+  margin-bottom: 0;
+}
+
+.modalExp {
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .modal__window {
+    width: 90%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .modal img {
+    width: 120px;
+  }
+  .modal a {
+    width: 100%;
+  }
+  .modal .red img {
+    width: 50px;
+  }
+  .modal .qiwi img {
+    width: 80px;
   }
 }
 
@@ -3198,9 +3344,16 @@
   margin-bottom: 10px;
 }
 
-.warranty .profilesBlock .profilesList li p {
+.warranty .profilesBlock .profilesList li a {
   border-bottom: 1px dashed #001E20;
   display: inline;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.warranty .profilesBlock .profilesList li a:hover {
+  color: #007550;
+  border-bottom: 1px dashed #007550;
 }
 
 .warranty .shield {

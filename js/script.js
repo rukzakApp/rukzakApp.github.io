@@ -168,6 +168,13 @@ const warrantyCross = document.querySelector('.warrantyCross');
 const warrantyExpandable = document.querySelector('.warrantyExpandable');
 const opener = document.querySelector('.opener');
 
+warrantyExpandable.addEventListener('click', (e) => {
+    if(e.target.classList.contains('warrantyExpandable')) {
+        warrantyExpandable.classList.remove('warrantyExp')
+        setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+    }
+})
+
 warrantyCross.addEventListener('click', () => {
     warrantyExpandable.classList.remove('warrantyExp')
     setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
@@ -181,6 +188,13 @@ opener.addEventListener('click', () => {
 const resultsCross = document.querySelectorAll('.resultsCross');
 const resultsExpandable = document.querySelectorAll('.resultsExp');
 const resultsOpener = document.querySelectorAll('.exp');
+
+resultsExpandable.forEach(e => e.addEventListener('click', (e) => {
+    if(e.target.classList.contains('resultsExp')) {
+        resultsExpandable.forEach(e => e.classList.remove('resultsExpand'))
+        setTimeout(() => resultsExpandable.forEach(e => e.style.zIndex = "-90", 500))
+    }
+}))
 
 resultsCross.forEach(e => e.addEventListener('click', () => {
     resultsExpandable.forEach(e => e.classList.remove('resultsExpand'))
@@ -201,6 +215,26 @@ resultsOpener[2].addEventListener('click', () => {
     resultsExpandable[2].style.zIndex = "90"
     resultsExpandable[2].classList.add('resultsExpand')
 })
+
+const courseModalPayment = document.querySelectorAll('.modal');
+const modalCross = document.querySelectorAll('.modalCross');
+
+courseModalPayment.forEach(e => e.addEventListener('click', (e) => {
+    if(e.target.classList.contains('modal')) {
+        courseModalPayment.forEach(e => e.classList.remove('modalExp'))
+        setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 500))
+    }
+}))
+
+modalCross.forEach(e => e.addEventListener('click', () => {
+    courseModalPayment.forEach(e => e.classList.remove('modalExp'))
+    setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 500))
+}))
+
+const modalExpand = (num) => {
+    courseModalPayment[num].style.zIndex = '90'
+    courseModalPayment[num].classList.add('modalExp')
+}
 
 
 

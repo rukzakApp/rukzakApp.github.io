@@ -9,11 +9,11 @@
     <title>KCF</title>
 </head>
 <body>
-    <div class="navBar">
+    <div class="navBar navBar__expand">
         <div class="sideNavContainer">
-            <p>Навигация&nbspпо&nbspсайту</p>
+            <p class="navBarP__expand">Навигация&nbspпо&nbspсайту</p>
 
-            <ul class="navBarMenu navBarP__expand">
+            <ul class="navBarMenu">
                 <li class="navBarMenu__item">
                     <a href="#welcomePage" class="hashtag-nav transBtn active">#Статьучастником</a>
                 </li>
@@ -1317,35 +1317,35 @@
 
                 <ul class="profilesList">
                     <li>
-                        <p>Создание сайтов, лендингов и&nbspквизов</p>
+                        <a href="#">Создание сайтов, лендингов и&nbspквизов</a>
                     </li>
 
                     <li>
-                        <p>Настройка контекстной рекламы Яндекс и&nbspGoogle</p>
+                        <a href="#">Настройка контекстной рекламы Яндекс и&nbspGoogle</a>
                     </li>
 
                     <li>
-                        <p>Настройка таргетированной рекламы Вконтакте</p>
+                        <a href="#">Настройка таргетированной рекламы Вконтакте</a>
                     </li>
 
                     <li>
-                        <p>Настройка таргетированной рекламы Facebook и&nbspInstagram</p>
+                        <a href="#">Настройка таргетированной рекламы Facebook и&nbspInstagram</a>
                     </li>
 
                     <li>
-                        <p>Ведение Instagram</p>
+                        <a href="#">Ведение Instagram</a>
                     </li>
 
                     <li>
-                        <p>Запуск инфопродуктов</p>
+                        <a href="#">Запуск инфопродуктов</a>
                     </li>
 
                     <li>
-                        <p>Создание геймифицированных Автоворонок</p>
+                        <a href="#">Создание геймифицированных Автоворонок</a>
                     </li>
 
                     <li>
-                        <p>Партнерский маркетинг</p>
+                        <a href="#">Партнерский маркетинг</a>
                     </li>
                 </ul>
 
@@ -1659,63 +1659,283 @@
         </div>
     </div>
 
-    <!--<form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" method="post" style="display:none;" id="tinkoff-2">
+    <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" method="post" style="display:none;" id="tinkoff-1">
         <input name="shopId" value="634921de-6003-478f-a123-197cf1fa6dd0" type="hidden">
         <input name="showcaseId" value="678c8320-7fc4-4538-91fe-9c21fa3d6aff" type="hidden">
         <input name="promoCode" value="default" type="hidden">
-        <input name="sum" value="59400.00" type="hidden">
+        <input name="sum" value="5000.00" type="hidden">
+        <input name="itemName_0" value="Клуб Сытых Фрилансеров, подписка на 1 месяц" type="hidden">
+        <input name="itemQuantity_0" value="1" type="hidden">
+        <input name="itemPrice_0" value="5000.00" type="hidden">
+        <input type="submit" value="Купить в кредит, взнос от 0р." class="btn btn-block btn--yellow payment__btn">
+    </form>
+
+    <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" method="post" style="display:none;" id="tinkoff-2">
+        <input name="shopId" value="634921de-6003-478f-a123-197cf1fa6dd0" type="hidden">
+        <input name="showcaseId" value="678c8320-7fc4-4538-91fe-9c21fa3d6aff" type="hidden">
+        <input name="promoCode" value="default" type="hidden">
+        <input name="sum" value="15000.00" type="hidden">
+        <input name="itemName_0" value="Клуб Сытых Фрилансеров, подписка на 3 месяца" type="hidden">
+        <input name="itemQuantity_0" value="1" type="hidden">
+        <input name="itemPrice_0" value="15000.00" type="hidden">
+        <input type="submit" value="Купить в кредит, взнос от 0р." class="btn btn-block btn--yellow payment__btn">
+    </form>
+
+    <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" method="post" style="display:none;" id="tinkoff-3">
+        <input name="shopId" value="634921de-6003-478f-a123-197cf1fa6dd0" type="hidden">
+        <input name="showcaseId" value="678c8320-7fc4-4538-91fe-9c21fa3d6aff" type="hidden">
+        <input name="promoCode" value="default" type="hidden">
+        <input name="sum" value="30000.00" type="hidden">
         <input name="itemName_0" value="Клуб Сытых Фрилансеров, подписка на 6 месяцев" type="hidden">
         <input name="itemQuantity_0" value="1" type="hidden">
-        <input name="itemPrice_0" value="59400.00" type="hidden">
+        <input name="itemPrice_0" value="30000.00" type="hidden">
         <input type="submit" value="Купить в кредит, взнос от 0р." class="btn btn-block btn--yellow payment__btn">
-        </form>
+    </form>
 
-    <div id="course-modal-payment-2" class="modal fade modal-course course-modal-payment show" tabindex="-1" role="dialog" aria-labelledby="TitleCourse1" style="padding-right: 17px; display: block;" aria-modal="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-md bg-black" role="document">
-            <div class="modal-content modal-content_pay">
-                <div class="modal-header">
-                    <p class="lead">Способ оплаты</p>
-                    <button type="button" class="close close-white" data-dismiss="modal" aria-label="Close">
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="modal-text">
-                                    Оплатить сразу
-                                </div>
-                                <a href="/office/pay/subscription/6?" class="btn btn--white btn--white-and-red">
-                                    <img class="img-fluid pay-card-images" src="/assets-v2/site/img/icons/pay-visa.svg" alt="Картой Visa">
-                                    <img class="img-fluid pay-card-images" src="/assets-v2/site/img/icons/pay-mastercard.svg" alt="Картой Mastercard">
-                                    <img class="img-fluid pay-card-images" src="/assets-v2/site/img/icons/pay-maestro.svg" alt="Картой Maestro">
-                                    <img class="img-fluid pay-card-images" src="/assets-v2/site/img/icons/pay-mir.svg" alt="Картой МИР">
-                                </a>
-                                <a href="/office/pay/subscription/6?type=QW&amp;" class="btn btn--white">
-                                    <img class="img-fluid" src="/assets-v2/site/img/icons/pay-qiwi.svg" alt="Qiwi">
-                                </a>
-                                <a href="/office/pay/subscription/6?type=YM&amp;" class="btn btn--white py-3">
-                                    <img class="img-fluid" src="/assets-v2/site/img/icons/pay-yd.svg" alt="Яндекс.Деньги">
-                                </a>
-                                <a href="/office/pay/subscription/6?type=WM&amp;" class="btn btn--white py-3">
-                                    <img class="img-fluid" src="/assets-v2/site/img/icons/pay-webmoney.png?1" alt="Webmoney">
-                                </a>
-                                <div class="modal-text">
-                                    Кредит и рассрочка
-                                </div>
-                                <a href="#" class="btn btn--white" onclick="$('#tinkoff-2').submit(); return false;">
-                                    <img class="img-fluid" src="/assets-v2/site/img/icons/pay-tink.svg" alt="Тинькофф Банк">
-                                </a>
-                                <a href="/office/pay/subscription/6?type=CR&amp;" class="btn btn--white">
-                                    <img class="img-fluid" src="/assets-v2/site/img/icons/pay-yk.svg" alt="Яндекс.Касса">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" method="post" style="display:none;" id="tinkoff-4">
+        <input name="shopId" value="634921de-6003-478f-a123-197cf1fa6dd0" type="hidden">
+        <input name="showcaseId" value="678c8320-7fc4-4538-91fe-9c21fa3d6aff" type="hidden">
+        <input name="promoCode" value="default" type="hidden">
+        <input name="sum" value="60000.00" type="hidden">
+        <input name="itemName_0" value="Клуб Сытых Фрилансеров, подписка на 12 месяцев" type="hidden">
+        <input name="itemQuantity_0" value="1" type="hidden">
+        <input name="itemPrice_0" value="60000.00" type="hidden">
+        <input type="submit" value="Купить в кредит, взнос от 0р." class="btn btn-block btn--yellow payment__btn">
+    </form>
+
+    <div id="course-modal-payment" class="modal">
+        <div class="modal__window">
+            <svg fill="white" class="modalCross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    svg {
+                        transition: .3s;
+                    }
+                    svg:hover {
+                        fill: #FF513F;
+                    }
+                </style>
+
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)"/>
+                <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)"/>
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)"/>
+                <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)"/>
+            </svg>
+
+            <p class="subtitle">Способ оплаты</p>
+            
+            <div class="text">
+                Оплатить сразу
             </div>
+
+            <a href="/office/pay/subscription/1?" class="red">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa1.svg" alt="Картой Visa">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa2.svg" alt="Картой Mastercard">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa3.svg" alt="Картой Maestro">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa4.svg" alt="Картой МИР">
+            </a>
+
+            <a href="/office/pay/subscription/1?type=QW&amp;" class="qiwi">
+                <img class="img-fluid" src="/assets/payQiwi.svg" alt="Qiwi">
+            </a>
+
+            <a href="/office/pay/subscription/1?type=YM&amp;" class="">
+                <img class="img-fluid" src="/assets/payYandex.svg" alt="Яндекс.Деньги">
+            </a>
+
+            <a href="/office/pay/subscription/1?type=WM&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payWebMoney.png" alt="Webmoney">
+            </a>
+
+            <div class="text second">
+                Кредит и рассрочка
+            </div>
+
+            <a href="#" class="" onclick="$('#tinkoff-1').submit(); return false;">
+                <img class="img-fluid" src="/assets/payTinkoff.svg" alt="Тинькофф Банк">
+            </a>
+
+            <a href="/office/pay/subscription/1?type=CR&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payKassa.svg" alt="Яндекс.Касса">
+            </a>
+
         </div>
-    </div>-->
+    </div>
+
+    <div id="course-modal-payment" class="modal">
+        <div class="modal__window">
+            <svg fill="white" class="modalCross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    svg {
+                        transition: .3s;
+                    }
+                    svg:hover {
+                        fill: #FF513F;
+                    }
+                </style>
+
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)"/>
+                <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)"/>
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)"/>
+                <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)"/>
+            </svg>
+
+            <p class="subtitle">Способ оплаты</p>
+            
+            <div class="text">
+                Оплатить сразу
+            </div>
+
+            <a href="/office/pay/subscription/3?" class="red">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa1.svg" alt="Картой Visa">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa2.svg" alt="Картой Mastercard">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa3.svg" alt="Картой Maestro">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa4.svg" alt="Картой МИР">
+            </a>
+
+            <a href="/office/pay/subscription/3?type=QW&amp;" class="qiwi">
+                <img class="img-fluid" src="/assets/payQiwi.svg" alt="Qiwi">
+            </a>
+
+            <a href="/office/pay/subscription/3?type=YM&amp;" class="">
+                <img class="img-fluid" src="/assets/payYandex.svg" alt="Яндекс.Деньги">
+            </a>
+
+            <a href="/office/pay/subscription/3?type=WM&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payWebMoney.png" alt="Webmoney">
+            </a>
+
+            <div class="text second">
+                Кредит и рассрочка
+            </div>
+
+            <a href="#" class="" onclick="$('#tinkoff-2').submit(); return false;">
+                <img class="img-fluid" src="/assets/payTinkoff.svg" alt="Тинькофф Банк">
+            </a>
+
+            <a href="/office/pay/subscription/3?type=CR&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payKassa.svg" alt="Яндекс.Касса">
+            </a>
+
+        </div>
+    </div>
+
+    <div id="course-modal-payment" class="modal">
+        <div class="modal__window">
+            <svg fill="white" class="modalCross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    svg {
+                        transition: .3s;
+                    }
+                    svg:hover {
+                        fill: #FF513F;
+                    }
+                </style>
+
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)"/>
+                <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)"/>
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)"/>
+                <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)"/>
+            </svg>
+
+            <p class="subtitle">Способ оплаты</p>
+            
+            <div class="text">
+                Оплатить сразу
+            </div>
+
+            <a href="/office/pay/subscription/6?" class="red">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa1.svg" alt="Картой Visa">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa2.svg" alt="Картой Mastercard">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa3.svg" alt="Картой Maestro">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa4.svg" alt="Картой МИР">
+            </a>
+
+            <a href="/office/pay/subscription/6?type=QW&amp;" class="qiwi">
+                <img class="img-fluid" src="/assets/payQiwi.svg" alt="Qiwi">
+            </a>
+
+            <a href="/office/pay/subscription/6?type=YM&amp;" class="">
+                <img class="img-fluid" src="/assets/payYandex.svg" alt="Яндекс.Деньги">
+            </a>
+
+            <a href="/office/pay/subscription/6?type=WM&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payWebMoney.png" alt="Webmoney">
+            </a>
+
+            <div class="text second">
+                Кредит и рассрочка
+            </div>
+
+            <a href="#" class="" onclick="$('#tinkoff-3').submit(); return false;">
+                <img class="img-fluid" src="/assets/payTinkoff.svg" alt="Тинькофф Банк">
+            </a>
+
+            <a href="/office/pay/subscription/6?type=CR&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payKassa.svg" alt="Яндекс.Касса">
+            </a>
+
+        </div>
+    </div>
+
+    <div id="course-modal-payment" class="modal">
+        <div class="modal__window">
+            <svg fill="white" class="modalCross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    svg {
+                        transition: .3s;
+                    }
+                    svg:hover {
+                        fill: #FF513F;
+                    }
+                </style>
+
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)"/>
+                <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)"/>
+                <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)"/>
+                <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)"/>
+            </svg>
+
+            <p class="subtitle">Способ оплаты</p>
+            
+            <div class="text">
+                Оплатить сразу
+            </div>
+
+            <a href="/office/pay/subscription/12?" class="red">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa1.svg" alt="Картой Visa">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa2.svg" alt="Картой Mastercard">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa3.svg" alt="Картой Maestro">
+                <img class="img-fluid pay-card-images" src="/assets/payVisa4.svg" alt="Картой МИР">
+            </a>
+
+            <a href="/office/pay/subscription/12?type=QW&amp;" class="qiwi">
+                <img class="img-fluid" src="/assets/payQiwi.svg" alt="Qiwi">
+            </a>
+
+            <a href="/office/pay/subscription/12?type=YM&amp;" class="">
+                <img class="img-fluid" src="/assets/payYandex.svg" alt="Яндекс.Деньги">
+            </a>
+
+            <a href="/office/pay/subscription/12?type=WM&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payWebMoney.png" alt="Webmoney">
+            </a>
+
+            <div class="text second">
+                Кредит и рассрочка
+            </div>
+
+            <a href="#" class="" onclick="$('#tinkoff-4').submit(); return false;">
+                <img class="img-fluid" src="/assets/payTinkoff.svg" alt="Тинькофф Банк">
+            </a>
+
+            <a href="/office/pay/subscription/12?type=CR&amp;" class="noMarg">
+                <img class="img-fluid" src="/assets/payKassa.svg" alt="Яндекс.Касса">
+            </a>
+
+        </div>
+    </div>
+
+ 
 
     <section class="price" id="price">
         <div class="container">
@@ -1766,7 +1986,7 @@
                                 5 000 ₽
                             </p>
     
-                            <a href="#" class="chooseOptionBtn">
+                            <a onclick="modalExpand(0)" class="chooseOptionBtn">
                                 Выбрать способ оплаты
                             </a>
                         </li>
@@ -1784,7 +2004,7 @@
                                 +<span class="opener">гарантия</span> возврата средств
                             </p>
     
-                            <a href="#" class="chooseOptionBtn">
+                            <a onclick="modalExpand(1)" class="chooseOptionBtn">
                                 Выбрать способ оплаты
                             </a>
                         </li>
@@ -1804,7 +2024,7 @@
                                 + один месяц в подарок
                             </p>
     
-                            <a href="#" class="chooseOptionBtn">
+                            <a onclick="modalExpand(2)" class="chooseOptionBtn">
                                 Выбрать способ оплаты
                             </a>
                         </li>
@@ -1822,7 +2042,7 @@
                                 + три месяца в подарок
                             </p>
     
-                            <a href="#" class="chooseOptionBtn">
+                            <a onclick="modalExpand(3)" class="chooseOptionBtn">
                                 Выбрать способ оплаты
                             </a>
                         </li>
