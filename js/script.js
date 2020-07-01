@@ -78,6 +78,106 @@ $(document).ready(function(){
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         
     }));
+
+    const newLvl = $("#newLvl").offset().top;
+    const community = $("#community").offset().top;
+    const education = $("#education").offset().top;
+    const allIn = $("#allIn").offset().top;
+    const employment = $("#employment").offset().top;
+    const roadMap = $("#roadMap").offset().top;
+    const warranty = $("#warranty").offset().top;
+    const reviews = $("#reviews").offset().top;
+    const founders = $("#founders").offset().top;
+    const features = $("#features").offset().top;
+    const bonuses = $("#bonuses").offset().top;
+    const price = $("#price").offset().top;
+    const navBarMenuItems = document.querySelectorAll('.navBarMenu__item a')
+    const navListMenuItems = document.querySelectorAll('.navListMenu__item a')
+
+    $(document).scroll((e) => {
+        if(pageYOffset < newLvl-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[0].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[0].classList.add('active')
+        } else if (pageYOffset < community-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[1].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[1].classList.add('active')
+        } else if (pageYOffset < education-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[2].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[2].classList.add('active')
+        } else if (pageYOffset < allIn-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[3].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[3].classList.add('active')
+        } else if (pageYOffset < employment-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[4].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[4].classList.add('active')
+        } else if (pageYOffset < roadMap-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[5].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[5].classList.add('active')
+        } else if (pageYOffset < warranty-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[6].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[6].classList.add('active')
+        } else if (pageYOffset < reviews-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[7].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[7].classList.add('active')
+        } else if (pageYOffset < founders-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[8].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[8].classList.add('active')
+        } else if (pageYOffset < features-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[9].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[9].classList.add('active')
+        } else if (pageYOffset < bonuses-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[10].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[10].classList.add('active')
+        } else if (pageYOffset < price-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[11].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[11].classList.add('active')
+        } else {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[12].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[12].classList.add('active')
+        }    
+    })
 });
+
+const warrantyCross = document.querySelector('.warrantyCross');
+const warrantyExpandable = document.querySelector('.warrantyExpandable');
+const opener = document.querySelector('.opener');
+
+warrantyCross.addEventListener('click', () => {
+    warrantyExpandable.classList.remove('warrantyExp')
+    body.style.overflowY = "visible";
+    setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+})
+
+opener.addEventListener('click', () => {
+    warrantyExpandable.style.zIndex = "90"
+    warrantyExpandable.classList.add('warrantyExp')
+    body.style.overflowY = "hidden";
+})
 
 
