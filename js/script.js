@@ -81,12 +81,12 @@ $(document).ready(function(){
         
     }));
     
-    $('.video1').on('click', () => ($('.video1').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239216&hash=75aa4f478f4cdbff&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
-    $('.video2').on('click', () => ($('.video2').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239209&hash=e4c09c3cbbaedaf2&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
-    $('.video3').on('click', () => ($('.video3').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239217&hash=b812289abfac1118" frameborder="0" allowfullscreen></iframe>')))
-    $('.video4').on('click', () => ($('.video4').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239220&hash=97cb376ef72355ce" frameborder="0" allowfullscreen></iframe>')))
-    $('.video5').on('click', () => ($('.video5').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239227&hash=8117f74857676624" frameborder="0" allowfullscreen></iframe>')))
-    $('.video6').on('click', () => ($('.video6').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239224&hash=48cb1d8284039492" frameborder="0" allowfullscreen></iframe>')))
+    $('.preview1').on('click', () => ($('.video1').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239216&hash=75aa4f478f4cdbff&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
+    $('.preview2').on('click', () => ($('.video2').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239209&hash=e4c09c3cbbaedaf2&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
+    $('.preview3').on('click', () => ($('.video3').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239217&hash=b812289abfac1118&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
+    $('.preview4').on('click', () => ($('.video4').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239220&hash=97cb376ef72355ce&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
+    $('.preview5').on('click', () => ($('.video5').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239227&hash=8117f74857676624&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
+    $('.preview6').on('click', () => ($('.video6').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239224&hash=48cb1d8284039492&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
 
     const newLvl = $("#newLvl").offset().top;
     const community = $("#community").offset().top;
