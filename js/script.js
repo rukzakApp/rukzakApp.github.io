@@ -64,6 +64,8 @@ const back = (num) => {
 
 const transBtn = document.querySelectorAll('.transBtn')
 const header = document.querySelector('.header')
+const videoItems = document.querySelector('.videoList')
+const videoItemss = document.querySelectorAll('.videoList li')
 
 $(document).ready(function(){
     transBtn.forEach(e => e.addEventListener("click", function (event) {
@@ -78,6 +80,14 @@ $(document).ready(function(){
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         
     }));
+    console.log($('.videoList li')[1])
+    
+    $('.video1').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239216&hash=75aa4f478f4cdbff" frameborder="0" allowfullscreen></iframe>')
+    $('.video2').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239209&hash=e4c09c3cbbaedaf2" frameborder="0" allowfullscreen></iframe>')
+    $('.video3').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239217&hash=b812289abfac1118" frameborder="0" allowfullscreen></iframe>')
+    $('.video4').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239220&hash=97cb376ef72355ce" frameborder="0" allowfullscreen></iframe>')
+    $('.video5').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239227&hash=8117f74857676624" frameborder="0" allowfullscreen></iframe>')
+    $('.video6').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239224&hash=48cb1d8284039492" frameborder="0" allowfullscreen></iframe>')
 
     const newLvl = $("#newLvl").offset().top;
     const community = $("#community").offset().top;
