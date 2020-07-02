@@ -997,8 +997,8 @@
   width: 100%;
   left: 0;
   bottom: 0;
-  border-bottom: 6px solid #001E20;
-  background-color: #001E20;
+  border-bottom: 6px solid #854212;
+  background-color: #854212;
   -webkit-transition: .4s ease;
   transition: .4s ease;
 }
@@ -2906,6 +2906,10 @@
   margin-top: 57px;
 }
 
+.featuresPage a:hover {
+  color: #fff;
+}
+
 .featuresPage a:hover:before {
   height: 100%;
 }
@@ -3549,6 +3553,48 @@
   margin-top: 100px;
 }
 
+.founders .foundersAvatars .ava {
+  position: relative;
+}
+
+.founders .foundersAvatars .ava .vkLink {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.founders .foundersAvatars .ava .vkLink .vkBorder {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.founders .foundersAvatars .ava .vkLink .vkLogo {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.founders .foundersAvatars .ava .vkLink:hover .vkLogo {
+  fill: white;
+}
+
+.founders .foundersAvatars .ava .vkLink:hover .vkBorder {
+  fill: #2F80ED;
+}
+
+.founders .foundersAvatars .ava .vkLink svg {
+  width: 23px;
+  height: 23px;
+  margin-right: 13px;
+}
+
+.founders .foundersAvatars .ava .vkLink p {
+  font-size: 14px;
+  color: #001E20;
+  text-transform: uppercase;
+}
+
 .founders .foundersAvatars li {
   max-width: 360px;
   line-height: 1.25;
@@ -3647,6 +3693,10 @@
 
 .founders .foundersAvatars li:last-child .fileBtn:after {
   background-color: #ffc856;
+}
+
+.founders .foundersAvatars li:last-child .fileBtn:hover {
+  color: #fff;
 }
 
 .founders .foundersAvatars li:last-child .fileBtn:before {
