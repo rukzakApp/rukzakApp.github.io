@@ -2038,6 +2038,9 @@
   font-weight: 900;
   line-height: 0.75;
   margin-right: 25px;
+  min-width: 30px;
+  display: block;
+  text-align: center;
 }
 
 .price .container .rulesList__item .text {
@@ -2589,7 +2592,7 @@
 }
 
 .education .profsList li:nth-child(3) {
-  background: url("../assets/profsBg3.svg") no-repeat center/cover;
+  background: url("../assets/profsBg3.png") no-repeat center/cover;
 }
 
 .education .profsList li:nth-child(4) {
@@ -2720,9 +2723,6 @@
     background: url("../assets/educationBg.svg") no-repeat calc(100vw - 560px - (100vw - 1140px) / 2) 238px;
   }
   .education .profsList {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin-bottom: 100px;
   }
   .education .profsList li {
@@ -3904,6 +3904,7 @@
 .reviews .reviewsList li {
   padding: 0;
   max-width: calc(50% - 15px);
+  border: 5px solid #FF513F;
 }
 
 .reviews .reviewsList li img {
@@ -3916,6 +3917,26 @@
 
 .reviews .reviewsList li:not(:nth-last-child(-n+2)) {
   margin-bottom: 30px;
+}
+
+.reviews .reviewsList li:nth-child(3) {
+  border-color: #007550;
+}
+
+.reviews .reviewsList li:nth-child(7) {
+  border-color: #007550;
+}
+
+.reviews .reviewsList li:nth-child(2) {
+  border-color: #ffc856;
+}
+
+.reviews .reviewsList li:nth-child(5) {
+  border-color: #ffc856;
+}
+
+.reviews .reviewsList li:nth-child(4n) {
+  border-color: #001E20;
 }
 
 .reviews .checkAllBtn {
@@ -4552,10 +4573,10 @@
     max-width: none;
   }
   .community .hoodie {
-    background-position: -80px top;
+    background-position: 0  top;
     height: 250px;
     width: 420px;
-    background-size: 100% 100%;
+    background-size: 250px 250px;
     position: relative;
     top: 0;
     left: 0;
@@ -4637,11 +4658,11 @@
     left: -20px;
     -webkit-transform: none;
             transform: none;
-    background-position: -110px 0;
+    background-position: -80px 0;
   }
   .community .hoodie .hoodieBtn {
-    left: auto;
-    right: -15px;
+    left: 200px;
+    right: auto;
     -webkit-transform: translateY(50%);
             transform: translateY(50%);
     width: 130px;
@@ -4661,6 +4682,9 @@
 @media (max-width: 359px) {
   .community .payBtn {
     font-size: 14px;
+  }
+  .community .hoodie .hoodieBtn {
+    left: 180px;
   }
 }
 

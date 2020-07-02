@@ -2,11 +2,12 @@ const navBar = document.querySelector('.navBar')
 const navBarText = document.querySelector('.navBar p')
 const navBarMenu = document.querySelector('.navBarMenu')
 
-navBar.addEventListener('click', () => {
-    navBar.classList.toggle('navBar__expand');
-    navBarText.classList.toggle('navBarP__expand');
-    navBarMenu.classList.toggle('navBarP__expand');
-
+navBar.addEventListener('click', (e) => {
+    if(!e.target.classList.contains('transBtn')) {
+        navBar.classList.toggle('navBar__expand');
+        navBarText.classList.toggle('navBarP__expand');
+        navBarMenu.classList.toggle('navBarP__expand');
+    }
 })
 
 const burger = document.querySelector('.burger');
@@ -64,8 +65,7 @@ const back = (num) => {
 
 const transBtn = document.querySelectorAll('.transBtn')
 const header = document.querySelector('.header')
-const videoItems = document.querySelector('.videoList')
-const videoItemss = document.querySelectorAll('.videoList li')
+const navListMenuItems = document.querySelectorAll('.navListMenu__item a')
 
 $(document).ready(function(){
     transBtn.forEach(e => e.addEventListener("click", function (event) {
@@ -78,7 +78,12 @@ $(document).ready(function(){
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 700);
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
-        
+        setTimeout(() => {
+            if(event.target.classList.contains('mobNav')) {
+                event.target.classList.add('active')
+            }
+        }, 400)
+        console.log(event.target)
     }));
     
     $('.preview1').on('click', () => ($('.video1').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239216&hash=75aa4f478f4cdbff&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
