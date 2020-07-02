@@ -1,35 +1,240 @@
-)
-const burger = document.querySelector(.burger);
-const body = document.querySelector(body);
-const crossRight = document.querySelector(.crossRight);
-const crossLeft = document.querySelector(.crossLeft);
-const burgerSide = document.querySelectorAll(.burgerSide);
-const crosses = document.querySelectorAll(.cross);
-const mobMenuList = document.querySelector(.mobMenuList)
-const mobMenuListItems = document.querySelectorAll(.mobMenuList__item)
+const navBar = document.querySelector('.navBar')
+const navBarText = document.querySelector('.navBar p')
+const navBarMenu = document.querySelector('.navBarMenu')
+
+navBar.addEventListener('click', () => {
+    navBar.classList.toggle('navBar__expand');
+    navBarText.classList.toggle('navBarP__expand');
+    navBarMenu.classList.toggle('navBarP__expand');
+
+})
+
+const burger = document.querySelector('.burger');
+const body = document.querySelector('body');
+const crossRight = document.querySelector('.crossRight');
+const crossLeft = document.querySelector('.crossLeft');
+const burgerSide = document.querySelectorAll('.burgerSide');
+const crosses = document.querySelectorAll('.cross');
+const mobMenuList = document.querySelector('.mobMenuList')
+const mobMenuListItems = document.querySelectorAll('.mobMenuList__item')
 let burgerExpanded = false;
-burger.addEventListener(click,() =>{crossleftclasslisttogglerotateleftcrossrightclasslisttogglerotaterightburgersideforeache:> e.classList.toggle(burgerExpand)) burgerExpanded = !burgerExpanded if(!burgerExpanded) { mobMenuListItems.forEach(e => e.style.left = '100vw') body.style.overflowY = visible;settimeout:> mobMenuList.style.zIndex = -1,500)}else{mobmenulistitems0styleleft:0;mobmenuliststylezindex:5;bodystyleoverflowy:hidden})
-crosses.forEach(e => e.addEventListener(click,() =>{mobmenulistitemsforeache:> e.style.left = 100vw) body.style.overflowY = visible;settimeout:> mobMenuList.style.zIndex = -1,500) crossLeft.classList.remove(rotateLeft) crossRight.classList.remove(rotateRight) burgerSide.forEach(e => e.classList.remove(burgerExpand)) burgerExpanded = false}))
-const forward = (num) =>{mobmenulistitemsnumstyleleft:0;mobmenuliststylezindex:10;bodystyleoverflowy:hidden}const back = (num) =>{mobmenulistitemsnumstyleleft:100vw;settimeout:> mobMenuList.style.zIndex = 5,500)}//Page transition
-const transBtn = document.querySelectorAll(.transBtn)
-const header = document.querySelector(.header)
-$(document).ready(function(){transbtnforeache:> e.addEventListener(click,function (event) { event.preventDefault(); body.style.overflowY = "visible"; mobMenuListItems.forEach(e => e.style.left = '100vw') var id = $(this).attr(href),top = $(id).offset().top; $(body,html).animate({scrollTop: top},700); setTimeout(() => mobMenuList.style.zIndex = "-1",500) }));constnewlvl:$(#newLvl).offset().top;constcommunity:$(#community).offset().top;consteducation:$(#education).offset().top;constallin:$(#allIn).offset().top;constemployment:$(#employment).offset().top;constroadmap:$(#roadMap).offset().top;constwarranty:$(#warranty).offset().top;constreviews:$(#reviews).offset().top;constfounders:$(#founders).offset().top;constfeatures:$(#features).offset().top;constbonuses:$(#bonuses).offset().top;constprice:$(#price).offset().top;constnavbarmenuitems:document.querySelectorAll('.navBarMenu__item a') const navListMenuItems = document.querySelectorAll('.navListMenu__item a') $(document).scroll((e) => { if(pageYOffset < newLvl-50) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[0].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[0].classList.add(active) } else if (pageYOffset < community) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[1].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[1].classList.add(active) } else if (pageYOffset < education) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[2].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[2].classList.add(active) } else if (pageYOffset < allIn) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[3].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[3].classList.add(active) } else if (pageYOffset < employment) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[4].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[4].classList.add(active) } else if (pageYOffset < roadMap) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[5].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[5].classList.add(active) } else if (pageYOffset < warranty) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[6].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[6].classList.add(active) } else if (pageYOffset < reviews) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[7].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[7].classList.add(active) } else if (pageYOffset < founders) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[8].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[8].classList.add(active) } else if (pageYOffset < features) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[9].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[9].classList.add(active) } else if (pageYOffset < bonuses) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[10].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[10].classList.add(active) } else if (pageYOffset < price) { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[11].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[11].classList.add(active) } else { navBarMenuItems.forEach(e => e.classList.remove(active)) navBarMenuItems[12].classList.add(active) navListMenuItems.forEach(e => e.classList.remove(active)) navListMenuItems[12].classList.add(active) } })});
-const warrantyCross = document.querySelector(.warrantyCross);
-const warrantyExpandable = document.querySelector(.warrantyExpandable);
-const opener = document.querySelector(.opener);
-warrantyExpandable.addEventListener(click,(e) =>{ifetargetclasslistcontainswarrantyexpandablewarrantyexpandableclasslistremovewarrantyexpsettimeout:> warrantyExpandable.style.zIndex = -90,500)})
-warrantyCross.addEventListener(click,() =>{warrantyexpandableclasslistremovewarrantyexpsettimeout:> warrantyExpandable.style.zIndex = -90,500)})
-opener.addEventListener(click,() =>{warrantyexpandablestylezindex:90 warrantyExpandable.classList.add(warrantyExp)})
-const resultsCross = document.querySelectorAll(.resultsCross);
-const resultsExpandable = document.querySelectorAll(.resultsExp);
-const resultsOpener = document.querySelectorAll(.exp);
-resultsExpandable.forEach(e => e.addEventListener(click,(e) =>{ifetargetclasslistcontainsresultsexpresultsexpandableforeache:> e.classList.remove(resultsExpand)) setTimeout(() => resultsExpandable.forEach(e => e.style.zIndex = "-90",500))}))
-resultsCross.forEach(e => e.addEventListener(click,() =>{resultsexpandableforeache:> e.classList.remove(resultsExpand)) setTimeout(() => resultsExpandable.forEach(e => e.style.zIndex = "-90",500))}))
-resultsOpener[0].addEventListener(click,() =>{resultsexpandable0stylezindex:90 resultsExpandable[0].classList.add(resultsExpand)})
-resultsOpener[1].addEventListener(click,() =>{resultsexpandable1stylezindex:90 resultsExpandable[1].classList.add(resultsExpand)})
-resultsOpener[2].addEventListener(click,() =>{resultsexpandable2stylezindex:90 resultsExpandable[2].classList.add(resultsExpand)})
-const courseModalPayment = document.querySelectorAll(.modal);
-const modalCross = document.querySelectorAll(.modalCross);
-courseModalPayment.forEach(e => e.addEventListener(click,(e) =>{ifetargetclasslistcontainsmodalcoursemodalpaymentforeache:> e.classList.remove(modalExp)) setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90",500))}))
-modalCross.forEach(e => e.addEventListener(click,() =>{coursemodalpaymentforeache:> e.classList.remove(modalExp)) setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90",500))}))
-const modalExpand = (num) =>{coursemodalpaymentnumstylezindex:90 courseModalPayment[num].classList.add(modalExp)}
+
+burger.addEventListener('click', () => {
+    crossLeft.classList.toggle('rotateLeft')
+    crossRight.classList.toggle('rotateRight')
+    burgerSide.forEach(e => e.classList.toggle('burgerExpand'))
+
+    burgerExpanded = !burgerExpanded
+
+    if(!burgerExpanded) {
+        mobMenuListItems.forEach(e => e.style.left = '100vw')
+        body.style.overflowY = "visible";
+        setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
+        
+    } else {
+        mobMenuListItems[0].style.left = '0';
+        mobMenuList.style.zIndex = "5";
+        body.style.overflowY = "hidden";
+    }
+})
+
+crosses.forEach(e => e.addEventListener('click', () => {
+    mobMenuListItems.forEach(e => e.style.left = '100vw')
+    body.style.overflowY = "visible";
+    setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
+    crossLeft.classList.remove('rotateLeft')
+    crossRight.classList.remove('rotateRight')
+    burgerSide.forEach(e => e.classList.remove('burgerExpand'))
+    burgerExpanded = false;
+}))
+
+const forward = (num) => {
+    mobMenuListItems[num].style.left = "0";
+    mobMenuList.style.zIndex = "10";
+    body.style.overflowY = "hidden";
+}
+
+const back = (num) => {
+    mobMenuListItems[num].style.left = "100vw";
+    setTimeout(() => mobMenuList.style.zIndex = "5", 500)
+}
+
+
+//Page transition
+
+const transBtn = document.querySelectorAll('.transBtn')
+const header = document.querySelector('.header')
+
+$(document).ready(function(){
+    transBtn.forEach(e => e.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        body.style.overflowY = "visible";
+        mobMenuListItems.forEach(e => e.style.left = '100vw')
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 700);
+        setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
+        
+    }));
+
+    const newLvl = $("#newLvl").offset().top;
+    const community = $("#community").offset().top;
+    const education = $("#education").offset().top;
+    const allIn = $("#allIn").offset().top;
+    const employment = $("#employment").offset().top;
+    const roadMap = $("#roadMap").offset().top;
+    const warranty = $("#warranty").offset().top;
+    const reviews = $("#reviews").offset().top;
+    const founders = $("#founders").offset().top;
+    const features = $("#features").offset().top;
+    const bonuses = $("#bonuses").offset().top;
+    const price = $("#price").offset().top;
+    const navBarMenuItems = document.querySelectorAll('.navBarMenu__item a')
+    const navListMenuItems = document.querySelectorAll('.navListMenu__item a')
+
+    $(document).scroll((e) => {
+        if(pageYOffset < newLvl-50) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[0].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[0].classList.add('active')
+        } else if (pageYOffset < community) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[1].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[1].classList.add('active')
+        } else if (pageYOffset < education) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[2].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[2].classList.add('active')
+        } else if (pageYOffset < allIn) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[3].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[3].classList.add('active')
+        } else if (pageYOffset < employment) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[4].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[4].classList.add('active')
+        } else if (pageYOffset < roadMap) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[5].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[5].classList.add('active')
+        } else if (pageYOffset < warranty) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[6].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[6].classList.add('active')
+        } else if (pageYOffset < reviews) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[7].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[7].classList.add('active')
+        } else if (pageYOffset < founders) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[8].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[8].classList.add('active')
+        } else if (pageYOffset < features) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[9].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[9].classList.add('active')
+        } else if (pageYOffset < bonuses) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[10].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[10].classList.add('active')
+        } else if (pageYOffset < price) {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[11].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[11].classList.add('active')
+        } else {
+            navBarMenuItems.forEach(e => e.classList.remove('active'))
+            navBarMenuItems[12].classList.add('active')
+            navListMenuItems.forEach(e => e.classList.remove('active'))
+            navListMenuItems[12].classList.add('active')
+        }    
+    })
+});
+
+const warrantyCross = document.querySelector('.warrantyCross');
+const warrantyExpandable = document.querySelector('.warrantyExpandable');
+const opener = document.querySelector('.opener');
+
+warrantyExpandable.addEventListener('click', (e) => {
+    if(e.target.classList.contains('warrantyExpandable')) {
+        warrantyExpandable.classList.remove('warrantyExp')
+        setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+    }
+})
+
+warrantyCross.addEventListener('click', () => {
+    warrantyExpandable.classList.remove('warrantyExp')
+    setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+})
+
+opener.addEventListener('click', () => {
+    warrantyExpandable.style.zIndex = "90"
+    warrantyExpandable.classList.add('warrantyExp')
+})
+
+const resultsCross = document.querySelectorAll('.resultsCross');
+const resultsExpandable = document.querySelectorAll('.resultsExp');
+const resultsOpener = document.querySelectorAll('.exp');
+
+resultsExpandable.forEach(e => e.addEventListener('click', (e) => {
+    if(e.target.classList.contains('resultsExp')) {
+        resultsExpandable.forEach(e => e.classList.remove('resultsExpand'))
+        setTimeout(() => resultsExpandable.forEach(e => e.style.zIndex = "-90", 500))
+    }
+}))
+
+resultsCross.forEach(e => e.addEventListener('click', () => {
+    resultsExpandable.forEach(e => e.classList.remove('resultsExpand'))
+    setTimeout(() => resultsExpandable.forEach(e => e.style.zIndex = "-90", 500))
+}))
+
+resultsOpener[0].addEventListener('click', () => {
+    resultsExpandable[0].style.zIndex = "90"
+    resultsExpandable[0].classList.add('resultsExpand')
+})
+
+resultsOpener[1].addEventListener('click', () => {
+    resultsExpandable[1].style.zIndex = "90"
+    resultsExpandable[1].classList.add('resultsExpand')
+})
+
+resultsOpener[2].addEventListener('click', () => {
+    resultsExpandable[2].style.zIndex = "90"
+    resultsExpandable[2].classList.add('resultsExpand')
+})
+
+const courseModalPayment = document.querySelectorAll('.modal');
+const modalCross = document.querySelectorAll('.modalCross');
+
+courseModalPayment.forEach(e => e.addEventListener('click', (e) => {
+    if(e.target.classList.contains('modal')) {
+        courseModalPayment.forEach(e => e.classList.remove('modalExp'))
+        setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 500))
+    }
+}))
+
+modalCross.forEach(e => e.addEventListener('click', () => {
+    courseModalPayment.forEach(e => e.classList.remove('modalExp'))
+    setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 500))
+}))
+
+const modalExpand = (num) => {
+    courseModalPayment[num].style.zIndex = '90'
+    courseModalPayment[num].classList.add('modalExp')
+}
+
+
+

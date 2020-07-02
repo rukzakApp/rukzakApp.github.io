@@ -1,6 +1,1 @@
-<svg width="555" height="340" viewBox="0 0 555 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="555" height="340" fill="#007550"/>
-<g style="mix-blend-mode:multiply" opacity="0.15">
-<path d="M0 325.5V340H258.5H555V290L258.5 340L0 325.5Z" fill="#007550"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="555" height="340" fill="#007550" xmlns:v="https://vecta.io/nano"><path d="M0 0h555v340H0z"/><path d="M0 325.5V340h555v-50l-296.5 50L0 325.5z" style="mix-blend-mode:multiply" opacity=".15"/></svg>

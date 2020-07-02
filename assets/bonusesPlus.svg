@@ -1,8 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.33301 0L10.6663 1.23077V16L9.33301 14.7692V0Z" fill="#001E20"/>
-<path d="M5.33301 14.667L6.47586 16.0003L10.6663 16.0003L9.52348 14.667L5.33301 14.667Z" fill="#001E20"/>
-<rect width="4" height="14.6667" transform="matrix(-4.37114e-08 1 1 4.37114e-08 0 5.33301)" fill="#FFC856"/>
-<path d="M0 9.33301L1.23077 10.665L16 10.665L14.7692 9.33301L0 9.33301Z" fill="#001E20"/>
-<path d="M14.667 5.33301L16.0002 6.47559L16.0002 10.665L14.667 9.52246L14.667 5.33301Z" fill="#001E20"/>
-<rect x="5.33301" width="4" height="14.6667" fill="#FFC856"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" xmlns:v="https://vecta.io/nano"><g fill="#001e20"><path d="M9.333 0l1.333 1.23V16l-1.333-1.23V0z"/><path d="M5.333 14.667L6.476 16h4.2l-1.143-1.333h-4.2z"/></g><path fill="#ffc856" d="M0 5.333v4h14.667v-4z"/><g fill="#001e20"><path d="M0 9.333l1.23 1.332H16l-1.23-1.332H0z"/><path d="M14.667 5.333L16 6.476v4.19l-1.333-1.143v-4.19z"/></g><path fill="#ffc856" d="M5.333 0h4v14.667h-4z"/></svg>

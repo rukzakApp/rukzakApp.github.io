@@ -1,9 +1,1 @@
-<svg width="380" height="201" viewBox="0 0 380 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="380" height="201" fill="#001E20"/>
-<g style="mix-blend-mode:screen" opacity="0.5">
-<path d="M380 46L357.5 201H380V46Z" fill="#001E20"/>
-</g>
-<g style="mix-blend-mode:screen" opacity="0.5">
-<path d="M144 1.03159e-05L380 45L380 0L144 1.03159e-05Z" fill="#001E20"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="201" fill="#001e20" xmlns:v="https://vecta.io/nano"><path d="M0 0h380v201H0z"/><path d="M380 46l-22.5 155H380V46zM144 0l236 45V0H144z" style="mix-blend-mode:screen" opacity=".5"/></svg>
