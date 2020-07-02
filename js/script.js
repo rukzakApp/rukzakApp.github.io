@@ -81,7 +81,7 @@ $(document).ready(function(){
         
     }));
     
-    $('.video1').on('click', () => ($('.video1').append('<iframe src="https://vk.com/video_ext.php?oid=-1672730&id=456240757&hash=455f28ff4094d3c5&autoplay=1" width="640" height="360" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
+    $('.video1').on('click', () => ($('.video1').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239216&hash=75aa4f478f4cdbff&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
     $('.video2').on('click', () => ($('.video2').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239209&hash=e4c09c3cbbaedaf2&autoplay=1" frameborder="0" allowfullscreen autoplay="autoplay"></iframe>')))
     $('.video3').on('click', () => ($('.video3').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239217&hash=b812289abfac1118" frameborder="0" allowfullscreen></iframe>')))
     $('.video4').on('click', () => ($('.video4').append('<iframe src="https://vk.com/video_ext.php?oid=47903010&id=456239220&hash=97cb376ef72355ce" frameborder="0" allowfullscreen></iframe>')))
