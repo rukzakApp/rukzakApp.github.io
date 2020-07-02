@@ -80,9 +80,10 @@ $(document).ready(function(){
         setTimeout(() => mobMenuList.style.zIndex = "-1", 500)
         setTimeout(() => {
             if(event.target.classList.contains('mobNav')) {
+                navListMenuItems.forEach(e => e.classList.remove('active'))
                 event.target.classList.add('active')
             }
-        }, 400)
+        }, 1000)
         console.log(event.target)
     }));
     
