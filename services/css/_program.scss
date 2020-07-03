@@ -71,6 +71,17 @@
                 font-weight: 600;
                 text-transform: uppercase;
             }
+
+            img {
+                position: absolute;
+                top: 50%;
+                right: 25px;
+                transform: translateY(-50%);
+            }
+
+            .closed {
+                transform: translateY(-50%) rotate(180deg);
+            }
         }
     }
 }

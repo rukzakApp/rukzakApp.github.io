@@ -65,6 +65,7 @@ $(document).ready(function(){
         crossRight.classList.remove('rotateRight')
         burgerSide.forEach(e => e.classList.remove('burgerExpand'))
         
+        
         if(!event.target.classList.contains('upBtn')) {
             burgerExpanded = !burgerExpanded
         }
@@ -81,73 +82,35 @@ $(document).ready(function(){
         }, 1000)
     }));
 
-    const reviews = $("#reviews").offset().top;
-    const program = $("#program").offset().top;
-    const price = $("#price").offset().top;
+    const results = $("#results").offset().top;
+    const form = $("#form").offset().top;
     const navListMenuItems = document.querySelectorAll('.navListMenu__item a')
 
     $(document).scroll((e) => {
-        if(pageYOffset < reviews) {
+        if(pageYOffset < results) {
             navListMenuItems.forEach(e => e.classList.remove('active'))
             navListMenuItems[0].classList.add('active')
-        } else if (pageYOffset < program) {
+        } else if (pageYOffset < form) {
             navListMenuItems.forEach(e => e.classList.remove('active'))
             navListMenuItems[1].classList.add('active')
-        } else if (pageYOffset < price) {
-            navListMenuItems.forEach(e => e.classList.remove('active'))
-            navListMenuItems[2].classList.add('active')
         } else {
             navListMenuItems.forEach(e => e.classList.remove('active'))
-            navListMenuItems[3].classList.add('active')
+            navListMenuItems[2].classList.add('active')
         }    
     })
 });
 
-const warrantyCross = document.querySelector('.warrantyCross');
-const warrantyExpandable = document.querySelector('.warrantyExpandable');
-const opener = document.querySelector('.opener');
+const secondInput = document.querySelector('.second')
+const thirdInput = document.querySelector('.third')
+const submitBtn = document.querySelector('.submitBtn')
 
-warrantyExpandable.addEventListener('click', (e) => {
-    if(e.target.classList.contains('warrantyExpandable')) {
-        warrantyExpandable.classList.remove('warrantyExp')
-        setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+submitBtn.addEventListener('click', () => {
+    if(thirdInput.value == "") {
+        secondInput.setAttribute("required", "true")
     }
 })
-
-warrantyCross.addEventListener('click', () => {
-    warrantyExpandable.classList.remove('warrantyExp')
-    setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
-})
-
-opener.addEventListener('click', () => {
-    warrantyExpandable.style.zIndex = "90"
-    setTimeout(() => warrantyExpandable.classList.add('warrantyExp'), 100)
-})
-
-const courseModalPayment = document.querySelectorAll('.modal');
-const modalCross = document.querySelectorAll('.modalCross');
-
-courseModalPayment.forEach(e => e.addEventListener('click', (e) => {
-    if(e.target.classList.contains('modal')) {
-        courseModalPayment.forEach(e => e.classList.remove('modalExp'))
-        setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 600))
-    }
-}))
-
-modalCross.forEach(e => e.addEventListener('click', () => {
-    courseModalPayment.forEach(e => e.classList.remove('modalExp'))
-    setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 600))
-}))
-
-const modalExpand = (num) => {
-    courseModalPayment[num].style.zIndex = '90'
-    setTimeout(() => courseModalPayment[num].classList.add('modalExp'), 100)
-}
-
 
 const carouselItem = document.querySelectorAll('.carousel-item')
 
 carouselItem.forEach(e => e.style.height = `${carouselItem[0].clientWidth / 1.78}px`)
-
-
 

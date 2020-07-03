@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KCF</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="row d-flex justify-content-sm-between">
+                <div class="d-flex align-items-center">
+                    <a href="/"><img class="header__logo" src="./assets/logo.svg" alt="Логотип"></a>
+                </div>
+
+                <div class="d-flex ml-auto align-items-center">
+                    <div class="tel">
+                        <a href="tel:+78001234567">+7 800 123-45-67</a>
+                    </div>
+                    <a href="#" class="lkBtn text">Личный кабинет</a>
+                    <svg class="burger" width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="burgerSide" width="32" height="6" fill="#828282"/>
+                        <rect class="crossRight" y="11" width="32" height="6" fill="#828282"/>
+                        <rect class="crossLeft" y="11" width="32" height="6" fill="#828282"/>
+                        <rect class="burgerSide" y="22" width="32" height="6" fill="#828282"/>
+                    </svg>     
+                </div>
+            </div>
+        </div>
+
+        <ul class="container mobMenuList">
+            <li class="mobMenuList__item mainMenu">
+                <ul class="pagesList">
+                    <li class="pagesList__item">
+                        <a href="#">Что такое КСФ</a>
+                    </li>
+                    <li class="pagesList__item">
+                        <a href="../index.html">Стать участником</a>
+                    </li>
+                    <li class="pagesList__item">
+                        <a href="#">Стать клиентом</a>
+                    </li>
+                    <li class="pagesList__item">
+                        <a href="#">Создание сайтов</a>
+                    </li>
+                    <li class="pagesList__item active">
+                        <a href="#">VIP</a>
+                    </li>
+                </ul>
+    
+                <ul class="toList">
+                    <li onclick="forward(2)" class="toList__item">
+                        Наши услуги
+                    </li>
+                    <li onclick="forward(1)" class="toList__item">
+                        Наши курсы
+                    </li>
+                    <li onclick="forward(4)" class="toList__item">
+                        Навигация
+                    </li>
+                    <li onclick="forward(3)" class="toList__item">
+                        Контакты
+                    </li>
+                </ul>
+    
+                <a href="#" class="lkBtn">Личный кабинет</a>
+            </li>
+    
+            <li class="mobMenuList__item courses">
+                <div class="menuBtns">
+                    <svg onclick="back(1)" class="menuArrowBack" width="18" height="28" viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8401 0L0 14L13.8401 28L18 23.7927L8.31583 14L18 4.20734L13.8401 0Z" fill="white"/>
+                    </svg>
+        
+                    <svg class="cross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)" fill="white"/>
+                        <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)" fill="white"/>
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)" fill="white"/>
+                        <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)" fill="white"/>
+                    </svg>
+                </div> 
+                <h3 class="menuTitle">Наши курсы</h3>
+                <ul class="coursesList">
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Лендинги</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Контекстная реклама</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Таргетированная реклама Вконтакте</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Таргетированная реклама Facebook</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Запуск инфопродуктов</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Продающий текст</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Ведение инстаграма</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Партнерские продажи</a>
+                    </li>
+                    <li class="coursesList__item">
+                        <a href="/vip/index.html">Геймифицированные автоворонки</a>
+                    </li>
+                </ul>
+            </li>
+    
+            <li class="mobMenuList__item services">
+                <div class="menuBtns">
+                    <svg onclick="back(2)" class="menuArrowBack" width="18" height="28" viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8401 0L0 14L13.8401 28L18 23.7927L8.31583 14L18 4.20734L13.8401 0Z" fill="white"/>
+                    </svg>
+        
+                    <svg class="cross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)" fill="white"/>
+                        <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)" fill="white"/>
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)" fill="white"/>
+                        <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)" fill="white"/>
+                    </svg>
+                </div> 
+                
+                <h3 class="menuTitle">Наши услуги</h3>
+    
+                <ul class="servicesList">
+                    <li class="servicesList__item">
+                        <a href="#">Лендинги и сайты</a>
+                    </li>
+                    <li class="servicesList__item">
+                        <a href="#">Контекстная реклама</a>
+                    </li>
+                    <li class="servicesList__item">
+                        <a href="#">Таргетированная реклама</a>
+                    </li>
+                    <li class="servicesList__item">
+                        <a href="#">Запуск инфопродуктов</a>
+                    </li>
+                    <li class="servicesList__item">
+                        <a href="#">Продвижение социальных сетей</a>
+                    </li>
+                    <li class="servicesList__item">
+                        <a href="#">Автоворонки</a>
+                    </li>
+                </ul>
+            </li>
+    
+            <li class="mobMenuList__item contactsMenu">
+                <div class="menuBtns">
+                    <svg onclick="back(3)" class="menuArrowBack" width="18" height="28" viewBox="0 0 18 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8401 0L0 14L13.8401 28L18 23.7927L8.31583 14L18 4.20734L13.8401 0Z" fill="#828282"/>
+                    </svg>
+        
+                    <svg class="cross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)" fill="#828282"/>
+                        <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)" fill="#828282"/>
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)" fill="#828282"/>
+                        <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)" fill="#828282"/>
+                    </svg>
+                </div> 
+                
+                <h3 class="menuTitle">Контакты</h3>
+    
+                <a href="tel:+78001234567">+7 800 123-45-67</a>
+                <a href="mailto:hello@kcf.team">hello@kcf.team</a>
+            </li>
+    
+            <li class="mobMenuList__item navMenu">
+                <div class="menuBtns">
+                    <div class="a"></div>
+                    <svg class="cross" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 -0.707105 -0.707108 0.707105 28.002 23.5791)" fill="white"/>
+                        <rect width="13.5582" height="6.25229" transform="matrix(-0.70711 -0.707104 -0.70711 0.707104 14.0093 9.5874)" fill="white"/>
+                        <rect width="33.3455" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 23.5791 0)" fill="white"/>
+                        <rect width="13.558" height="6.25229" transform="matrix(-0.707108 0.707105 0.707108 0.707105 9.58887 13.9917)" fill="white"/>
+                    </svg>
+                </div> 
+    
+                <ul class="navList">
+                    <li class="navListMenu__item">
+                        <a href="#header" class="hashtag-nav transBtn active obNav">#Страница еще не готова</a>
+                    </li>
+                    <li class="navListMenu__item">
+                        <a href="#results" class="hashtag-nav transBtn mobNav">#наширезультаты</a>
+                    </li>
+                    <li class="navListMenu__item">
+                        <a href="#form" class="hashtag-nav transBtn mobNav">#пообщатьсясэкспертом</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+
+        <div class="navContainer">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <nav class="nav">
+                        <ul class="menu d-flex">
+                            <li class="menu__item">
+                                <a href="#">Что такое КСФ</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="../index.html">Стать участником</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#">Стать клиентом</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="active">VIP</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="working" id="working">
+        <div class="container">
+            <div class="row">
+                <h2 class="hashtag-title">Мы делаем новый сайт и&nbspотдельную страницу для&nbspэтого курса еще<nobr> не&nbspсделали&nbsp:(</nobr></h2>
+                <p class="subtitle">Возвращайся через пару недель&nbsp- тут будет отличный лендинг</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="results" id="results">
+        <div class="container">
+            <div class="row intro">
+                <h2 class="hashtag-title">#Наши<span>результаты</span></h2>
+                <p class="subtitle">Доверь маркетинг - маркетологам :)</p>
+                <p class="text">Даже мы не&nbвсевсегда можем сходу сказать, какой комплекс услуг необходим компании, чтобы денег в&nbspкассе стало больше.</p>
+                <p class="text">Все конкуренты так делают - не&nbspаргумент, потому что ты видишь только вершину айсберга. Даже мы не&nbspвсегда можем сходу сказать, какой комплекс услуг необходим компании, чтобы денег в&nbspкассе стало больше.</p>
+                <p class="text">Все конкуренты так делают - не&nbspаргумент, потому что ты видишь только вершину айсберга. Даже мы не&nbspвсегда можем сходу сказать, какой комплекс услуг необходим компании, чтобы денег в&nbspкассе стало больше.</p>
+                <p class="text">Все конкуренты так делают - не&nbspаргумент, потому что ты видишь только вершину айсберга. Даже мы не&nbspвсегда можем сходу сказать, какой комплекс услуг необходим компании, чтобы денег в&nbspкассе стало больше.</p>
+                <p class="text">Все конкуренты так делают - не&nbspаргумент, потому что ты видишь только вершину айсберга.</p>
+                
+            </div>
+
+            <div class="row list">
+                <p class="subtitle">Поэтому лучше - пообщайся с&nbspодним из&nbspнаших экспертов</p>
+                <p class="text">После разговора он:</p>
+                <ul>
+                    <li class="text">
+                        <p>Точно определит необходимый комплекс мер под&nbspтвою задачу и&nbspбюджет</p>
+                    </li>
+                    <li class="text">
+                        <p>Подберет необходимых специалистов</p>
+                    </li>
+                    <li class="text">
+                        <p>Составит график работы и&nbspсмету</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="reviews" id="reviews">
+                    <div id="carouselExpamleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-target="#carouselExpamleIndicators" data-slide-to="0">
+        
+                            </li>
+        
+                            <li data-target="#carouselExpamleIndicators" data-slide-to="1">
+        
+                            </li>
+        
+                            <li data-target="#carouselExpamleIndicators" data-slide-to="2">
+        
+                            </li>
+                        </ol>
+        
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./assets/reviewTest.png" alt="" class="d-block w-100">
+                            </div>
+        
+                            <div class="carousel-item">
+                                <img src="./assets/reviewTest.png" alt="" class="d-block w-100">
+                            </div>
+        
+                            <div class="carousel-item">
+                                <img src="./assets/reviewTest.png" alt="" class="d-block w-100">
+                            </div>
+                        </div>
+        
+                        <a href="#carouselExpamleIndicators" class="carousel-control-prev" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a href="#carouselExpamleIndicators" class="carousel-control-next" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+            </div>
+
+            <div class="row list">
+                <p class="subtitle">Поэтому лучше - пообщайся с&nbspодним из&nbspнаших экспертов</p>
+                <p class="text">После разговора он:</p>
+                <ul>
+                    <li class="text">
+                        <p>Точно определит необходимый комплекс мер под&nbspтвою задачу и&nbspбюджет</p>
+                    </li>
+                    <li class="text">
+                        <p>Подберет необходимых специалистов</p>
+                    </li>
+                    <li class="text">
+                        <p>Составит график работы и&nbspсмету</p>
+                    </li>
+                </ul>
+            </div>
+        
+
+            <img src="./assets/millionaire.svg" alt="Стань миллионером" class="row">
+
+            <div class="marketologam row">
+                <h2 class="hashtag-title"><span> Доверь маркетинг</span><br/>маркетологам :)</h2>
+                <div class="text">
+                    <p>Даже мы не&nbspвсегда можем сходу сказать, какой комплекс услуг необходим компании, чтобы денег в&nbspкассе стало больше.</p>
+                    <p>Все конкуренты так делают - не&nbspаргумент, потому что ты видишь только вершину айсберга.</p>
+                </div>
+
+                <div class="list">
+                    <p class="subtitle">Поэтому лучше - пообщайся с&nbspодним из&nbspнаших экспертов</p>
+                    <p class="text">После разговора он:</p>
+                    <ul>
+                        <li class="text">
+                            <p>Точно определит необходимый комплекс мер под твою задачу и бюджет</p>
+                        </li>
+                        <li class="text">
+                            <p>Подберет необходимых специалистов</p>
+                        </li>
+                        <li class="text">
+                            <p>Составит график работы и смету</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="alert row">
+                    <p class="subtitle">У нас нет менеджеров по&nbspпродажам</p>
+                    <p class="text">Ты будешь общаться непосредственно с&nbspчеловеком, который в&nbspитоге будет вести твой&nbspпроект, так&nbspчто все вопросы сможешь задать сразу :)</p>
+                </div>
+            </div>
+
+           
+        </div>
+    </section>   
+
+    <div class="form" id="form">
+        <div class="container">
+            <div class="row">
+                <form action="#">
+                    <input type="text" class="first" placeholder="Введите имя" required="true">
+                    <input type="text" class="second" placeholder="Номер телефона">
+                    <p class="subtitle">или</p>
+                    <input type="text" class="third" placeholder="Введите ссылку">
+                    <button href="" type="submit" class="submitBtn">Записаться к эксперту</button>
+                    <div class="check">
+                        <input type="checkbox" required>
+                        <p class="text">Даю согласие на обработку своих  пресональных данных <span>согласно <a>политике конфиденциальности и обработке персональных данных</a></span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="alertMob">
+        <div class="container">
+            <div class="alert row">
+                <p class="subtitle">У нас нет менеджеров по&nbspпродажам</p>
+                <p class="text">Ты будешь общаться непосредственно с&nbspчеловеком, который в&nbspитоге будет вести твой&nbspпроект, так&nbspчто все вопросы сможешь задать сразу :)</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-12">
+                    <img class="footer__logo" src="./assets/footerLogo.svg" alt="Логотип">
+
+                    <div class="contacts d-flex flex-column">
+                        <a href="tel:+78001234567" class="tel">+7 800 123-45-67</a>
+                        <a href="mailto:hello@kcf.team">hello@kcf.team</a>
+                    </div>
+                    
+                    <div class="requis">
+                        <p>ИП Варга Давид Валентинович</p>
+                        <p>ОГРНИП 314231207700042</p>
+                        <p>ИНН 231217849364</p>
+                    </div>
+
+                    <div class="docs d-flex flex-column">
+                        <p><a href="#">Политика конфиденциальности</a></p>
+                        <p><a href="#">Оферта об обучении</a></p>
+                        <p><a href="#">Оферта об услугах</a></p>
+                    </div>
+
+                    <a href="#" class="lkBtn text">Личный кабинет</a>
+                    <a href="#header" class="upBtn text transBtn">Наверх</a>
+                </div>
+                
+                <div class="col-3">
+                    <p class="footer__header">Навигация</p>
+
+                    <div class="footer__items d-flex flex-column">
+                        <a href="#">Что такое КСФ</a>
+                        <a href="#">Стать участником</a>
+                        <a href="#">Стать клиентом</a>
+                        <a href="#">Участники КСФ</a>
+                        <a href="#">Портфолио</a>
+                        <a href="#">Отзывы</a>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <p class="footer__header">Наши курсы</p>
+
+                    <div class="footer__items d-flex flex-column">
+                        <a href="#">Лендинги</a>
+                        <a href="#">Контекстная реклама</a>
+                        <a href="#">Тартетированная реклама Вконтакте</a>
+                        <a href="#">Тартетированная реклама Facebook</a>
+                        <a href="#">Запуск инфопродуктов</a>
+                        <a href="#">Продающий текст</a>
+                        <a href="#">Ведение инстаграма</a>
+                        <a href="#">Партнерские продажи</a>
+                        <a href="#">Геймифицированные Автоворонки</a>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <p class="footer__header">Наши услуги</p>
+
+                    <div class="footer__items d-flex flex-column">
+                        <a href="#">Лендинги и сайты</a>
+                        <a href="#">Контекстная реклама</a>
+                        <a href="#">Таргетированная реклама</a>
+                        <a href="#">Запуск инфопродукта</a>
+                        <a href="#">Продвижение социальных сетей</a>
+                        <a href="#">Автоворонки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -74,6 +74,14 @@ $(document).ready(function(){
         body.style.overflowY = "visible";
         mobMenuListItems.forEach(e => e.style.left = '100vw')
 
+        crossLeft.classList.remove('rotateLeft')
+        crossRight.classList.remove('rotateRight')
+        burgerSide.forEach(e => e.classList.remove('burgerExpand'))
+       
+        if(!event.target.classList.contains('upBtn')) {
+            burgerExpanded = !burgerExpanded
+        }
+
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 700);
@@ -179,27 +187,6 @@ $(document).ready(function(){
     })
 });
 
-const warrantyCross = document.querySelector('.warrantyCross');
-const warrantyExpandable = document.querySelector('.warrantyExpandable');
-const opener = document.querySelector('.opener');
-
-warrantyExpandable.addEventListener('click', (e) => {
-    if(e.target.classList.contains('warrantyExpandable')) {
-        warrantyExpandable.classList.remove('warrantyExp')
-        setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
-    }
-})
-
-warrantyCross.addEventListener('click', () => {
-    warrantyExpandable.classList.remove('warrantyExp')
-    setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
-})
-
-opener.addEventListener('click', () => {
-    warrantyExpandable.style.zIndex = "90"
-    warrantyExpandable.classList.add('warrantyExp')
-})
-
 const resultsCross = document.querySelectorAll('.resultsCross');
 const resultsExpandable = document.querySelectorAll('.resultsExp');
 const resultsOpener = document.querySelectorAll('.exp');
@@ -218,17 +205,41 @@ resultsCross.forEach(e => e.addEventListener('click', () => {
 
 resultsOpener[0].addEventListener('click', () => {
     resultsExpandable[0].style.zIndex = "90"
-    resultsExpandable[0].classList.add('resultsExpand')
+    
+    setTimeout(() => resultsExpandable[0].classList.add('resultsExpand'), 100)
 })
 
 resultsOpener[1].addEventListener('click', () => {
     resultsExpandable[1].style.zIndex = "90"
-    resultsExpandable[1].classList.add('resultsExpand')
+    
+    setTimeout(() => resultsExpandable[1].classList.add('resultsExpand'), 100)
 })
 
 resultsOpener[2].addEventListener('click', () => {
     resultsExpandable[2].style.zIndex = "90"
-    resultsExpandable[2].classList.add('resultsExpand')
+    
+    setTimeout(() => resultsExpandable[2].classList.add('resultsExpand'), 100)
+})
+
+const warrantyCross = document.querySelector('.warrantyCross');
+const warrantyExpandable = document.querySelector('.warrantyExpandable');
+const opener = document.querySelector('.opener');
+
+warrantyExpandable.addEventListener('click', (e) => {
+    if(e.target.classList.contains('warrantyExpandable')) {
+        warrantyExpandable.classList.remove('warrantyExp')
+        setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+    }
+})
+
+warrantyCross.addEventListener('click', () => {
+    warrantyExpandable.classList.remove('warrantyExp')
+    setTimeout(() => warrantyExpandable.style.zIndex = "-90", 500)
+})
+
+opener.addEventListener('click', () => {
+    warrantyExpandable.style.zIndex = "90"
+    setTimeout(() => warrantyExpandable.classList.add('warrantyExp'), 100)
 })
 
 const courseModalPayment = document.querySelectorAll('.modal');
@@ -237,18 +248,18 @@ const modalCross = document.querySelectorAll('.modalCross');
 courseModalPayment.forEach(e => e.addEventListener('click', (e) => {
     if(e.target.classList.contains('modal')) {
         courseModalPayment.forEach(e => e.classList.remove('modalExp'))
-        setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 500))
+        setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 600))
     }
 }))
 
 modalCross.forEach(e => e.addEventListener('click', () => {
     courseModalPayment.forEach(e => e.classList.remove('modalExp'))
-    setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 500))
+    setTimeout(() => courseModalPayment.forEach(e => e.style.zIndex = "-90", 600))
 }))
 
 const modalExpand = (num) => {
     courseModalPayment[num].style.zIndex = '90'
-    courseModalPayment[num].classList.add('modalExp')
+    setTimeout(() => courseModalPayment[num].classList.add('modalExp'), 100)
 }
 
 
