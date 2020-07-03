@@ -1,0 +1,118 @@
+@import "./variables";
+@import "./welcome";
+@import "./footer";
+@import "./features";
+@import "./program";
+@import "./reviews";
+
+
+html {
+    box-sizing: border-box; /* width и height включают в себя значения полей и границ */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /* наследует от html */
+    margin: 0; /* Убирает отступы по умолчанию */
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $white;
+    line-height: 1.5;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif; /* основной шрифт */
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%; /* растягивает картинку на всю ширину родительского элемента */
+}
+
+a {
+    text-decoration: none; /* убирает подчеркивание ссылки */
+    color: inherit; /* позволяет наследовать цвет шрифта от родительского элемента */
+    transition: .3s;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.hashtag-title {
+    font-weight: 900;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.hashtag-nav {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.bold-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .hashtag-title {
+        font-weight: 900;
+        font-size: 55px;
+        text-transform: uppercase;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hashtag-title {
+        font-size: 26px;
+        font-weight: 900;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .text {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+    }
+}
+
+
+
