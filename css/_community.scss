@@ -1,0 +1,393 @@
+.community {
+    position: relative;
+    line-height: 1.25;
+    
+    &__container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: url("../assets/communityBg.svg") no-repeat center / auto 100%;
+
+        .container {
+            position: relative;
+        }
+    }
+
+    .extra {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: $green;
+        color: $white;
+
+        .text {
+            color: #e0e0e0;
+
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .text {
+        max-width: 500px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .frame {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
+    .help {
+        .title {
+            margin-bottom: 30px;
+        }
+
+        .text {
+            margin-bottom: 60px;
+            max-width: 606px;
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }    
+        }
+    }
+
+    .quote {
+        max-width: 410px;
+        color: $green;
+    }
+
+    .hoodie {
+        height: 442px;
+        width: 361px;
+        background: url("../assets/hoodie.svg") no-repeat center top;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        z-index: 1;
+        left: auto;
+
+        .hoodieBtn {
+            position: absolute;
+            width: 165px;
+            height: 52px;
+            bottom: 0;
+            z-index: 1;
+            background-color: $white;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 1.25;
+            
+            .circle {
+                position: absolute;
+                top: 7px;
+                left: 10px;
+            }
+
+            a {
+                padding: 5px 15px 9px 48px;
+                font-family: "Roboto", sans-serif;
+                font-size: 18px;
+                color: $black;
+                width: 165px;
+                display: inline-block;
+                position: absolute;
+                bottom: 0;
+                border: 1px solid $black;
+                transition: .3s;
+                line-height: 1.25;
+                left: 50%;
+                transform: translateX(-50%);
+    
+                &:hover {
+                    color: $white;
+    
+                    &:after {
+                        height: 100%;
+                    }
+    
+                    &:before {
+                        border-color: $white;
+                        color: $white;
+                    }
+                }
+                
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: $black;
+                    transition: .3s;
+                    z-index: -1;
+                }
+    
+                
+            }
+        }
+
+        .circle {
+            &:hover {
+                fill: blue;
+            }
+        }
+
+        
+    }
+
+    .attention {
+        position: absolute;
+        right: 0;
+        padding: 20px 40px 35px;
+        border: 10px solid $red;
+        bottom: 450px;
+        z-index: -1;
+
+        .text {
+            line-height: 1.25;
+
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &:not(:nth-child(2)) {
+                padding-left: 12px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    height: 5px;
+                    width: 5px;
+                    border-radius: 50%;
+                    background-color: $black;
+                    top: 9px;
+                }
+            }
+        }
+        
+        .title {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .payBtn {
+        font-size: 18px;
+        color: $white;
+        text-transform: uppercase;
+        padding: 14px 35px 16px;
+        position: relative;
+        font-weight: 700;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 290px;
+        z-index: 2;
+
+        &:hover {
+            &:before {
+                height: 100%;
+            } 
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            background-color: $green;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 100%;
+            height: 6px;
+            left: 0;
+            background-color: #015339;
+            z-index: -1;
+            transition: .3s;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .community {
+        .hoodie {
+            
+            
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .community {
+
+        &__container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background: url("../assets/communityMobBg.svg") no-repeat bottom center / auto 100%;
+        }
+
+        .text {
+            max-width: none;
+        }
+
+        .hoodie {
+            background-position: 0  top;
+            height: 250px;
+            width: 420px;
+            background-size: 250px 250px;
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-bottom: 40px;
+
+            .hoodieBtn {
+                left: auto;
+                right: 0;
+                transform: translateY(50%);
+                width: 150px;
+                height: 52px;
+                bottom: 50%;
+
+                a {
+                    width: 150px;
+                    height: 52px;
+                    padding-left: 40px;
+                    padding-right: 8px;
+                    line-height: 1.1;
+                }
+
+                .circle {
+                    top: 12px;
+                }
+            }
+        }
+
+        .extra {
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            .text {
+                margin-top: 10px;
+                margin-bottom: 1px;
+            }
+        }
+
+        .frame {
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+
+        .help {
+            .title {
+                margin-bottom: 20px;
+            }
+
+            .text {
+                margin-bottom: 20px;
+                max-width: none;
+            }
+        }
+
+        .quote {
+            max-width: none;
+        }
+
+        .bold-text {
+            font-size: 14px;
+        }
+
+        .attention {
+            max-width: none;
+            position: relative;
+            right: auto;
+            left: 0;
+            bottom: 0;
+            margin-top: 33px;
+            border-width: 5px;
+            padding: 15px;
+        }
+
+        .payBtn {
+            margin-top: 150px;
+            font-size: 16px;
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .community {
+        .hoodie {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .community {
+
+        .hoodie {
+            width: 100%;
+            left: -20px;
+            transform: none;
+            background-position: -80px 0;
+
+            .hoodieBtn {
+                left: 200px;
+                right: auto;
+                transform: translateY(50%);
+                width: 130px;
+                height: 52px;
+                bottom: 50%;
+                
+                
+                a {
+                    width: 130px;
+                    padding-left: 30px;
+                    font-size: 16px;    
+                }
+
+                .circle {
+                    left: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 359px) {
+    .community {
+        .payBtn {
+            font-size: 14px;
+        }
+
+        .hoodie {
+            .hoodieBtn {
+                left: 180px;
+            }
+        }
+    }
+}

@@ -28,11 +28,6 @@
             &:nth-child(2) {
                 margin-bottom: 0px;
             }
-
-            &:invalid {
-                border: 2px solid $red;
-                outline: none;
-            }
         }
 
         .first {

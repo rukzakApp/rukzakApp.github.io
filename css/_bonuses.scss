@@ -1,0 +1,353 @@
+.bonuses {
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .row {
+        .hashtag-title {
+            margin-bottom: 66px;
+    
+            &:first-child {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .featuresList {
+        padding: 0;
+        padding-bottom: 100px;
+        
+        li {
+            width: 50%;
+            padding: 0;
+            color: $white;
+            line-height: 1.25;
+            padding: 20px 40px;
+
+            .title {
+                text-transform: uppercase;
+                font-weight: 900;
+                margin-bottom: 20px;
+            }
+
+            &:nth-child(1) {
+                background: url('../assets/bonusesBg1.svg') no-repeat center / cover;
+                color: $black;
+            }
+            &:nth-child(2) {
+                background: url('../assets/bonusesBg2.svg') no-repeat center / cover;
+            }
+            &:nth-child(3) {
+                background: url('../assets/bonusesBg3.svg') no-repeat center / cover;
+            }
+            &:nth-child(4) {
+                background: url('../assets/bonusesBg4.svg') no-repeat center / cover;
+                padding-top: 35px;
+
+                .title {
+                    margin-bottom: 35px;
+                }
+            }
+            &:nth-child(5) {
+                background: url('../assets/bonusesBg5.svg') no-repeat center / cover;
+                color: $black;
+            }
+            &:nth-child(6) {
+                background: url('../assets/bonusesBg6.svg') no-repeat center / cover;
+            }
+            &:nth-child(7) {
+                background: url('../assets/bonusesBg7.svg') no-repeat center / cover;
+            }
+            &:nth-child(8) {
+                background: url('../assets/bonusesBg8.svg') no-repeat center / cover;
+                padding-top: 35px;
+
+                .title {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+        
+    }
+
+    .bonusesList {
+        position: relative;
+        padding: 0;
+        border: 10px solid $green;
+        padding: 56px 62px;
+        line-height: 1.25;
+
+        ul {
+            li {
+                padding-left: 32px;
+                width: 50%;
+
+                a {
+                    border-bottom: 1px dashed $black;
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+    
+                &:not(:nth-last-child(-n+2)) {
+                    margin-bottom: 40px;
+                }
+    
+                &:nth-child(odd) {
+                    background: url("../assets/bonusesFrame.svg") no-repeat left center;
+                }
+        
+                &:nth-child(even) {
+                    background: url("../assets/bonusesPlus.svg") no-repeat left center;
+                }
+            }
+        }
+        
+
+        img {
+            position: absolute;
+            top: -66px;
+            right: 7%;
+        }
+
+    }
+}
+
+@media(max-width: 1200px) {
+    .bonuses {
+        .featuresList {
+            li {
+                .title {
+                    font-size: 22px;
+                }
+
+                &:nth-child(4) {
+                    padding-top: 30px;
+    
+                    .title {
+                        margin-bottom: 35px;
+                    }
+                }
+                &:nth-child(8) {
+                    padding-top: 30px;
+    
+                    .title {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .bonuses {
+        .featuresList {
+            li {
+                
+
+                .title {
+                    font-size: 22px;
+                }
+
+                .descr {
+                    font-size: 16px;
+                }
+
+                &:nth-child(4) {
+                    padding-top: 25px;
+    
+                    .title {
+                        margin-bottom: 35px;
+                    }
+                }
+                &:nth-child(8) {
+                    padding-top: 25px;
+    
+                    .title {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
+
+        .bonusesList {
+            padding: 30px;
+
+            ul {
+                li {
+                    width: 48%;
+                    &:nth-child(odd) {
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .bonuses {
+        .row {
+            .hashtag-title {
+                margin-bottom: 17px;
+
+                &:first-child {
+                    margin-bottom: 37px;
+                }
+            }
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        .featuresList {
+            flex-direction: column;
+            max-width: none;
+            background: url("../assets/bonusesMobBg.svg") no-repeat 10px 92%;
+            padding-bottom: 195px;
+
+            li {
+                padding: 0;
+                padding-left: 20px;
+                color: $black;
+                background: none;
+                position: relative;
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    background-color: $black;
+                    left: 0;
+                    top: 9px;
+                }
+                
+                .title {
+                    text-transform: none;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+
+                &:nth-child(n) {
+                    background: none;
+                }
+
+                &:nth-child(1) {
+                    &:after {
+                        background-color: $red;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &:after {
+                        background-color: $yellow;
+                    }
+                }
+
+                &:nth-child(4) {
+                    &:after {
+                        background-color: $green;
+                    }
+
+                    padding-top: 0px;
+    
+                    .title {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                &:nth-child(6) {
+                    &:after {
+                        background-color: $red;
+                    }
+                }
+
+                &:nth-child(7) {
+                    &:after {
+                        background-color: $yellow;
+                    }
+                }
+
+                &:nth-child(8) {
+                    padding-top: 0px;
+    
+                    .title {
+                        margin-bottom: 5px;
+                    }
+                    
+                    &:after {
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+
+        .bonusesList {
+            padding: 30px 20px;
+            
+
+            ul {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                    
+                    p {
+                        font-size: 18px;
+                    }
+
+                    &:nth-child(even) {
+                        order: 1;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .bonuses {
+        .bonusesList {
+            border-width: 5px;
+            padding: 30px 20px;
+            
+    
+            ul {
+                li {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .featuresList {
+            li {
+                .title {
+                    font-size: 18px;
+                }
+
+                .descr {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+}

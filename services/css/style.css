@@ -1878,11 +1878,6 @@
   margin-bottom: 0px;
 }
 
-.form form input:invalid {
-  border: 2px solid #FF513F;
-  outline: none;
-}
-
 .form form .first {
   background: url("../assets/inpurtName.svg") no-repeat 10px center #fff;
 }
