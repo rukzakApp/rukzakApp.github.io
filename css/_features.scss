@@ -317,7 +317,6 @@
                 }
 
                 &:first-child {
-                    margin-bottom: 40px;
                     margin-right: 0;
                     background: url("../assets/featuresMobBg1.png") no-repeat center top;
                 }
@@ -377,6 +376,12 @@
         .cardsList {
             max-width: 320px;
             margin: 0 auto;
+
+            li {
+                &:first-child {
+                    margin-bottom: 40px;
+                }
+            }
         }
 
         #featuresModal {

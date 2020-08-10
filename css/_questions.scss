@@ -61,6 +61,14 @@
         padding: 12px 20px 11px 44px;
         font-size: 18px;
 
+        &:first-child {
+            background: url("../assets/questionsNameIcon.svg") no-repeat 14px center #e0e0e0;
+        }
+
+        &:nth-child(2) {
+            background: url("../assets/questionsTelIcon.svg") no-repeat 14px center #e0e0e0;
+        }
+
         &::placeholder {
             color: #4f4f4f;
         }

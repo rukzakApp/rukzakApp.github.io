@@ -1636,7 +1636,6 @@
     background: url("../assets/featuresMobBg2.png") no-repeat center top;
   }
   .features .cardsList li:first-child {
-    margin-bottom: 40px;
     margin-right: 0;
     background: url("../assets/featuresMobBg1.png") no-repeat center top;
   }
@@ -1686,6 +1685,9 @@
   .features .cardsList {
     max-width: 320px;
     margin: 0 auto;
+  }
+  .features .cardsList li:first-child {
+    margin-bottom: 40px;
   }
   .features #featuresModal {
     color: #4f4f4f;
@@ -2218,8 +2220,8 @@
 
 @media (min-width: 993px) {
   .buyNow .buyNowCard .textBlock {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 74px;
+    padding-bottom: 74px;
   }
 }
 
@@ -2333,6 +2335,9 @@
 }
 
 @media (max-width: 992px) {
+  .whyUs {
+    background: none;
+  }
   .whyUs .container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -2900,6 +2905,14 @@
           box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.1);
   padding: 12px 20px 11px 44px;
   font-size: 18px;
+}
+
+.questions input[type="text"]:first-child {
+  background: url("../assets/questionsNameIcon.svg") no-repeat 14px center #e0e0e0;
+}
+
+.questions input[type="text"]:nth-child(2) {
+  background: url("../assets/questionsTelIcon.svg") no-repeat 14px center #e0e0e0;
 }
 
 .questions input[type="text"]::-webkit-input-placeholder {
