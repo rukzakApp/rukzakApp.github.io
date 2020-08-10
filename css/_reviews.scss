@@ -2,8 +2,7 @@
     background-color: #FBFBFB;
 
     .container {
-        padding-top: 150px;
-        padding-bottom: 100px;
+        padding: 150px 0 100px;
     }
 
     ul {
@@ -157,6 +156,15 @@
         .moreBtn {
             width: 100%;
             max-width: 320px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews {
+        .container {
+            padding-right: 20px;
+            padding-left: 20px;
         }
     }
 }

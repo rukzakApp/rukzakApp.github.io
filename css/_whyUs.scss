@@ -2,8 +2,7 @@
     background: url("../assets/whyUsBg.svg") no-repeat center / auto 100%;
 
     .container {
-        padding-top: 70px;
-        padding-bottom: 150px;
+        padding: 70px 0 150px;
     }
 
     .whyUsCard {
@@ -16,6 +15,7 @@
             color: $yellow;
             margin-bottom: 20px;
             line-height: 1.3;
+            padding: 0;
         }
     
         .header3 {
@@ -58,7 +58,7 @@
         .whyUsCard {
             margin-top: 60px;
             width: 100%;
-            padding: 30px 20px 410px;
+            padding: 30px 20px 430px;
             background-position: 90% 185%;
             background-size: 100% auto;
             
@@ -85,7 +85,17 @@
             margin-top: 60px;
             padding: 30px 20px 410px;
             background-position: 90% bottom;
-            background-size: auto 370px;
+            background-size: auto 385px;
         }
     }
+}
+
+
+@media (max-width: 576px) {
+    .whyUs {
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }   
 }

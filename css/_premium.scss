@@ -2,8 +2,7 @@
     background: url('../assets/premiumBg.svg') no-repeat center / auto 100%;
 
     .container {
-        padding-bottom: 250px;
-        padding-top: 100px;
+        padding: 100px 0 250px;
     }
 
     .row {
@@ -90,6 +89,15 @@
                     margin-bottom: 10px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .premium {
+        .container {
+            padding-right: 20px;
+            padding-left: 20px;
         }
     }
 }

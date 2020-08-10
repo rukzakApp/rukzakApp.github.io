@@ -44,7 +44,11 @@
     }
 
     .container {
-        padding-top: 100px;
+        padding: 100px 0;
+    }
+
+    .header2 {
+        padding: 0;
     }
 
     .featuresList {
@@ -180,7 +184,6 @@
 
         .valuesList {
             flex-wrap: wrap;
-            padding: 0 20px;
             margin-top: 70px;
 
             li {
