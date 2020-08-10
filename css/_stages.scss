@@ -1,0 +1,93 @@
+.stages {
+    .container {
+        padding-bottom: 150px;
+        padding-top: 150px;
+    }
+
+    .header2 {
+        margin-bottom: 90px;
+    }
+
+    &__controls {
+        fill: #bdbdbd;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+            fill: $yellow;
+        }
+
+        &:last-child {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__carousel {
+        display: flex;
+        
+    }
+
+    .carousel-inner {
+        max-width: 945px;
+
+        &__inside {
+            width: 10000px;
+            display: flex;
+            transform: translateX(0px);
+            overflow-x: hidden;
+            transition: .5s;
+            position: relative;
+
+            .grayBar {
+                position: absolute;
+                bottom: 20px;
+                z-index: -2;
+                height: 10px;
+            }
+
+            .yellowBar {
+                position: absolute;
+                bottom: 20px;
+                width: 10000px;
+                z-index: -1;
+                height: 10px;
+                fill: $yellow;
+                
+
+                rect {
+                    width: 280px;
+                    transition: .5s;
+                }
+            }
+        }
+
+        svg {
+            min-width: 165px;
+            height: 200px;
+
+            &:not(:last-child) {
+                margin-right: 224px;
+            }
+
+            linearGradient {
+                stop {
+                    transition: .5s;
+
+                    &:first-child {
+                        stop-color: #bdbdbd;
+                    }
+
+                    &:last-child {
+                        stop-color: #bdbdbd;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bruh {
+    path {
+        
+    }
+}

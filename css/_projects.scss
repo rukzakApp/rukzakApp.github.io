@@ -1,0 +1,567 @@
+.projects {
+    background-color: #FBFBFB;
+
+    .container {
+        padding-top: 66px;
+        padding-bottom: 92px;
+    }
+
+    .bigProjectsList {
+        margin-top: 70px;
+        
+
+        .carousel-control-prev {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 60px;
+            bottom: 0;
+            left: auto;
+            top: auto;
+            opacity: 1;
+        }
+        
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: auto;
+            top: auto;
+            opacity: 1;
+        }
+        
+        .carousel {
+            position: relative;
+            max-width: 555px;
+            min-width: 555px;
+        }
+        
+        .carousel-indicators {
+            position: absolute;
+            height: 25px;
+            left: 20px;
+            bottom: 0;
+            margin: 0;
+            width: 380px;
+            
+        
+            li {
+                width: 80px;
+                height: 5px;
+                margin: 0;
+                background-color: #f2f2f2;
+                opacity: 1;
+                
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        
+            .active {
+                background-color: $yellow;
+            }
+        }
+        
+        .projectsBigArrow {
+            
+            cursor: pointer;
+            transition: .3s;
+        
+            * {
+                transition: .3s;
+            }
+        
+            &:hover {
+                background-color: $black;
+        
+                path {
+                    fill: white;
+                }
+            }
+        }
+        
+        .rightArrow {
+            transform: scaleX(-1);
+            background-color: $yellow;
+            right: 0;
+            bottom: 0;
+        
+            path {
+                fill: white;
+            }
+        }
+        
+        .leftArrow {
+            right: 60px;
+            bottom: 0;
+            background-color: white;
+            border-radius: 5px 0 0 0;
+            
+            rect {
+                fill: white;
+                height: 60px;
+                width: 60px;
+                
+                &:first-child {
+                    fill: $yellow;
+                }
+            }
+        
+            path {
+                fill: #828282;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        li {
+            padding: 0;
+            max-height: 335px;
+            display: flex;
+            box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+            &:first-child {
+                margin-bottom: 40px;
+            }
+
+            .content {
+                padding: 30px 30px 80px 30px;
+                position: relative;  
+            }
+
+            .moreBtn {
+                position: absolute;
+                left: 0; 
+                bottom: 0;
+                background-color: #e0e0e0;
+                font-weight: 300;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 17px 20px 16.6px;
+                transition: .3s;
+
+                &:hover {
+                    background-color: $black;
+                    color: #f2f2f2;
+                }
+            }
+
+            .header4 {
+                color: #4f4f4f;
+                line-height: 1.25;
+            }
+            
+            .params {
+                display: flex;
+                margin-top: 15px;
+            }
+
+            .name {
+                margin-bottom: 10px;
+                line-height: 1.25;
+            }
+
+            .square {
+                margin-right: 66px;
+                position: relative;
+                color: #828282;
+                font-family: "Montserrat", sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+
+                .number {
+                    font-family: "Roboto", sans-serif;
+                    color: #333;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 1.25;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -33px;
+                    top: 0;
+                    height: 100%;
+                    width: 1px;
+                    background-color: #333;
+                }
+            }
+
+            .price {
+                color: #828282;
+                font-family: "Montserrat", sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+
+                .number {
+                    font-family: "Roboto", sans-serif;
+                    color: #219653;
+                    font-size: 30px;
+                    font-weight: 300;
+                    line-height: 1.25;
+                }
+            }
+        }
+    }
+
+    .smallProjectsList {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        
+        .cardTop {
+            position: relative;
+    
+            .name {
+                position: absolute;
+                font-family: "Playfair Display", sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                left: 20px;
+                bottom: 10px;
+                color: #f2f2f2;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        li {
+            box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            max-width: 460px;
+
+            &:nth-child(odd) {
+                margin-right: 30px;
+            }
+
+            &:not(:nth-last-child(-n+2)) {
+                margin-bottom: 30px;
+            }
+
+            .params {
+                padding: 18px 20px;
+                display: flex;
+                line-height: 1;
+                position: relative;
+            }
+
+            .price {
+                font-size: 24px;
+                font-weight: 300;
+                color: #219653;
+            }
+
+            .square {
+                margin-right: 50px;
+                position: relative;
+                font-weight: 500;
+                font-size: 24px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -27px;
+                    top: 0;
+                    height: 100%;
+                    width: 1px;
+                    background-color: #333;
+                }
+            }
+
+            .moreBtn {
+                background-color: #e0e0e0;
+                padding: 21px 20px 21px 20px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-weight: 300;
+                font-size: 18px;
+                transition: .3s;
+
+                &:hover {
+                    background-color: $black;
+                    color: #f2f2f2;
+                }
+            }
+        }
+    }
+
+    .showMoreBtn {
+        color: #333333;
+        width: 263px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        z-index: 1;
+        position: relative;
+        margin-top: 60px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:after {
+            position: absolute;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            content: "";
+            border-radius: 5px;
+            background: $gradient;
+        }
+
+        &:before {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            content: "";
+            border-radius: 5px;
+            transition: .3s;
+        }
+
+        &:hover {
+            &:before {
+                background: $yellow;
+                box-shadow: 0px 0px 10px #F2C94C;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .projects {
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .smallProjectsList {
+            li {
+                max-width: none;
+                width: calc(50% - 15px);
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .projects {
+
+        .conainer {
+            padding-top: 10px;
+            padding-bottom: 100px;
+        }
+
+        .header2 {
+            &:not(.name) {
+                padding-left: 15px;
+            }
+        }
+
+        .bigProjectsList {
+            margin-top: 60px;
+            width: 100%;
+            max-width: none;
+            margin-right: 0;
+            margin-left: 0;
+            
+
+            li {
+                flex-direction: column;
+                max-height: none;
+
+                &:first-child {
+                    margin-bottom: 30px;
+                }
+
+                .square {
+                    .number {
+                        font-size: 28px;
+                    }
+                }
+
+                .price {
+                    .number {
+                        font-size: 28px;
+                    }
+                }
+
+                .params {
+                    position: relative;
+                    max-width: 305px;
+                    margin: 15px auto 0;
+                }
+
+                .content {
+                    padding: 10px 20px 30px;
+                }
+
+                .moreBtn {
+                    position: relative;
+                    margin: 20px auto 0;
+                    width: 100%;
+                    max-width: 320px;
+                    height: 50px;
+                    font-size: 24px;
+                    background-color: transparent;
+                    border: 2px solid #4F4F4F;
+                    border-radius: 5px;
+                }
+
+                .carousel {
+                    width: 100%;
+                    max-width: none;
+                    min-width: 100px;
+
+                    &-indicators {
+                        width: 100%;
+                        left: 0;
+                        
+                        
+                        li {
+                            width: 18%;
+                            max-width: 65px;
+                            margin-bottom: 0;
+
+                            
+                        }
+                    }
+
+                    &-control-prev {
+                        display: none;
+                    }
+
+                    &-control-next {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        
+
+        .showMoreBtn {
+            font-size: 24px;
+            width: calc(100% - 40px);
+            max-width: 320px;
+            margin-top: 60px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .projects {
+        .smallProjectsList {
+            li {
+                .params {
+                    padding: 12px 20px;
+
+                    .square {
+                        font-size: 18px;
+                        margin-right: 25px;
+
+
+                        &:after {
+                            right: -15px;
+                        }
+                    }
+
+                    .price {
+                        font-size: 18px;
+                    }
+                }
+    
+                .moreBtn {
+                    padding: 12px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        .container {
+            padding-top: 270px;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .smallProjectsList {
+            width: 100%;
+            max-width: none;
+            margin-top: 30px;
+
+            li {
+                width: 100%;
+
+                .params {
+                    padding: 12px 20px;
+                }
+                
+                &:nth-child(n) {
+                    margin-right: 0;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+
+                .square {
+                    font-size: 18px;
+                    margin-right: 20px;
+
+                    &:after {
+                        right: -12px;
+                    }
+                }
+
+                .price {
+                    font-size: 18px;
+                }
+
+                .moreBtn {
+                    background-color: #c4c4c4;
+                    padding: 12px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 345px) {
+    .projects {
+        .bigProjectsList {
+            li {
+                .square {
+                    margin-right: 40px;
+
+                    &:after {
+                        right: -22px;
+                    }
+                }
+            }
+        }
+    }
+}

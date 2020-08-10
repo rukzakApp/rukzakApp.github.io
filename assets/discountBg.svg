@@ -1,0 +1,9 @@
+<svg width="1920" height="204" viewBox="0 0 1920 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.6" width="1920" height="204" fill="#DDDDDD"/>
+<g style="mix-blend-mode:screen" opacity="0.15">
+<path d="M194 0L836 204L577 0H1613.5L1136.32 137.5L1920 204V63L1172.5 204L1061.5 0L0 204H194V0Z" fill="#DDDDDD"/>
+</g>
+<g style="mix-blend-mode:screen" opacity="0.3">
+<path d="M0 0L427 204H684.5L1920 0V120L332.5 0L0 204V0Z" fill="#DDDDDD"/>
+</g>
+</svg>

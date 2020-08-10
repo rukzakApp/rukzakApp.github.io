@@ -1,0 +1,12 @@
+<svg width="3120" height="733" viewBox="0 0 3120 733" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="3120" height="733" transform="matrix(1 0 0 -1 0 733)" fill="white"/>
+<g style="mix-blend-mode:multiply" opacity="0.2">
+<path d="M600 0L951.5 733H2173L2520 0V733H600V0Z" fill="#F2F2F2"/>
+</g>
+<g style="mix-blend-mode:multiply" opacity="0.2">
+<rect width="600" height="733" fill="#F2F2F2"/>
+</g>
+<g style="mix-blend-mode:multiply" opacity="0.2">
+<rect x="2520" width="600" height="733" fill="#F2F2F2"/>
+</g>
+</svg>

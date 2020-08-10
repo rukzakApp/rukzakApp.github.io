@@ -1,15 +1,18 @@
 @import "./variables";
-@import "./welcome";
-@import "./newLvl";
-@import "./footer";
+@import "./welcomePage";
+@import "./discount";
+@import "./projects";
+@import "./catalog";
 @import "./features";
-@import "./education";
-@import "./employment";
-@import "./warranty";
-@import "./founders";
+@import "./pros";
+@import "./stages";
+@import "./premium";
+@import "./buyNow";
+@import "./whyUs";
+@import "./about";
 @import "./reviews";
-@import "./bonuses";
-@import "./community";
+@import "./questions";
+@import "./footer";
 
 html {
     box-sizing: border-box; /* width и height включают в себя значения полей и границ */
@@ -24,11 +27,12 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: $white;
+    background-color: #fbfbfb;
     line-height: 1.5;
     font-weight: 400;
     scroll-behavior: smooth;
-    font-family: "Montserrat", sans-serif; /* основной шрифт */
+    font-family: "Roboto", sans-serif; /* основной шрифт */
+    color: #333;
 }
 
 h1, h2, h3, p, ul {
@@ -56,68 +60,57 @@ ul, li {
     padding: 0;
 }
 
-.hashtag-title {
-    font-weight: 900;
-    font-size: 64px;
-    text-transform: uppercase;
-}
-
-.subtitle {
+.header1 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 52px;
     font-weight: 700;
-    font-size: 24px;
 }
 
-.hashtag-nav {
-    font-size: 18px;
+.header2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.header3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
     font-weight: 400;
 }
 
-.text {
+.header4 {
+    font-size: 16px;
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
 }
 
-.bold-text {
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
+.medium {
+    font-size: 48px;
+}
+
+.text {
+    font-size: 24px;
+}
+
+.title {
+    font-size: 84px;
 }
 
 @media (max-width: 992px) {
-    .hashtag-title {
-        font-weight: 900;
-        font-size: 55px;
-        text-transform: uppercase;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
     .container {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .hashtag-title {
-        font-size: 26px;
-        font-weight: 900;
+    .header2 {
+        font-size: 24px;
     }
-    
-    .subtitle {
+
+    .header3 {
         font-size: 18px;
-        font-weight: 700;
     }
-    
-    .text {
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
+
+    .header4 {
+        font-size: 16px;
     }
 }
-
-
 

@@ -1,0 +1,235 @@
+.buyNow {
+    background: url("../assets/buyNowBg.svg") no-repeat center / cover;
+    color: black;
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .header2 {
+        margin-bottom: 117px;
+        max-width: 690px;
+    }
+
+    ul {
+        margin-bottom: 58px;
+        padding-left: 35px;
+
+        li {
+            padding-left: 65px;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &:nth-child(1) {
+                background: url('../assets/buyNowIcon1.svg') no-repeat left center;
+            }
+
+            &:nth-child(2) {
+                background: url('../assets/buyNowIcon2.svg') no-repeat left center;
+            }
+
+            &:nth-child(3) {
+                background: url('../assets/buyNowIcon3.svg') no-repeat left center;
+            }
+        }
+    }
+
+    .askBtn {
+        color: #333333;
+            width: 263px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            z-index: 1;
+            position: relative;
+            margin-left: 100px;
+
+            &:after {
+                position: absolute;
+                z-index: -2;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                content: "";
+                border-radius: 5px;
+                background: $gradient;
+            }
+
+            &:before {
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                content: "";
+                border-radius: 5px;
+                transition: .3s;
+            }
+
+            &:hover {
+                &:before {
+                    background: $yellow;
+                    box-shadow: 0px 0px 10px #F2C94C;
+                }
+            }
+    }
+
+    .buyNowCard {
+        position: absolute;
+        right: 0;
+        bottom: -22px;
+        color: #333;
+        line-height: 1.25;
+        background: url("../assets/buyNowCardBg.png") no-repeat right center;
+        padding: 0;
+        border-radius: 5px;
+        box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+        .textBlock {
+            background-color: white;
+            max-width: 263px;
+            padding: 20px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .header2 {
+            color: $yellow;
+            margin-bottom: 21px;
+        }
+
+        .header3 {
+            margin-bottom: 10px;
+            max-width: 127px;
+        }
+
+        .header4 {
+            max-width: 198px;
+        }
+
+        .moreBtn {
+            color: #828282;
+            margin-top: 91px;
+            display: flex;
+            align-items: center;
+            transition: .3s;
+
+            svg {
+                transition: .3s;
+            }
+            
+            p {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: #333;
+
+                svg {
+                    fill: #333;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 993px) {
+    .buyNow {
+        .buyNowCard {
+            .textBlock {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .buyNow {
+        background: none;
+
+        .container {
+            padding-bottom: 0;
+            padding-top: 100px;
+        }
+
+        .buyNowCard {
+            max-width: 320px;
+            position: relative;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+            margin-bottom: 40px;
+            background: url("../assets/buyNowCardMobBg.png") no-repeat center top;
+            background-position: center top;
+            padding-top: 180px;
+
+            .moreBtn {
+                margin-top: 30px;
+            }
+
+            .textBlock {
+                padding: 20px 20px 30px 20px;
+                width: 100%;
+                max-width: none;
+                border-radius: 0 0 5px 5px;
+
+                .header2 {
+                    margin-bottom: 10px;
+                }
+
+                .header3 {
+                    margin-bottom: 0;
+                    font-size: 24px;
+                    max-width: none;
+                    margin-left: -1px;
+                    
+                    &:first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+
+                .header4 {
+                    max-width: none;
+                }
+            }
+        }
+
+        .header2 {
+            margin-bottom: 60px;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                &:nth-child(n) {
+                    height: 65px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 85px;
+                    background-size: 65px 65px;
+                }
+            }
+        }
+
+        .askBtn {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+}
