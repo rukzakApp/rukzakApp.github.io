@@ -12,11 +12,8 @@ const swiperPrev = document.querySelector(".swiper-button-prev")
 const swiperSlide = document.querySelectorAll('.swiper-slide')
 const progressBar = document.querySelector('.progressBar')
 
-console.log(swiperSlide)
-
 
 const carousel__item = document.querySelectorAll('.carousel__item')
-console.log(carousel__item[1])
 counter = 0
 
 swiperSlide[0].querySelectorAll('linearGradient stop').forEach((e, i) => {
@@ -129,5 +126,40 @@ var swiper = new Swiper('.swiper-container', {
   });
 
 
+  
 
+  
+ 
+ /* const code  = "AF"
+
+const func = async function(code, page = 1) {
+    let name
+    fetch(`https://jsonmock.hackerrank.com/api/countries?page=${page}`)
+        .then(response => response.json())
+        .then(data => {
+            let found = false
+            for (let i = 0; i < data.data.length; i++) {
+                if (data.data[i].alpha2Code === code) {
+                    found = true
+                    name = data.data[i].name
+                }
+            }
+            if (!found) {
+                func(code, page + 1)
+            }
+           
+        })
+    console.log(name) 
+}
+
+const bruh = async function() {
+    
+    const name = await func(code)
+
+    console.log(name)
+    setTimeout(() => console.log(name), 1500)
+}
+
+bruh()
+*/
 

@@ -10,7 +10,47 @@
     <title>KCF</title>
 </head>
 <body>
-    <header class="header"></header>
+    <div class="fixedBlock">
+        <img src="./assets/fixedPhone.svg" data-toggle="modal" data-target="#fixedModal" class="telBtn" alt="Записаться на консультацию">
+        <img src="./assets/fixedArrow.svg" class="transBtn upBtn" alt="Наверх">     
+    </div>
+
+    <div class="modal fade" id="fixedModal" tabindex="-1" aria-labelledby="fixedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="topNav">
+                        <img src="./assets/modalArrowBack.svg" data-dismiss="modal" aria-label="Close" alt="Назад">
+                        <img src="./assets/modalCross.svg" data-dismiss="modal" aria-label="Close" alt="Закрыть">
+                    </div>
+
+                    <p class="header2">Записаться</p>
+                    <p class="header3">на консультацию по телефону</p>
+                    <p class="header4">Заполните форму и наш специалист перезвонит Вам в течение рабочего дня, чтобы ответить на вопросы</p>
+                </div>
+
+                <div class="modal-body header4">
+                    <form>
+                        <div class="reqInputs">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <textarea name="" placeholder="Ваш вопрос (не обязательно заполнять)" id="" cols="30" rows="10"></textarea>
+                        <div class="checkbox">
+                            <input type="checkbox" id="discountCheckbox">
+                            <label for="fixedCheckbox">Даю согласие на обработку своих персональных данных согласно №152-ФЗ</label>
+                        </div>
+                        <button type="submit">Отправить заявку на консультацию</button>                
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="header3" data-dismiss="modal">Вернуться на сайт</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <section class="welcomePage">
         <div class="forBg">
@@ -123,7 +163,7 @@
 
                 <form class="col-12 col-lg-6 col-xl-5">
                     <input type="text" placeholder="Ваше имя">
-                    <input type="text" class="telInput" placeholder="+7 (___) ___-__-__">
+                    <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__">
                     <div class="checkbox">
                         <input type="checkbox" id="discountCheckbox">
                         <label for="discountCheckbox">Даю согласие на обработку своих персональных данных согласно №152-ФЗ</label>
@@ -515,7 +555,7 @@
 
     <section class="pros">
         <div class="container">
-            <div class="row">
+            <div class="">
                 <h2 class="header2">Преимущества  работы с нами</h2>
 
                 <div class="prosBlock">
@@ -534,14 +574,14 @@
                             
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body header4">
-                                    Мы 20 лет на рынке: пообщавшись с заказчиком всего несколько минут, можем сказать, какой дом сделает его счастливым,  сэкономив ему время и энергию при выборе проекта
+                                    Мы 20 лет на рынке: пообщавшись с&nbspзаказчиком всего несколько минут, можем сказать, какой дом сделает его счастливым, сэкономив ему время и&nbspэнергию при&nbspвыборе проекта
                                 </div>
                             </div>
                         </li>
 
                         <li class="card">
                             <div class="card-header" id="headingTwo">
-                                <p class="header3">Свои архитекторы в штате</p>
+                                <p class="header3">Свои архитекторы в&nbspштате</p>
                                 <button class="btn btn-link btn-block p-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     <svg class="accordionBtn" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 5.19531C11.3777 5.19531 5.19531 11.3777 5.19531 19C5.19531 26.6223 11.3777 32.8047 19 32.8047C26.6223 32.8047 32.8047 26.6223 32.8047 19C32.8047 11.3777 26.6223 5.19531 19 5.19531ZM25.843 15.5006L19.2375 24.6295C19.2102 24.6674 19.1742 24.6983 19.1326 24.7196C19.091 24.7409 19.0449 24.752 18.9981 24.752C18.9514 24.752 18.9053 24.7409 18.8637 24.7196C18.8221 24.6983 18.7861 24.6674 18.7588 24.6295L12.1533 15.5006C12.0123 15.3039 12.1533 15.0293 12.3945 15.0293H14.135C14.5172 15.0293 14.8734 15.2111 15.0961 15.5191L19 20.9148L22.9039 15.5191C23.1266 15.2111 23.4865 15.0293 23.865 15.0293H25.6055C25.8467 15.0293 25.9877 15.3039 25.843 15.5006Z" fill-opacity="0.1"/>
@@ -572,7 +612,7 @@
                             
                             <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
                                 <div class="card-body header4">
-                                    Постоянно мониторим рынок, расширяя ассортимент для клиентов
+                                    Постоянно мониторим рынок, расширяя ассортимент для&nbspклиентов
                                 </div>
                             </div>
                         </li>
@@ -591,7 +631,7 @@
                             
                             <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
                                 <div class="card-body header4">
-                                    Цены дешевле рыночных, благодаря собственным делянкам и производству
+                                    Цены дешевле рыночных, благодаря собственным делянкам и&nbspпроизводству
                                 </div>
                             </div>
                         </li>
@@ -610,7 +650,7 @@
                             
                             <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
                                 <div class="card-body header4">
-                                    Европейский стандарт материалов и ГОСТы
+                                    Европейский стандарт материалов и&nbspГОСТы
                                 </div>
                             </div>
                         </li>
@@ -631,14 +671,14 @@
                             
                             <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample2">
                                 <div class="card-body header4">
-                                    Нанимаем службу независимого контроля. Нас проверяют на каждом этапе работ
+                                    Нанимаем службу независимого контроля. Нас проверяют на&nbspкаждом этапе работ
                                 </div>
                             </div>
                         </li>
 
                         <li class="card">
                             <div class="card-header" id="heading7">
-                                <p class="header3">Качество в деталях</p>
+                                <p class="header3">Качество в&nbspдеталях</p>
                                 <button class="btn btn-link btn-block p-0" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                     <svg class="accordionBtn" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 5.19531C11.3777 5.19531 5.19531 11.3777 5.19531 19C5.19531 26.6223 11.3777 32.8047 19 32.8047C26.6223 32.8047 32.8047 26.6223 32.8047 19C32.8047 11.3777 26.6223 5.19531 19 5.19531ZM25.843 15.5006L19.2375 24.6295C19.2102 24.6674 19.1742 24.6983 19.1326 24.7196C19.091 24.7409 19.0449 24.752 18.9981 24.752C18.9514 24.752 18.9053 24.7409 18.8637 24.7196C18.8221 24.6983 18.7861 24.6674 18.7588 24.6295L12.1533 15.5006C12.0123 15.3039 12.1533 15.0293 12.3945 15.0293H14.135C14.5172 15.0293 14.8734 15.2111 15.0961 15.5191L19 20.9148L22.9039 15.5191C23.1266 15.2111 23.4865 15.0293 23.865 15.0293H25.6055C25.8467 15.0293 25.9877 15.3039 25.843 15.5006Z" fill-opacity="0.1"/>
@@ -650,14 +690,14 @@
                             
                             <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample2">
                                 <div class="card-body header4">
-                                    Двери высокопрочные с терморазрывом. Лестницы не скрипят. Окна не потеют.
+                                    Двери высокопрочные с&nbspтерморазрывом. Лестницы не&nbspскрипят. Окна не&nbspпотеют.
                                 </div>
                             </div>
                         </li>
 
                         <li class="card">
                             <div class="card-header" id="heading8">
-                                <p class="header3">Дружим с конкурентами</p>
+                                <p class="header3">Дружим с&nbspконкурентами</p>
                                 <button class="btn btn-link btn-block p-0" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
                                     <svg class="accordionBtn" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 5.19531C11.3777 5.19531 5.19531 11.3777 5.19531 19C5.19531 26.6223 11.3777 32.8047 19 32.8047C26.6223 32.8047 32.8047 26.6223 32.8047 19C32.8047 11.3777 26.6223 5.19531 19 5.19531ZM25.843 15.5006L19.2375 24.6295C19.2102 24.6674 19.1742 24.6983 19.1326 24.7196C19.091 24.7409 19.0449 24.752 18.9981 24.752C18.9514 24.752 18.9053 24.7409 18.8637 24.7196C18.8221 24.6983 18.7861 24.6674 18.7588 24.6295L12.1533 15.5006C12.0123 15.3039 12.1533 15.0293 12.3945 15.0293H14.135C14.5172 15.0293 14.8734 15.2111 15.0961 15.5191L19 20.9148L22.9039 15.5191C23.1266 15.2111 23.4865 15.0293 23.865 15.0293H25.6055C25.8467 15.0293 25.9877 15.3039 25.843 15.5006Z" fill-opacity="0.1"/>
@@ -669,7 +709,7 @@
                             
                             <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample2">
                                 <div class="card-body header4">
-                                    Обмениваемся опытом с конкурентами. Знаем, что наши дома служат дольше на 30%, благодаря соблюдению стандартов ГОСТов и СНиПов
+                                    Обмениваемся опытом с&nbspконкурентами. Знаем, что&nbspнаши дома служат дольше на&nbsp30%, благодаря соблюдению стандартов ГОСТов и&nbspСНиПов
                                 </div>
                             </div>
                         </li>
@@ -707,8 +747,8 @@
                             
                             <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample2">
                                 <div class="card-body header4">
-                                    <p>5 лет бесплатного и 25 лет гарантийного обслуживания.</p>
-                                    <p>25 лет — это как раз гарант того, что дом еще потом 75-100 лет без проблем прослужит</p>
+                                    <p>5 лет бесплатного и&nbsp25&nbspлет гарантийного обслуживания.</p>
+                                    <p>25 лет&nbsp— это как&nbspраз гарант того, что&nbspдом еще&nbspпотом 75-100 лет без&nbspпроблем прослужит</p>
                                 </div>
                             </div>
                         </li>
@@ -1397,7 +1437,7 @@
 
     <section class="whyUs">
         <div class="container">
-            <div class="row">
+            <div class="">
                 <h2 class="header2">Почему дома для&nbspкруглогодичного проживания следует&nbspзаказывать именно у&nbspнас?</h2>
 
                 <div class="whyUsCard">
@@ -1480,6 +1520,124 @@
             <div class="">
                 <h2 class="header2">Отзывы наших клиентов</h2>
 
+                <div class="reviewsModals">
+                    <div class="modal fade" id="reviewsModal1" tabindex="-1" aria-labelledby="reviewsModal1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="topNav">
+                                        <img src="./assets/modalArrowBack.svg" data-dismiss="modal" aria-label="Close" alt="Назад">
+                                        <img src="./assets/modalCross.svg" data-dismiss="modal" aria-label="Close" alt="Закрыть">
+                                    </div>
+
+                                    <div class="person" id="reviewsModal1Label">
+                                        <img class="ava" src="./assets/reviewAva1.png" alt="Фото">
+                                        <div class="who">
+                                            <div class="name header2">Юрий А.</div>
+                                            <div class="city header4">п. Снигири</div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="modal-body header4">
+                                    Давно хотел перехать из&nbspтемной квартиры в&nbspсвой просторный дом, компания дом108 предлажила отличный проект, а&nbspтакже массу планировочных решений и&nbspвариантов отделки. Да&nbspи&nbspпо&nbspсловам менеджера, деревянных домов у&nbspних возводится не&nbspмало, особенно по&nbspкаркасной технологии, при&nbspоформлении договора даже пришлось немного ждать, чтобы фирма успела изготовить все части здания на&nbspсвоем производстве. Но&nbspэто небольшое ожидание окупилось скоростью постройки, при&nbspтом что площадь нашего дома около 230 м.кв. с&nbspучетом допов мы слегка вышли за&nbspрамки 5млн.рублей, а&nbspстройка заняла не&nbspмногим больше двух месяцев. Доволен и&nbspвизуальной составляющей. Отмечу так&nbspже, что отстутствие усадки тоже является жирным плюсом. Плюсы&nbsp— качество, цена, большой выбор проектов. Минусы&nbsp– небольшое ожидание. 
+                                </div>
+            
+                                <div class="modal-footer">
+                                    <button type="button" class="header3" data-dismiss="modal">Вернуться на сайт</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="reviewsModal2" tabindex="-1" aria-labelledby="reviewsModal2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="topNav">
+                                        <img src="./assets/modalArrowBack.svg" data-dismiss="modal" aria-label="Close" alt="Назад">
+                                        <img src="./assets/modalCross.svg" data-dismiss="modal" aria-label="Close" alt="Закрыть">
+                                    </div>
+
+                                    <div class="person">
+                                        <img class="ava" src="./assets/reviewAva2.png" alt="Фото">
+                                        <div class="who">
+                                            <div class="name header2">Сергей В.</div>
+                                            <div class="city header4">г. Раменское</div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="modal-body header4">
+                                    Когда решали какую технологию выбрать, долго не&nbspмогли определиться с&nbspвариантом, звонок Дмитрия просто как свет в&nbspконце туннеля, расселил все наши сомнения, как сейчас помню, за&nbsp15 минут разговора, мы обсудили все технологии, остановились на&nbspСкандинавском каркасе и&nbspдаже согласовали пожелания по&nbspпроекту. Изначально конечно же&nbspдумали строить из&nbspкирпича, но&nbspпроанализировав все варианты, послушав аргументы эксперта, стало ясным, что&nbspкирпичный дом обладает большими недостатками, это дороговизна и&nbspдолгий срок строения. Поэтому пришли к&nbspвыводу, что&nbspвсе-таки больше подходит дом выполненный по&nbspкаркасной технологии. Наш дом был построен всего за&nbspмесяц, причем двух этажный. Также он&nbspнамного быстрее прогревается в&nbspотличии от&nbspкирпичного, да&nbspи&nbspкрепость нашего дома теперь не&nbspвызывает никаких сомнений. Плюсы&nbsp- значительно дешевле кирпичного, маленькие сроки строительства, быстро прогревается. Минусы&nbsp- не&nbspобнаружено.
+                                </div>
+            
+                                <div class="modal-footer">
+                                    <button type="button" class="header3" data-dismiss="modal">Вернуться на сайт</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="reviewsModal3" tabindex="-1" aria-labelledby="reviewsModal3Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="topNav">
+                                        <img src="./assets/modalArrowBack.svg" data-dismiss="modal" aria-label="Close" alt="Назад">
+                                        <img src="./assets/modalCross.svg" data-dismiss="modal" aria-label="Close" alt="Закрыть">
+                                    </div>
+
+                                    <div class="person">
+                                        <img class="ava" src="./assets/reviewAva3.png" alt="Фото">
+                                        <div class="who">
+                                            <div class="name header2">Анжела С.</div>
+                                            <div class="city header4">д. Красная Пахра</div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="modal-body header4">
+                                    Мы с мужем давно мечтали построить свой дом для&nbspпостоянного проживания. Решили, что&nbspбудем строить из&nbspдерева, поскольку это&nbspэкологичный материал&nbsp+ такие дома быстро прогреваются и&nbspхорошо сохраняют тепло, что&nbspпозволяет не&nbspпереплачивать за&nbspотопление. У&nbspДмитрия,&nbsp- в&nbspего компании, заказали каркасный дом с&nbspкровлей из&nbspнатуральной черепицы, попросили усилить фундамент и&nbspутеплить мансарду, в&nbspитоге стоимость составила 3&nbsp230&nbspтыс.&nbspруб., что&nbspвесьма подходило под Наш скромный бюджет. Сроки строительства тоже стали еще одним плюсом. И&nbspвот, уже&nbspкоторый год, мы с&nbspудовольствием живем в&nbspнем сами и&nbspбез&nbspпроблем размещаем всех наших гостей. Плюсы&nbsp— Адекватный бюджет, оперативность возведения, слаженная работа. Минусы&nbsp— Ничего серьезного.
+                                </div>
+            
+                                <div class="modal-footer">
+                                    <button type="button" class="header3" data-dismiss="modal">Вернуться на сайт</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="reviewsModal4" tabindex="-1" aria-labelledby="reviewsModal4Label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="topNav">
+                                        <img src="./assets/modalArrowBack.svg" data-dismiss="modal" aria-label="Close" alt="Назад">
+                                        <img src="./assets/modalCross.svg" data-dismiss="modal" aria-label="Close" alt="Закрыть">
+                                    </div>
+
+                                    <div class="person">
+                                        <img class="ava" src="./assets/reviewAva4.png" alt="Фото">
+                                        <div class="who">
+                                            <div class="name header2">Евгений В.</div>
+                                            <div class="city header4">г. Москва</div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="modal-body header4">
+                                    Выражаю огромную благодарность строительной компании ДОМ108, которая помогла с&nbspприобретением, оформлением и&nbspзастройкой участка в&nbspкотеджном посёлке. Я&nbspпривык доверять только серьёзным компаниям и&nbspэта&nbspкак&nbspраз&nbspтакая! Дом получился на&nbspславу. Сквозняков нет, отопление дома получается гораздо дешевле чем&nbspу&nbspсоседей, ничего не&nbspскрипит, не&nbspтечёт. А&nbspсамое главное&nbsp- в&nbspпостроенный дом можно сразу вьезжать, потому что&nbspстроители уберут весь мусор с&nbspучастка, а&nbspкомпания предоставит мебель (причём дизайнерскую) по&nbspвыгодным ценам. По&nbspкрайней мере дешевле того&nbspже&nbspкачества мы&nbspсами найти не&nbspсмогли. Рекомендую ДОМ108 всем, кто&nbspхочет построить себе качественный загородный дом.
+                                </div>
+            
+                                <div class="modal-footer">
+                                    <button type="button" class="header3" data-dismiss="modal">Вернуться на сайт</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <ul>
                     <li class="test">
                         <div class="person">
@@ -1492,7 +1650,7 @@
                         <div class="review header4">
                             Давно хотел перехать из темной квартиры в&nbspсвой просторный дом, компания дом108 предложила отличный проект, а&nbspтакже массу планировочных решений и&nbspвариантов отделки. Да&nbspи&nbspпо словам менеджера, деревянных<span> домов у&nbspних возводится не&nbspмало, особенно по&nbspкаркасной технологии, при&nbspоформлении договора даже пришлось немного</span>...
                         </div>
-                        <div class="fullBtn">
+                        <div class="fullBtn" data-toggle="modal" data-target="#reviewsModal1">
                             <p class="header4">Читать отзыв полностью</p>
 
                             <svg class="reviewArrow" width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1512,7 +1670,7 @@
                         <div class="review header4">
                             Когда решали какую технологию выбрать, долго не&nbspмогли определиться с&nbspвариантом, звонок Дмитрия просто как&nbspсвет в&nbspконце тоннеля, рассеял все наши сомнения, как&nbspсейчас помню, за&nbsp15&nbspминут<span> разговора, мы обсудили все технологии, остановились на&nbspСкандинавском каркасе и&nbspдаже согласовали пожелания по&nbspпроекту. Изначально конечномже&nbspдумали строить из&nbspкирпича</span>...
                         </div>
-                        <div class="fullBtn">
+                        <div class="fullBtn" data-toggle="modal" data-target="#reviewsModal2"> 
                             <p class="header4">Читать отзыв полностью</p>
 
                             <svg class="reviewArrow" width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1532,7 +1690,7 @@
                         <div class="review header4">
                             Мы с мужем давно мечтали построить свой дом для&nbspпостоянного проживания. Решили, что будем строить из&nbspдерева, поскольку это экологичный материал + такие дома быстро прогреваются<span> и&nbspхорошо сохраняют тепло, что позволяет не&nbspпереплачивать за&nbspотопление. У&nbspДмитрия,&nbsp- в&nbspего компании, заказали каркасный дом с&nbspкровлей из&nbspнатуральной черепицы, попросили усилить</span>...
                         </div>
-                        <div class="fullBtn">
+                        <div class="fullBtn" data-toggle="modal" data-target="#reviewsModal3">
                             <p class="header4">Читать отзыв полностью</p>
 
                             <svg class="reviewArrow" width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1553,7 +1711,7 @@
                             Выражаю огромную благодарность строительной компании ДОМ108, которая помогла с&nbspприобретением, оформлением и&nbspзастройкой участка в&nbspкотеджном посёлке.<br/>
                             Я&nbspпривык доверять только серьёзным компаниям и&nbspэта как&nbspраз&nbspтакая!<br/> Дом получился на&nbspславу. Сквозняков нет, отопление дома...
                         </div>
-                        <div class="fullBtn">
+                        <div class="fullBtn" data-toggle="modal" data-target="#reviewsModal4">
                             <p class="header4">Читать отзыв полностью</p>
 
                             <svg class="reviewArrow" width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">

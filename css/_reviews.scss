@@ -5,6 +5,53 @@
         padding: 150px 0 100px;
     }
 
+    .modal {
+        .modal-header {
+            display: flex;
+            flex-direction: column;
+            border-bottom: none;
+            padding: 0;
+            margin-bottom: 30px;
+
+            .topNav {
+                display: none;
+            }
+        }
+
+        button {
+            border: 2px solid #bdbdbd;
+            background: none;
+            color: #828282;
+            width: 263px;
+            height: 50px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        
+        .modal-body {
+            padding: 0;
+            color: #4f4f4f;
+        }
+
+        .modal-footer {
+            border-top: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .modal-dialog {
+            max-width: 725px;
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .person {
+            margin-bottom: 0;
+        }
+    }
+
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -92,6 +139,17 @@
     .reviews {
         .container {
             padding-top: 100px;
+        }
+
+        .modal {
+            .modal-header {
+                .topNav {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 30px;
+                }
+            }
         }
 
         .person {

@@ -1,4 +1,116 @@
 @charset "UTF-8";
+.fixedBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  right: 16%;
+}
+
+.fixedBlock .telBtn {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1820px) {
+  .fixedBlock {
+    right: 10%;
+  }
+}
+
+@media (max-width: 1550px) {
+  .fixedBlock {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+#fixedModal .modal-dialog {
+  max-width: 556px;
+}
+
+#fixedModal .modal-content {
+  padding: 30px 50px 40px;
+}
+
+#fixedModal .modal-header {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#fixedModal .modal-header .haeader3 {
+  color: #F2C94C;
+}
+
+#fixedModal .modal-header .header4 {
+  color: #828282;
+}
+
+#fixedModal .modal-body {
+  padding: 0;
+  width: 100%;
+}
+
+#fixedModal .modal-body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 18px;
+  max-width: 458px;
+}
+
+#fixedModal .modal-body form .reqInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#fixedModal .modal-body form input[type="text"] {
+  background: url("../assets/fixedNameIcon.svg") no-repeat 14px center #bdbdbd;
+  border-radius: 5px;
+  padding: 15px 20px 15px 44px;
+  width: auto;
+  margin-right: 30px;
+  max-width: 165px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#fixedModal .modal-body form input[type="tel"] {
+  background: url("../assets/fixedTelIcon.svg") no-repeat 14px center #bdbdbd;
+  border-radius: 5px;
+  padding: 15px 20px 15px 44px;
+  max-width: 215px;
+}
+
+#fixedModal .modal-body form textarea {
+  background: url("../assets/fixedTextareaIcon.svg") no-repeat 14px center #bdbdbd;
+  border-radius: 5px;
+  padding: 15px 20px 15px 44px;
+  margin-top: 30px;
+  max-height: 120px;
+}
+
+#fixedModal .modal-footer {
+  padding: 0;
+}
+
 .welcomePage {
   background: url("../assets/welcomeBg.png") no-repeat center/cover;
   position: relative;
@@ -438,7 +550,7 @@
   display: none;
 }
 
-.discount input[type="text"] {
+.discount input[type="text"], .discount input[type="tel"] {
   height: 50px;
   border-radius: 5px;
   border: none;
@@ -446,30 +558,30 @@
   font-size: 18px;
 }
 
-.discount input[type="text"]::-webkit-input-placeholder {
+.discount input[type="text"]::-webkit-input-placeholder, .discount input[type="tel"]::-webkit-input-placeholder {
   color: #bdbdbd;
 }
 
-.discount input[type="text"]:-ms-input-placeholder {
+.discount input[type="text"]:-ms-input-placeholder, .discount input[type="tel"]:-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-.discount input[type="text"]::-ms-input-placeholder {
+.discount input[type="text"]::-ms-input-placeholder, .discount input[type="tel"]::-ms-input-placeholder {
   color: #bdbdbd;
 }
 
-.discount input[type="text"]::placeholder {
+.discount input[type="text"]::placeholder, .discount input[type="tel"]::placeholder {
   color: #bdbdbd;
 }
 
-.discount input[type="text"]:first-child {
+.discount input[type="text"] {
   padding: 15px 20px 15px 44px;
   margin-right: 25px;
   width: 236px;
   background: url("../assets/nameIcon.svg") no-repeat 16px center #4F4F4F;
 }
 
-.discount input[type="text"]:nth-child(2) {
+.discount input[type="tel"] {
   padding: 15px 20px 15px 42px;
   width: 210px;
   background: url("../assets/telIcon.svg") no-repeat 14px center #4F4F4F;
@@ -614,12 +726,12 @@
   .discount form button span {
     display: none;
   }
-  .discount form input[type="text"]:nth-child(n) {
+  .discount form input[type="text"], .discount form input[type="tel"] {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
   }
-  .discount form input[type="text"]:first-child {
+  .discount form input[type="text"] {
     margin-bottom: 20px;
   }
   .discount form input:checked + label:before {
@@ -1761,12 +1873,11 @@
 }
 
 .pros {
-  background: url("../assets/prosBg.png") no-repeat center;
+  background: url("../assets/prosBg.png") no-repeat center/cover;
 }
 
 .pros .container {
-  padding-top: 100px;
-  padding-bottom: 64px;
+  padding: 100px 0 150px;
 }
 
 .pros .row {
@@ -1781,7 +1892,6 @@
 
 .pros .prosBlock {
   margin-top: 70px;
-  height: 547px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1868,6 +1978,13 @@
   margin-bottom: 15px;
 }
 
+@media (max-width: 992px) {
+  .pros .prosBlock .btn-block {
+    top: 11px;
+    right: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .pros .prosBlock {
     -webkit-box-orient: vertical;
@@ -1883,6 +2000,16 @@
   }
   .pros .prosBlock ul li {
     width: 100%;
+  }
+  .pros .prosBlock ul li .card-header {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pros .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -2010,6 +2137,12 @@
 
 .swiper-pagination {
   display: none;
+}
+
+@media (max-width: 992px) {
+  .stages {
+    display: none;
+  }
 }
 
 .premium {
@@ -2755,6 +2888,56 @@
   padding: 150px 0 100px;
 }
 
+.reviews .modal .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.reviews .modal .modal-header .topNav {
+  display: none;
+}
+
+.reviews .modal button {
+  border: 2px solid #bdbdbd;
+  background: none;
+  color: #828282;
+  width: 263px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.reviews .modal .modal-body {
+  padding: 0;
+  color: #4f4f4f;
+}
+
+.reviews .modal .modal-footer {
+  border-top: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.reviews .modal .modal-dialog {
+  max-width: 725px;
+}
+
+.reviews .modal .modal-content {
+  padding: 20px;
+}
+
+.reviews .modal .person {
+  margin-bottom: 0;
+}
+
 .reviews ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2859,6 +3042,16 @@
 @media (max-width: 992px) {
   .reviews .container {
     padding-top: 100px;
+  }
+  .reviews .modal .modal-header .topNav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 30px;
   }
   .reviews .person .ava {
     margin-right: 20px;

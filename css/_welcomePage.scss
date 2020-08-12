@@ -1,3 +1,98 @@
+.fixedBlock {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    right: 16%;
+
+    .telBtn {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1820px) {
+    .fixedBlock {
+        right: 10%;
+    }
+}
+
+@media (max-width: 1550px) {
+    .fixedBlock {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+#fixedModal {
+    .modal-dialog {
+        max-width: 556px;
+    }
+
+    .modal-content {
+        padding: 30px 50px 40px;
+    }
+
+    .modal-header {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        .haeader3 {
+            color: $yellow;
+        }
+
+        .header4 {
+            color: #828282;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+        width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            max-width: 458px;
+
+            .reqInputs {
+                display: flex;
+            }
+
+            input[type="text"] {
+                background: url('../assets/fixedNameIcon.svg') no-repeat 14px center #bdbdbd;
+                border-radius: 5px;
+                padding: 15px 20px 15px 44px;
+                width: auto;
+                margin-right: 30px;
+                max-width: 165px;
+                flex: 1;
+            }
+
+            input[type="tel"] {
+                background: url('../assets/fixedTelIcon.svg') no-repeat 14px center #bdbdbd;
+                border-radius: 5px;
+                padding: 15px 20px 15px 44px;
+                max-width: 215px;
+            }
+
+            textarea {
+                background: url('../assets/fixedTextareaIcon.svg') no-repeat 14px center #bdbdbd;
+                border-radius: 5px;
+                padding: 15px 20px 15px 44px;
+                margin-top: 30px;
+                max-height: 120px;
+            }
+        }
+    }
+
+    .modal-footer {
+        padding: 0;
+    }
+}
+
 .welcomePage {
     background: url("../assets/welcomeBg.png") no-repeat center / cover;
     position: relative;

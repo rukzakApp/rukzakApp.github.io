@@ -36,7 +36,7 @@
         }
     }
 
-    input[type="text"] {
+    input[type="text"], input[type="tel"] {
         height: 50px;
         border-radius: 5px;
         border: none;
@@ -45,21 +45,20 @@
 
         &::placeholder {
             color: #bdbdbd;
-
         }
+    }
 
-        &:first-child {
-            padding: 15px 20px 15px 44px;
-            margin-right: 25px;
-            width: 236px;
-            background: url("../assets/nameIcon.svg") no-repeat 16px center #4F4F4F;
-        }
+    input[type="text"] {
+        padding: 15px 20px 15px 44px;
+        margin-right: 25px;
+        width: 236px;
+        background: url("../assets/nameIcon.svg") no-repeat 16px center #4F4F4F;
+    }
 
-        &:nth-child(2) {
-            padding: 15px 20px 15px 42px;
-            width: 210px;
-            background: url("../assets/telIcon.svg") no-repeat 14px center #4F4F4F;
-        }
+    input[type="tel"] {
+        padding: 15px 20px 15px 42px;
+        width: 210px;
+        background: url("../assets/telIcon.svg") no-repeat 14px center #4F4F4F;
     }
 
     button {
@@ -206,16 +205,14 @@
                 }
             }
 
-            input[type="text"] {
-                &:nth-child(n) {
-                    width: 100%;
-                    max-width: 320px;
-                    margin: 0 auto;
-                }
+            input[type="text"], input[type="tel"] {
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
 
-                &:first-child {
-                    margin-bottom: 20px;
-                }
+            input[type="text"] {
+                margin-bottom: 20px;
             }
 
             input:checked + label {
