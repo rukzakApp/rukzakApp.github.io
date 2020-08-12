@@ -7,62 +7,101 @@ element.forEach(e => {
     var mask = IMask(e, maskOptions);
 })
 
-/*const stagesControlLeft = document.querySelector("#stagesControlLeft")
-const stagesControlRight = document.querySelector("#stagesControlRight")
-const carouselInner = document.querySelector(".carousel-inner__inside")
-const yellowBar = document.querySelector(".yellowBar rect")
+const swiperNext = document.querySelector(".swiper-button-next")
+const swiperPrev = document.querySelector(".swiper-button-prev")
+const swiperSlide = document.querySelectorAll('.swiper-slide')
+const progressBar = document.querySelector('.progressBar')
+
+console.log(swiperSlide)
+
 
 const carousel__item = document.querySelectorAll('.carousel__item')
 console.log(carousel__item[1])
-counter = 1
+counter = 0
 
-/*stagesControlRight.addEventListener('click', () => {
-    carouselInner.style.transform = "translateX(-380px)"
-    yellowBar.style.width = "650px"
-    gradient = carousel__item[0].querySelectorAll('linearGradient')
+swiperSlide[0].querySelectorAll('linearGradient stop').forEach((e, i) => {
+    if (i % 2 === 0) {
+        e.style.stopColor = "#F2C94C"
+    } else {
+        e.style.stopColor = "#F29C4C"
+    }
+})
 
-    gradient.forEach(e => e.querySelectorAll('stop')[0].style.stopColor = "#F29C4C")
-    gradient.forEach(e => e.querySelectorAll('stop')[1].style.stopColor = "#F2C94C")
+swiperNext.addEventListener('click', () => {
+        counter ++
 
-    
-
-    /*for(i = 0; i < 9; i++) {
-        if (i === 7) {
-            carousel__item.querySelectorAll('.carousel__path')[i].style.stroke = `url(#paint${i}_linear)`
+        if (counter == 9) {
+            progressBar.style.width = `${30 + (counter - 1) * 40 + 20}%`
         } else {
-            carousel__item.querySelectorAll('.carousel__path')[i].style.fill = `url(#paint${i}_linear)`
+            progressBar.style.width = `${30 + counter * 40}%`
         }
 
-        &:first-child {
+        swiperSlide[counter].querySelectorAll('linearGradient stop').forEach((e, i) => {
+            if (i % 2 === 0) {
+                e.style.stopColor = "#F2C94C"
+            } else {
+                e.style.stopColor = "#F29C4C"
+            }
+        })
+
+        /*&:first-child {
             stop-color: #F2C94C;
         }
 
         &:last-child {
             stop-color: #F29C4C;
-        }
-    }
+        }*/
+    
 })
 
-stagesControlLeft.addEventListener('click', () => {
-    carouselInner.style.transform = "translateX(0)"
-    yellowBar.style.width = "280px"
-})*/
+swiperPrev.addEventListener('click', () => {
+    swiperSlide[counter].querySelectorAll('linearGradient stop').forEach((e, i) => {
+        if (i % 2 === 0) {
+            e.style.stopColor = "#bdbdbd"
+        } else {
+            e.style.stopColor = "#bdbdbd"
+        }
+    })
+
+    counter --
+
+    progressBar.style.width = `${30 + counter * 40}%`
+})
 
 const accordionBtn = document.querySelectorAll('.accordionBtn')
 
 const accordionExample = document.querySelector('#accordionExample')
 const accordionExample2 = document.querySelector('#accordionExample2')
 
+$("#accordionExample2").on('show.bs.collapse', () => {
+    $("#accordionExample .show").collapse('hide')
+})
+
+$("#accordionExample").on('show.bs.collapse', () => {
+    $("#accordionExample2 .show").collapse('hide')
+})
+
+let boolAcc1 = false
+let boolAcc2 = false
+
 accordionBtn.forEach(e => e.addEventListener('click', (t) => {
     t.target.parentNode.classList.toggle('rotated')
     if (t.target.closest('ul') == accordionExample) {
-        accordionExample2.querySelectorAll('.collapse').forEach(e => e.style.height = 0)
+        boolAcc1 = t.target.parentNode.classList.contains('rotated') ? true : false 
+        
         accordionExample2.querySelectorAll('svg').forEach(e => e.classList.remove('rotated'))
+        accordionExample.querySelectorAll('svg').forEach(e => e.classList.remove('rotated'))
+        
+        boolAcc1 ? t.target.parentNode.classList.add('rotated') : t.target.parentNode.classList.remove('rotated')
     }
 
     if (t.target.closest('ul') == accordionExample2) {
-        accordionExample.querySelectorAll('.collapse').forEach(e => e.classList.remove('show'))
+        boolAcc2 = t.target.parentNode.classList.contains('rotated') ? true : false 
+        
+        accordionExample2.querySelectorAll('svg').forEach(e => e.classList.remove('rotated'))
         accordionExample.querySelectorAll('svg').forEach(e => e.classList.remove('rotated'))
+        
+        boolAcc2 ? t.target.parentNode.classList.add('rotated') : t.target.parentNode.classList.remove('rotated')   
     }
 }))
 
@@ -71,13 +110,23 @@ const welcomePage = document.querySelector('.welcomePage')
 const leftSideContent = document.querySelector('.leftSide .content')
 const body = document.querySelector('body')
 
-console.log(welcomeCarousel.clientHeight)
-
 if (body.clientWidth >= 993) {
     welcomePage.style.height = `${welcomeCarousel.clientHeight + 120}px`
     leftSideContent.style.height = `${welcomeCarousel.clientHeight + 120}px`
 }
 
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 
 
 

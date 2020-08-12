@@ -1,93 +1,122 @@
 .stages {
+
     .container {
-        padding-bottom: 150px;
-        padding-top: 150px;
+        padding: 150px 0;
+        position: relative;
     }
 
-    .header2 {
-        margin-bottom: 90px;
+    .carousel-caption {
+        color: $black;
+    }
+    
+    .progressBarBg {
+        width: 370%;
+        height: 10px;
+        background-color: #bdbdbd;
+        position: absolute;
+        left: 0;
+        top: 185px;
     }
 
-    &__controls {
-        fill: #bdbdbd;
+    .progressBar {
+        height: 10px;
+        width: 30%;
+        position: absolute;
+        left: 0;
+        top: 185px;
+        background-color: $yellow;
         transition: .3s;
-        cursor: pointer;
+    }
 
-        &:hover {
-            fill: $yellow;
-        }
+    linearGradient {
+        stop {
+            transition: .3s;
 
-        &:last-child {
-            transform: rotate(180deg);
+            &:first-child {
+                stop-color: #bdbdbd;
+            }
+
+            &:last-child {
+                stop-color: #bdbdbd;
+            }
         }
     }
 
-    &__carousel {
-        display: flex;
-        
+    &:first-child {
+        stop-color: #F2C94C;
     }
+
+    &:last-child {
+        stop-color: #F29C4C;
+    }
+    
 
     .carousel-inner {
-        max-width: 945px;
+        .carousel-item {
+            width: 33%;
 
-        &__inside {
-            width: 10000px;
-            display: flex;
-            transform: translateX(0px);
-            overflow-x: hidden;
-            transition: .5s;
-            position: relative;
-
-            .grayBar {
-                position: absolute;
-                bottom: 20px;
-                z-index: -2;
-                height: 10px;
-            }
-
-            .yellowBar {
-                position: absolute;
-                bottom: 20px;
-                width: 10000px;
-                z-index: -1;
-                height: 10px;
-                fill: $yellow;
-                
-
-                rect {
-                    width: 280px;
-                    transition: .5s;
-                }
-            }
-        }
-
-        svg {
-            min-width: 165px;
-            height: 200px;
-
-            &:not(:last-child) {
-                margin-right: 224px;
-            }
-
-            linearGradient {
-                stop {
-                    transition: .5s;
-
-                    &:first-child {
-                        stop-color: #bdbdbd;
-                    }
-
-                    &:last-child {
-                        stop-color: #bdbdbd;
-                    }
-                }
+            &.active + .carousel-item {
+                display: block;
+                transform: translateX(100%);
             }
         }
     }
 }
 
-.bruh {
-    path {
-        
+.swiper-button-next, .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+
+    &:after {
+        content: "";
     }
 }
+
+.swiper-button-next {
+    transform: scaleX(-1);
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-wrapper {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 40%;
+
+    &:last-child {
+        width: 60%;
+    }
+
+    .swiperTitle {
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 15px;
+    }
+
+    .header4 {
+        margin-top: 10px;
+    }
+  }
+
+  .swiper-pagination {
+      display: none;
+  }
