@@ -544,6 +544,16 @@
     }
 }
 
+@media (max-width: 576px) {
+    .projects {
+        .header2 {
+            &:not(.name) {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
 @media (max-width: 345px) {
     .projects {
         .bigProjectsList {

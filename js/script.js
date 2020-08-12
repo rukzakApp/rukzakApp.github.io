@@ -125,12 +125,23 @@ var swiper = new Swiper('.swiper-container', {
     },
   });
 
+  let transBtn = document.querySelectorAll('.transBtn')
 
-  
+  $(document).ready(function(){
+    transBtn.forEach(e => e.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 700);
+    }));
+})
 
   
  
- /* const code  = "AF"
+
+/*
+const code  = "AF"
 
 const func = async function(code, page = 1) {
     let name
@@ -160,6 +171,4 @@ const bruh = async function() {
     setTimeout(() => console.log(name), 1500)
 }
 
-bruh()
-*/
-
+bruh()*/

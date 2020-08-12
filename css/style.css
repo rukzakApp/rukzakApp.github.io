@@ -486,6 +486,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .welcomePage .leftSide {
+    padding-bottom: 250px;
+  }
+}
+
 @media (max-width: 576px) {
   .welcomePage .leftSide {
     padding-bottom: 289px;
@@ -671,10 +677,16 @@
   }
 }
 
+@media (max-width: 992px) {
+  .discount input[type="text"] {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .discount {
     position: absolute;
-    top: 860px;
+    top: 820px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1301,6 +1313,12 @@
   .projects .smallProjectsList li .moreBtn {
     background-color: #c4c4c4;
     padding: 12px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects .header2:not(.name) {
+    padding-left: 20px;
   }
 }
 

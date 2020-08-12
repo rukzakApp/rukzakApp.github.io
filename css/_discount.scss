@@ -150,10 +150,18 @@
     }
 }
 
+@media (max-width: 992px) {
+    .discount {
+        input[type="text"] {
+            margin-bottom: 20px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .discount {
         position: absolute;
-        top: 860px;
+        top: 820px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;

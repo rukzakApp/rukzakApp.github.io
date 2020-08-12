@@ -442,6 +442,14 @@
     }
 }
 
+@media (max-width: 768px) {
+    .welcomePage {
+        .leftSide {
+            padding-bottom: 250px;
+        }
+    }
+}
+
 @media (max-width: 576px) {
     .welcomePage {
         .leftSide {
