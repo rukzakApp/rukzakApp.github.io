@@ -1,0 +1,124 @@
+.burgerMenuPages {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    transition: .5s;
+
+    .burgerNav {
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: #fbfbfb;
+        height: 100%;
+        width: 100%;
+
+        .header {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 70px;
+            z-index: 5;
+            padding-top: 20px;
+        }
+
+        .burgerCross {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            left: 7px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                font-size: 24px;
+                display: inline-block;
+                text-transform: uppercase;
+
+                span {
+                    padding-bottom: 10px;
+                }
+
+                &.active {
+                    span {
+                        border-bottom: 2px solid $yellow;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .burgerContacts {
+        position: absolute;
+        padding: 20px;
+        background-color: #fbfbfb;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 100%;
+        z-index: 1;
+        transition: .5s;
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 90px;
+
+            .burgerCross {
+                position: relative;
+                left: 7px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .burgerBack {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .tel {
+            padding-left: 38px;
+            background: url("../assets/burgerContactsTelIcon.svg") no-repeat left center;
+            font-size: 28px;
+            color: #4f4f4f;
+            margin-bottom: 25px;
+        }
+
+        .mail {
+            padding-left: 38px;
+            background: url("../assets/burgerContactsMailIcon.svg") no-repeat left center;
+            color: #4f4f4f;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .media {
+            margin-top: 35px;
+
+            a {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

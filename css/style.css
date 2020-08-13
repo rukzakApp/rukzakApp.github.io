@@ -36,6 +36,11 @@
 
 #fixedModal .modal-content {
   padding: 30px 50px 40px;
+  line-height: 1.25;
+}
+
+#fixedModal .topNav {
+  display: none;
 }
 
 #fixedModal .modal-header {
@@ -47,10 +52,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 30px;
+  border-bottom: none;
 }
 
-#fixedModal .modal-header .haeader3 {
+#fixedModal .modal-header .header3 {
   color: #F2C94C;
+  margin-bottom: 12px;
 }
 
 #fixedModal .modal-header .header4 {
@@ -86,10 +94,28 @@
   padding: 15px 20px 15px 44px;
   width: auto;
   margin-right: 30px;
-  max-width: 165px;
+  max-width: 209px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border: none;
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="text"]::-webkit-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="text"]:-ms-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="text"]::-ms-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="text"]::placeholder {
+  color: #333;
 }
 
 #fixedModal .modal-body form input[type="tel"] {
@@ -97,18 +123,292 @@
   border-radius: 5px;
   padding: 15px 20px 15px 44px;
   max-width: 215px;
+  border: none;
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="tel"]::-webkit-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="tel"]:-ms-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="tel"]::-ms-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form input[type="tel"]::placeholder {
+  color: #333;
 }
 
 #fixedModal .modal-body form textarea {
-  background: url("../assets/fixedTextareaIcon.svg") no-repeat 14px center #bdbdbd;
+  background: url("../assets/fixedTextareaIcon.svg") no-repeat 14px 15px #bdbdbd;
   border-radius: 5px;
   padding: 15px 20px 15px 44px;
   margin-top: 30px;
   max-height: 120px;
+  border: none;
+  color: #333;
 }
 
-#fixedModal .modal-footer {
-  padding: 0;
+#fixedModal .modal-body form textarea::-webkit-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form textarea:-ms-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form textarea::-ms-input-placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form textarea::placeholder {
+  color: #333;
+}
+
+#fixedModal .modal-body form .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.25;
+  margin-top: 10px;
+}
+
+#fixedModal .modal-body form .checkbox input {
+  opacity: 0;
+}
+
+#fixedModal .modal-body form .checkbox label {
+  position: relative;
+  padding-left: 17px;
+  max-width: 350px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #828282;
+}
+
+#fixedModal .modal-body form .checkbox label:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 1px;
+  left: -13px;
+  border: 2px solid #828282;
+}
+
+#fixedModal .modal-body form .checkbox input:checked + label:before {
+  background: url("../assets/checkboxBg.svg") no-repeat center;
+}
+
+#fixedModal .modal-body form button {
+  margin-top: 20px;
+  color: #333333;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+#fixedModal .modal-body form button:after {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F2C94C), to(#F29C4C));
+  background: linear-gradient(#F2C94C, #F29C4C);
+}
+
+#fixedModal .modal-body form button:before {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#fixedModal .modal-body form button:hover:before {
+  background: #F2C94C;
+  -webkit-box-shadow: 0px 0px 10px #F2C94C;
+          box-shadow: 0px 0px 10px #F2C94C;
+}
+
+.burgerMenuPages {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.burgerMenuPages .burgerNav {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fbfbfb;
+  height: 100%;
+  width: 100%;
+}
+
+.burgerMenuPages .burgerNav .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 70px;
+  z-index: 5;
+  padding-top: 20px;
+}
+
+.burgerMenuPages .burgerNav .burgerCross {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 7px;
+}
+
+.burgerMenuPages .burgerNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.burgerMenuPages .burgerNav ul li {
+  font-size: 24px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.burgerMenuPages .burgerNav ul li span {
+  padding-bottom: 10px;
+}
+
+.burgerMenuPages .burgerNav ul li.active span {
+  border-bottom: 2px solid #F2C94C;
+}
+
+.burgerMenuPages .burgerNav ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.burgerMenuPages .burgerContacts {
+  position: absolute;
+  padding: 20px;
+  background-color: #fbfbfb;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.burgerMenuPages .burgerContacts .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.burgerMenuPages .burgerContacts .header .burgerCross {
+  position: relative;
+  left: 7px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burgerMenuPages .burgerContacts .header .burgerBack {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burgerMenuPages .burgerContacts .tel {
+  padding-left: 38px;
+  background: url("../assets/burgerContactsTelIcon.svg") no-repeat left center;
+  font-size: 28px;
+  color: #4f4f4f;
+  margin-bottom: 25px;
+}
+
+.burgerMenuPages .burgerContacts .mail {
+  padding-left: 38px;
+  background: url("../assets/burgerContactsMailIcon.svg") no-repeat left center;
+  color: #4f4f4f;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.burgerMenuPages .burgerContacts .media {
+  margin-top: 35px;
+}
+
+.burgerMenuPages .burgerContacts .media a:not(:last-child) {
+  margin-right: 20px;
 }
 
 .welcomePage {
@@ -117,6 +417,10 @@
 }
 
 .welcomePage .mobileWelcome {
+  display: none;
+}
+
+.welcomePage .burger {
   display: none;
 }
 
@@ -409,6 +713,16 @@
 @media (max-width: 992px) {
   .welcomePage {
     background-position: 62% center;
+  }
+  .welcomePage .container {
+    position: relative;
+  }
+  .welcomePage .burger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
   }
   .welcomePage .rightSide {
     display: none;
@@ -3130,6 +3444,10 @@
   .reviews .header2 {
     font-size: 22px;
   }
+}
+
+.amoforms_submit-button {
+  background-color: red;
 }
 
 .questions {

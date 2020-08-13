@@ -137,7 +137,33 @@ var swiper = new Swiper('.swiper-container', {
     }));
 })
 
-  
+const burger = document.querySelector('.burger')
+const burgerMenuPages = document.querySelector('.burgerMenuPages')
+const burgerCross = document.querySelectorAll('.burgerCross')
+
+const contactsBtn = document.querySelector('.contactsBtn')
+const burgerContacts = document.querySelector('.burgerContacts')
+
+contactsBtn.addEventListener('click', () => {
+    burgerContacts.style.left = "0"
+})
+
+burger.addEventListener('click', () => {
+    burgerMenuPages.style.left = "0"
+    body.style.overflow = "hidden"
+})
+
+const burgerGoBack = () => {
+    burgerContacts.style.left = "100%"
+}
+
+burgerCross.forEach(e => {
+    e.addEventListener('click', () => {
+        burgerMenuPages.style.left = "100vw"
+        body.style.overflow = "visible"
+        setTimeout(() => burgerContacts.style.left = "100%", 500)
+    })
+})
  
 
 /*
