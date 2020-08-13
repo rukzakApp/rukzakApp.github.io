@@ -1891,7 +1891,7 @@
 }
 
 .pros {
-  background: url("../assets/prosBg.png") no-repeat center/cover;
+  background: url("../assets/prosBg.jpg") no-repeat center/cover;
 }
 
 .pros .container {
@@ -2600,7 +2600,7 @@
 }
 
 .about {
-  background: url("../assets/aboutBg.png") no-repeat center/cover;
+  background: url("../assets/aboutBg.jpg") no-repeat center/cover;
   color: #f2f2f2;
   position: relative;
 }
@@ -2773,9 +2773,6 @@
 }
 
 @media (max-width: 992px) {
-  .about {
-    background: url("../assets/aboutBg.png") no-repeat center/cover;
-  }
   .about .container {
     padding-top: 50px;
     padding-bottom: 280px;

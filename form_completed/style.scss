@@ -64,19 +64,7 @@ a {
     margin-top: 10px;
 }
 
-@media (max-width: 992px) {
-    .header2 {
-        font-size: 24px;
-    }
 
-    .header3 {
-        font-size: 18px;
-    }
-
-    .header4 {
-        font-size: 16px;
-    }
-}
 
 .card {
     text-align: center;
@@ -110,6 +98,37 @@ a {
         color: #f2f2f2;
         background-color: $black;
         border-color: $black;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 320px;
+        height: 324px;
+    }
+
+    .header1 {
+        font-size: 36px;
+    }
+
+    .header3 {
+        font-size: 18px;
+    }
+
+    .header4 {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .backBtn {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 350px) {
+    .card {
+        width: 100%;
     }
 }
 

@@ -1,5 +1,5 @@
 .about {
-    background: url("../assets/aboutBg.png") no-repeat center / cover;
+    background: url("../assets/aboutBg.jpg") no-repeat center / cover;
     color: #f2f2f2;
     position: relative;
 
@@ -173,7 +173,6 @@
 
 @media (max-width: 992px) {
     .about {
-        background: url("../assets/aboutBg.png") no-repeat center / cover;
 
         .container {
             padding-top: 50px;
