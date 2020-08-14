@@ -1,8 +1,13 @@
 .stages {
+    position: relative;
 
     .container {
         padding: 150px 0;
         position: relative;
+    }
+
+    .header2 {
+        margin-bottom: 100px;
     }
 
     .carousel-caption {
@@ -123,6 +128,124 @@
 
   @media (max-width: 992px) {
       .stages {
-          display: none;
+        .container {
+            padding-bottom: 50px;
+        }
+
+          .swiper-slide {
+              width: 46%;
+          }
+
+          .progressBar {
+              width: 36%;
+          }
+
+          .progressBarBg {
+              width: 426%;
+          }
+
+          .swiper-container {
+              max-width: none;
+              width: 100%;
+          }
+
+          .swiper-wrapper {
+            width: 100%;
+        }
+
+        .swiper-button-prev {
+            display: none;
+        }
+
+        .swiper-button-next {
+            display: none;
+        }
+
+          .swiper-pagination {
+            display: block;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 320px;
+            text-align: left;
+
+            &-bullet {
+                width: 14px;
+                height: 14px;
+                border-radius: 0;
+                background: $gradient;
+
+                &:not(:nth-last-child(2)) {
+                    margin-right: 20px;
+                }
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
       }
   }
+
+  @media (max-width: 768px) {
+      .stages {
+          .swiper-slide {
+              width: 88%;
+          }
+
+          .progressBar {
+              width: 60%;
+          }
+
+          .progressBarBg {
+              width: 808%;
+          }
+      }
+  }
+
+  @media (max-width: 576px) {
+      .stages {
+          .container {
+              padding-right: 20px;
+              padding-left: 20px;
+          }
+      }
+  }
+
+  @media (max-width: 460px) {
+      .stages {
+          .progressBarBg {
+              width: 816%;
+          }
+          
+          .progressBar {
+              width: 70%;
+          }
+      }
+  }
+
+@media (max-width: 359px) {
+    .stages {
+        .swiperTitle {
+            font-size: 18px;
+        }
+
+        .progressBar {
+            width: 75%;
+        }
+
+        .header4 {
+            font-size: 14px;
+        }
+
+        .swiper-pagination {
+            max-width: 280px;
+            
+            &-bullet {
+                &:not(:nth-last-child(2)) {
+                    margin-right: 15.5px;
+                }
+            }
+        }
+    }
+}

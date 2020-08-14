@@ -223,6 +223,12 @@
   margin-right: 30px;
   z-index: 1;
   position: relative;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#fixedModal .modal-body form button span {
+  padding-left: 5px;
 }
 
 #fixedModal .modal-body form button:after {
@@ -257,15 +263,87 @@
           box-shadow: 0px 0px 10px #F2C94C;
 }
 
+@media (max-width: 768px) {
+  #fixedModal .modal-header .topNav {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 40px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  #fixedModal .modal-content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  #fixedModal .modal-body form button span {
+    display: none;
+  }
+  #fixedModal .modal-body form .reqInputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #fixedModal .modal-body form input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  #fixedModal .modal-body form input[type="tel"] {
+    width: 100%;
+    max-width: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  #fixedModal .modal-body form textarea {
+    margin-top: 20px;
+    max-height: 80px;
+  }
+  #fixedModal .modal-body form .checkbox {
+    margin-top: 22px;
+    margin-right: 0px;
+  }
+  #fixedModal .modal-body form .checkbox label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  #fixedModal .modal-header .header3 {
+    font-size: 16px;
+  }
+  #fixedModal .modal-header .header4 {
+    font-size: 14px;
+  }
+}
+
 .burgerMenuPages {
   position: fixed;
   top: 0;
-  left: 100vw;
+  right: -100%;
   width: 100vw;
   height: 100vh;
   z-index: 999999;
   -webkit-transition: .5s;
   transition: .5s;
+  display: none;
 }
 
 .burgerMenuPages .burgerNav {
@@ -409,6 +487,18 @@
 
 .burgerMenuPages .burgerContacts .media a:not(:last-child) {
   margin-right: 20px;
+}
+
+@media (max-width: 992px) {
+  .burgerMenuPages {
+    display: block;
+  }
+}
+
+@media (min-width: 577px) {
+  .burgerMenuPages {
+    max-width: 360px;
+  }
 }
 
 .welcomePage {
@@ -665,6 +755,79 @@
   padding: 0;
   width: 50%;
   max-width: 952px;
+  z-index: 1;
+}
+
+.welcomePage .rightSide .descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  z-index: 999;
+  padding: 30px 92px 20px 30px;
+  background: rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.welcomePage .rightSide .descr .square {
+  margin-right: 92px;
+  position: relative;
+  font-family: "Monserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.welcomePage .rightSide .descr .square p {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #0E0B09;
+}
+
+.welcomePage .rightSide .descr .square:after {
+  position: absolute;
+  right: -47px;
+  content: "";
+  background-color: #4f4f4f;
+  height: 100%;
+  width: 1px;
+  top: 0;
+}
+
+.welcomePage .rightSide .descr .price {
+  font-family: "Monserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.welcomePage .rightSide .descr .price p {
+  font-size: 32px;
+  color: #219653;
+  font-weight: 30;
+  font-family: "Roboto", sans-serif;
+}
+
+.welcomePage .rightSide .carousel-indicators {
+  margin: 0;
+  max-width: 430px;
+  left: 27px;
+  bottom: 120px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.welcomePage .rightSide .carousel-indicators li {
+  height: 5px;
+  width: calc(25% - 7px);
+  margin: 0;
+  opacity: 1;
+}
+
+.welcomePage .rightSide .carousel-indicators li.active {
+  background-color: #F2C94C;
 }
 
 @media (min-width: 993px) and (max-width: 1202px) {
@@ -2345,9 +2508,17 @@
   }
 }
 
+.stages {
+  position: relative;
+}
+
 .stages .container {
   padding: 150px 0;
   position: relative;
+}
+
+.stages .header2 {
+  margin-bottom: 100px;
 }
 
 .stages .carousel-caption {
@@ -2472,8 +2643,98 @@
 }
 
 @media (max-width: 992px) {
-  .stages {
+  .stages .container {
+    padding-bottom: 50px;
+  }
+  .stages .swiper-slide {
+    width: 46%;
+  }
+  .stages .progressBar {
+    width: 36%;
+  }
+  .stages .progressBarBg {
+    width: 426%;
+  }
+  .stages .swiper-container {
+    max-width: none;
+    width: 100%;
+  }
+  .stages .swiper-wrapper {
+    width: 100%;
+  }
+  .stages .swiper-button-prev {
     display: none;
+  }
+  .stages .swiper-button-next {
+    display: none;
+  }
+  .stages .swiper-pagination {
+    display: block;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0;
+    width: 320px;
+    text-align: left;
+  }
+  .stages .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F2C94C), to(#F29C4C));
+    background: linear-gradient(#F2C94C, #F29C4C);
+  }
+  .stages .swiper-pagination-bullet:not(:nth-last-child(2)) {
+    margin-right: 20px;
+  }
+  .stages .swiper-pagination-bullet:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stages .swiper-slide {
+    width: 88%;
+  }
+  .stages .progressBar {
+    width: 60%;
+  }
+  .stages .progressBarBg {
+    width: 808%;
+  }
+}
+
+@media (max-width: 576px) {
+  .stages .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .stages .progressBarBg {
+    width: 816%;
+  }
+  .stages .progressBar {
+    width: 70%;
+  }
+}
+
+@media (max-width: 359px) {
+  .stages .swiperTitle {
+    font-size: 18px;
+  }
+  .stages .progressBar {
+    width: 75%;
+  }
+  .stages .header4 {
+    font-size: 14px;
+  }
+  .stages .swiper-pagination {
+    max-width: 280px;
+  }
+  .stages .swiper-pagination-bullet:not(:nth-last-child(2)) {
+    margin-right: 15.5px;
   }
 }
 

@@ -217,6 +217,75 @@
         padding: 0;
         width: 50%;
         max-width: 952px;
+        z-index: 1;
+
+        .descr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 16px;
+            z-index: 999;
+            padding: 30px 92px 20px 30px;
+            background: rgba(255, 255, 255, 0.6);
+            display: flex;
+            
+            .square {
+                margin-right: 92px;
+                position: relative;
+                font-family: "Monserrat", sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+
+                p {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 32px;
+                    font-weight: 300;
+                    color: $black;
+                }
+
+                &:after {
+                    position: absolute;
+                    right: -47px;
+                    content: "";
+                    background-color: #4f4f4f;
+                    height: 100%;
+                    width: 1px;
+                    top: 0;
+                }
+            }
+
+            .price {
+                font-family: "Monserrat", sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                
+                p {
+                    font-size: 32px;
+                    color: #219653;
+                    font-weight: 30;
+                    font-family: "Roboto", sans-serif;
+                }
+            }
+        }
+
+        .carousel-indicators {
+            margin: 0;
+            max-width: 430px;
+            left: 27px;
+            bottom: 120px;
+            justify-content: space-between;
+
+            li {
+                height: 5px;
+                width: calc(25% - 7px);
+                margin: 0;
+                opacity: 1;
+
+                &.active {
+                    background-color: $yellow;
+                }
+            }
+        }
     }
 }
 

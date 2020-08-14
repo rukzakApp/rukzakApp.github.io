@@ -20,13 +20,12 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="topNav">
-                        <img src="./assets/modalArrowBack.svg" data-dismiss="modal" aria-label="Close" alt="Назад">
                         <img src="./assets/modalCross.svg" data-dismiss="modal" aria-label="Close" alt="Закрыть">
                     </div>
 
                     <p class="header2">Записаться</p>
-                    <p class="header3">на консультацию по телефону</p>
-                    <p class="header4">Заполните форму и наш специалист перезвонит Вам в течение рабочего дня, чтобы ответить на вопросы</p>
+                    <p class="header3">на консультацию по&nbspтелефону</p>
+                    <p class="header4">Заполните форму и&nbspнаш специалист перезвонит Вам в&nbspтечение рабочего дня, чтобы ответить на&nbspвопросы</p>
                 </div>
 
                 <div class="modal-body header4">
@@ -35,12 +34,12 @@
                             <input type="text" placeholder="Ваше имя" required>
                             <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__" required>
                         </div>
-                        <textarea name="" placeholder="Ваш вопрос (не обязательно заполнять)" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" placeholder="Ваш вопрос" id="" cols="30" rows="10"></textarea>
                         <div class="checkbox">
-                            <input type="checkbox" id="discountCheckbox">
-                            <label for="fixedCheckbox">Даю согласие на обработку своих персональных данных согласно №152-ФЗ</label>
+                            <input type="checkbox" id="fixedCheckbox" required>
+                            <label for="fixedCheckbox">Даю согласие на&nbspобработку своих персональных данных согласно №152-ФЗ</label>
                         </div>
-                        <button type="submit">Отправить заявку на консультацию</button>                
+                        <button type="submit">Отправить заявку <span>на консультацию</span></button>                
                     </form>
                 </div>
             </div>
@@ -57,12 +56,12 @@
             </div>
 
             <ul>
-                <li class="active"><span>Проекты</span></li>
-                <li><span>Преимущества</span></li>
-                <li><span>Каталог</span></li>
-                <li><span>Гарантии</span></li>
-                <li><span>Отзывы</span></li>
-                <li class="contactsBtn"><span>Контакты</span></li>
+                <li class="active"><span href="#projects"  class="transBtn burgerNavLink">Проекты</span></li>
+                <li><span href="#pros" class="transBtn burgerNavLink">Преимущества</span></li>
+                <li><span href="#about" class="transBtn burgerNavLink">О нас</span></li>
+                <li><span href="#warranty" class="transBtn burgerNavLink">Гарантии</span></li>
+                <li><span href="#reviews" class="transBtn burgerNavLink">Отзывы</span></li>
+                <li><span class="contactsBtn">Контакты</span></li>
             </ul>
         </div>
 
@@ -169,7 +168,7 @@
     
                     <div class="content">
                         <h1 class="header1" id="firstToSee">Каркасные экодома</h1>
-                        <p class="header3">для круглогодичного проживания за&nbspмесяц под&nbspключ <span>от&nbsp12 000 р/м2</span></p>
+                        <p class="header3">для круглогодичного проживания за&nbspмесяц под&nbspключ <span>от&nbsp12&nbsp000&nbspр/м2</span></p>
                         <p class="header4">Дышите чистым воздухом</p>
                         <div class="buttons">
                             <a href="#" class="orderBtn header3">Заказать дом</a>
@@ -183,28 +182,40 @@
             <nav class="headerNav">
                 <ul>
                     <li>
-                        <a href="#">Проекты</a>
+                        <a href="#projects" class="transBtn">Проекты</a>
                     </li>
 
                     <li>
-                        <a href="#">Преимущества</a>
+                        <a href="#pros" class="transBtn">Преимущества</a>
                     </li>
 
                     <li>
-                        <a href="#">Каталог</a>
+                        <a href="#about" class="transBtn">О нас</a>
                     </li>
 
                     <li>
-                        <a href="#">гарантии</a>
+                        <a href="#warranty" class="transBtn">Гарантии</a>
                     </li>
 
                     <li>
-                        <a href="#">Отзывы</a>
+                        <a href="#reviews" class="transBtn">Отзывы</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="rightSide col-6">
+                <div class="descr">
+                    <div class="square">
+                        площадь
+                        <p>100 м2</p>
+                    </div>
+
+                    <div class="price">
+                        цена
+                        <p>7 680 000 ₽</p>
+                    </div>
+                </div>
+
                 <div id="carouselExampleCaptions" class="welcomeCarousel carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -254,15 +265,15 @@
             <div class="row">
                 <div class="col-12 col-lg-6 info">
                     <h2 class="header2">Получите скидку 4%</h2>
-                    <p class="header3">заказав расчёт стоимости и сроков сегодня </p>
+                    <p class="header3">заказав расчёт стоимости и&nbspсроков сегодня </p>
                     <p class="header4">Нажимая кнопку Вы даёте согласие на&nbspобработку своих персональных данных согласно №152-ФЗ о&nbspперсональных данных </p>
                 </div>
 
                 <form class="col-12 col-lg-6 col-xl-5">
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__" required>
                     <div class="checkbox">
-                        <input type="checkbox" id="discountCheckbox">
+                        <input type="checkbox" id="discountCheckbox" required>
                         <label for="discountCheckbox">Даю согласие на обработку своих персональных данных согласно №152-ФЗ</label>
                     </div>
                     <button type="submit"><p>Рассчитать стоимость <span>проекта</span></p></button>                
@@ -323,7 +334,7 @@
 
                         <div class="content">
                             <div class="name header2">Роман</div>
-                            <p class="review header4">Отличный загородный дом для&nbspкруглогодичного проживания. Дизайн выполнен в&nbspнео&nbspстиле. Убранство - хайтек.
+                            <p class="review header4">Отличный загородный дом для&nbspкруглогодичного проживания. Дизайн выполнен в&nbspнео&nbspстиле. Убранство&nbsp- хайтек.
                                 Для&nbspлюбителей финского минимализма и&nbspединения с&nbspприродой</p>
 
                             <div class="params">
@@ -385,19 +396,20 @@
                           </div>
 
                         <div class="content">
-                            <div class="name header2">Роман</div>
-                            <p class="review header4">Отличный загородный дом для&nbspкруглогодичного проживания. Дизайн выполнен&nbspв&nbspнео стиле. Убранство&nbsp- хайтек.
-                                Для любителей финского минимализма и&nbspединения с&nbspприродой</p>
+                            <div class="name header2">Александр</div>
+                            <p class="review header4">Уютный загородный дом для&nbspотдыха.
+                                Второй этаж с&nbspмансардой и&nbspуютным балконом.<br/>
+                                Это решение&nbsp- то, что&nbspнужно для&nbspлюбителей уюта и&nbspсветлых в&nbspдоме</p>
 
                             <div class="params">
                                 <div class="square">
                                     площадь
-                                    <p class="number">100 м2</p>
+                                    <p class="number">87 м2</p>
                                 </div>
 
                                 <div class="price">
                                     цена
-                                    <p class="number">7 680 000 ₽</p>
+                                    <p class="number">3 591 000 ₽</p>
                                 </div>
                             </div>
 
@@ -509,7 +521,7 @@
         </div>
     </section>
 -->
-    <section class="features">
+    <section class="features" id="warranty">
 
         <div class="modal fade" id="featuresModal" tabindex="-1" aria-labelledby="featuresModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -650,7 +662,7 @@
     </section>
 
 
-    <section class="pros">
+    <section class="pros" id="pros">
         <div class="container">
             <div class="">
                 <h2 class="header2">Преимущества  работы с нами</h2>
@@ -857,7 +869,9 @@
 
     <section class="stages">
         <div class="container">
-            <div class="swiper-container  col-10">
+            <h2 class="header2">Этапы работ</h2>
+
+            <div class="swiper-container col-md-10">
                 <div class="swiper-wrapper">
                     <div class="progressBarBg"></div>
 
@@ -1483,13 +1497,14 @@
 
                   <div class="swiper-slide p-0"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-                
-              </div>
+            </div>
 
-              <div class="swiper-button-next"><img src="./assets/swiperArrowLeft.svg" alt=""></div>
-              <div class="swiper-button-prev"><img src="./assets/swiperArrowLeft.svg" alt=""></div>
+            <div class="swiper-button-next"><img src="./assets/swiperArrowLeft.svg" alt=""></div>
+            <div class="swiper-button-prev"><img src="./assets/swiperArrowLeft.svg" alt=""></div>
+
+            <div class="swiper-pagination"></div>
         </div>
+
     </section>
 
     <section class="premium">
@@ -1559,7 +1574,7 @@
         </div>
 
 
-        <div class="container">
+        <div class="container" id="about">
             <div class="row">
                 <h2 class="header2 col-12">О нашей компании</h2>
 
@@ -1612,7 +1627,7 @@
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <div class="">
                 <h2 class="header2">Отзывы наших клиентов</h2>
@@ -1864,10 +1879,10 @@
 
 
                     <form action="" class="col-12 col-lg-3">
-                        <input type="text" placeholder="Ваше имя">
-                        <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" class="telInput" placeholder="+7 (___) ___-__-__" required>
                         <div class="checkbox">
-                            <input type="checkbox" id="questionsCheckbox">
+                            <input type="checkbox" id="questionsCheckbox" required>
                             <label for="questionsCheckbox">Даю согласие на&nbspобработку своих персональных данных согласно №152-ФЗ</label>
                         </div>
                         <button type="submit" class="goBtn header3">Записаться</button>
@@ -2018,11 +2033,11 @@
 
                 <div class="footerNav">
                     <ul>
-                        <li><a href="#">Проекты</a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">Гарантии</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#projects" class="transBtn">Проекты</a></li>
+                        <li><a href="#pros" class="transBtn">Преимущества</a></li>
+                        <li><a href="#about" class="transBtn">О нас</a></li>
+                        <li><a href="#warranty" class="transBtn">Гарантии</a></li>
+                        <li><a href="#reviews" class="transBtn">Отзывы</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+
 var element = document.querySelectorAll('.telInput');
 element.forEach(e => {
     var maskOptions = {
@@ -24,13 +26,108 @@ swiperSlide[0].querySelectorAll('linearGradient stop').forEach((e, i) => {
     }
 })
 
-swiperNext.addEventListener('click', () => {
+const swiperPagin = document.querySelector(".swiper-pagination")
+const swiperWrapper = document.querySelector(".swiper-wrapper")
+const swiperSlides = document.querySelectorAll(".swiper-slide")
+
+
+//setTimeout(() => swiperPagin.append('<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 10"></span>'), 500)
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+});
+
+swiper.on('transitionStart', () => {
+    for (let i = 0; i < swiperSlides.length; i++) {
+        if (swiperWrapper.querySelector('.swiper-slide-active') === swiperSlides[i]) {
+            console.log(i)
+            if (i == 9) {
+                if (body.clientWidth >= 992) {
+                    progressBar.style.width = `${30 + (i - 1) * 40 + 20}%`
+                } else if (body.clientWidth >= 768) {
+                    progressBar.style.width = `${36 + (i - 1) * 46 + 23}%`
+                } else if (body.clientWidth >= 461) {
+                    progressBar.style.width = `${70 + (i - 1) * 88 + 39}%`
+                } else {
+                    progressBar.style.width = `${75 + (i - 1) * 88 + 39}%`
+                } 
+                
+            } else {
+                if (body.clientWidth >= 992) {
+                    progressBar.style.width = `${30 + i * 40}%`
+                } else if (body.clientWidth >= 768) {
+                    progressBar.style.width = `${36 + i * 46}%`
+                } else if (body.clientWidth >= 461) {
+                    progressBar.style.width = `${70 + i * 88}%`
+                } else {
+                    progressBar.style.width = `${75 + i * 88}%`
+                }
+            }
+
+            swiperSlides.forEach((e, j) => {
+                if (j <= i) {
+                    e.querySelectorAll('linearGradient stop').forEach((e, k) => {
+                        if (k % 2 === 0) {
+                            e.style.stopColor = "#F2C94C"
+                        } else {
+                            e.style.stopColor = "#F29C4C"
+                        }
+                    })    
+                } else {
+                    e.querySelectorAll('linearGradient stop').forEach((e, k) => {
+                        if (k % 2 === 0) {
+                            e.style.stopColor = "#bdbdbd"
+                        } else {
+                            e.style.stopColor = "#bdbdbd"
+                        }
+                    })  
+                }
+            })
+        }
+    }
+})
+
+
+$(document).ready(function(){
+    transBtn.forEach(e => e.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (event.target.classList.contains('burgerNavLink')) {
+            burgerMenuPages.style.right = "-100%"
+            body.style.overflow = "visible"
+            setTimeout(() => burgerContacts.style.left = "100%", 500)
+        }
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 700);
+    }));
+})
+
+/*wiperNext.addEventListener('click', () => {
         counter ++
 
         if (counter == 9) {
-            progressBar.style.width = `${30 + (counter - 1) * 40 + 20}%`
+            if (body.clientWidth >= 992) {
+                progressBar.style.width = `${30 + (counter - 1) * 40 + 20}%`
+            } else if (body.clientWidth >= 768) {
+                progressBar.style.width = `${38 + (counter - 1) * 46 + 20}%`
+            }
+            
         } else {
-            progressBar.style.width = `${30 + counter * 40}%`
+            if (body.clientWidth >= 992) {
+                progressBar.style.width = `${30 + counter * 40}%`
+            } else if (body.clientWidth >= 768) {
+                progressBar.style.width = `${38 + counter * 46}%`
+            }
         }
 
         swiperSlide[counter].querySelectorAll('linearGradient stop').forEach((e, i) => {
@@ -41,29 +138,15 @@ swiperNext.addEventListener('click', () => {
             }
         })
 
-        /*&:first-child {
+        &:first-child {
             stop-color: #F2C94C;
         }
 
         &:last-child {
             stop-color: #F29C4C;
-        }*/
-    
-})
-
-swiperPrev.addEventListener('click', () => {
-    swiperSlide[counter].querySelectorAll('linearGradient stop').forEach((e, i) => {
-        if (i % 2 === 0) {
-            e.style.stopColor = "#bdbdbd"
-        } else {
-            e.style.stopColor = "#bdbdbd"
         }
-    })
-
-    counter --
-
-    progressBar.style.width = `${30 + counter * 40}%`
-})
+    
+})*/
 
 const accordionBtn = document.querySelectorAll('.accordionBtn')
 
@@ -105,37 +188,16 @@ accordionBtn.forEach(e => e.addEventListener('click', (t) => {
 const welcomeCarousel = document.querySelector('.welcomeCarousel')
 const welcomePage = document.querySelector('.welcomePage')
 const leftSideContent = document.querySelector('.leftSide .content')
-const body = document.querySelector('body')
+
 
 if (body.clientWidth >= 993) {
     welcomePage.style.height = `${welcomeCarousel.clientHeight + 120}px`
     leftSideContent.style.height = `${welcomeCarousel.clientHeight + 120}px`
 }
 
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
 
   let transBtn = document.querySelectorAll('.transBtn')
 
-  $(document).ready(function(){
-    transBtn.forEach(e => e.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 700);
-    }));
-})
 
 const burger = document.querySelector('.burger')
 const burgerMenuPages = document.querySelector('.burgerMenuPages')
@@ -149,7 +211,7 @@ contactsBtn.addEventListener('click', () => {
 })
 
 burger.addEventListener('click', () => {
-    burgerMenuPages.style.left = "0"
+    burgerMenuPages.style.right = "0"
     body.style.overflow = "hidden"
 })
 
@@ -159,7 +221,7 @@ const burgerGoBack = () => {
 
 burgerCross.forEach(e => {
     e.addEventListener('click', () => {
-        burgerMenuPages.style.left = "100vw"
+        burgerMenuPages.style.right = "-100%"
         body.style.overflow = "visible"
         setTimeout(() => burgerContacts.style.left = "100%", 500)
     })

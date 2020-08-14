@@ -1,11 +1,12 @@
 .burgerMenuPages {
     position: fixed;
     top: 0;
-    left: 100vw;
+    right: -100%;
     width: 100vw;
     height: 100vh;
     z-index: 999999;
     transition: .5s;
+    display: none;
 
     .burgerNav {
         padding-left: 20px;
@@ -120,5 +121,17 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 992px) {
+    .burgerMenuPages {
+        display: block;
+    }
+}
+
+@media (min-width: 577px) {
+    .burgerMenuPages {
+        max-width: 360px;
     }
 }
