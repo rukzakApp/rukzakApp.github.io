@@ -110,6 +110,11 @@ $(document).ready(function(){
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 700);
     }));
+
+    if (body.clientWidth >= 993) {
+        welcomePage.style.height = `${welcomeCarousel.clientHeight + 120}px`
+        leftSideContent.style.height = `${welcomeCarousel.clientHeight + 120}px`
+    }
 })
 
 /*wiperNext.addEventListener('click', () => {
@@ -190,10 +195,7 @@ const welcomePage = document.querySelector('.welcomePage')
 const leftSideContent = document.querySelector('.leftSide .content')
 
 
-if (body.clientWidth >= 993) {
-    welcomePage.style.height = `${welcomeCarousel.clientHeight + 120}px`
-    leftSideContent.style.height = `${welcomeCarousel.clientHeight + 120}px`
-}
+
 
 
   let transBtn = document.querySelectorAll('.transBtn')
