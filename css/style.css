@@ -15,6 +15,11 @@
 
 .fixedBlock .telBtn {
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.fixedBlock .upBtn {
+  cursor: pointer;
 }
 
 @media (max-width: 1820px) {
@@ -765,7 +770,7 @@
   font-size: 16px;
   z-index: 999;
   padding: 30px 92px 20px 30px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1328,6 +1333,8 @@
   margin: 0;
   background-color: #f2f2f2;
   opacity: 1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .projects .bigProjectsList .carousel-indicators li:not(:last-child) {
@@ -3705,10 +3712,6 @@
   .reviews .header2 {
     font-size: 22px;
   }
-}
-
-.amoforms_submit-button {
-  background-color: red;
 }
 
 .questions {

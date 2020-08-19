@@ -117,6 +117,33 @@ $(document).ready(function(){
     }
 })
 
+
+/*$("#amoforms_formDiscount").submit(function(e) {
+    const headers  = {
+        "Accept": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "X-Requested-With": "XMLHttpRequest",
+        "Access-Control-Allow-Methods" : "GET,POST,PUT,DELETE,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+      }
+
+
+
+         $.ajax({
+            crossDomain: true,
+            type: "POST",
+            url: 'https://forms.amocrm.ru/queue/add',
+            data: $("#amoforms_formDiscount").serialize(),
+            dataType: "jsonp",                
+            success: function(data)
+            {
+                alert(data);
+            }
+        });
+
+    e.preventDefault();
+});
+
 /*wiperNext.addEventListener('click', () => {
         counter ++
 
