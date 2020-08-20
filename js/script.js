@@ -115,8 +115,41 @@ $(document).ready(function(){
         welcomePage.style.height = `${welcomeCarousel.clientHeight + 120}px`
         leftSideContent.style.height = `${welcomeCarousel.clientHeight + 120}px`
     }
+
+    
+
+    setTimeout(() => {
+        var visitor_uid = AMOPIXEL_IDENTIFIER.getVisitorUid();
+        console.log(visitor_uid)
+    }, 500)
 })
 
+const amoforms_formDiscount = document.querySelector("#amoforms_formDiscount")
+const testBtn = document.querySelector(".testBtn")
+
+
+$("#amoforms_formDiscount").on('submit', (e) => {
+    e.preventDefault()
+    console.log($("#amoforms_formDiscount").serialize())
+    console.log(1)
+})
+
+$("#amoforms_formDiscount").submit(function(e) {
+    
+    var url = "https://forms.amocrm.ru/queue/add";
+
+    $.ajax({
+           type: "GET",
+           url: url,
+           data: $("#amoforms_formDiscount").serialize(),
+           success: function(data)
+           {
+               alert(data);
+           }
+         });
+
+    e.preventDefault();
+});
 
 /*$("#amoforms_formDiscount").submit(function(e) {
     const headers  = {
@@ -256,6 +289,9 @@ burgerCross.forEach(e => {
     })
 })
  
+
+
+
 
 /*
 const code  = "AF"
