@@ -270,8 +270,6 @@
         </div>
     </section>
 
-    
-
     <section class="discount">
         <div class="container">
             <div class="row">
@@ -280,6 +278,28 @@
                     <p class="header3">заказав расчёт стоимости и&nbspсроков сегодня </p>
                     <p class="header4">Нажимая кнопку Вы даёте согласие на&nbspобработку своих персональных данных согласно №152-ФЗ о&nbspперсональных данных </p>
                 </div>
+
+                
+
+                <form id="amoforms_form" class="amoforms-form amoforms-view-form" action="./send.php" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="fields[name_1]" placeholder="Ваше имя" class="amoforms_placeholder js-form-changes-skip text-input js-amoforms-font js-amoforms-color  amoforms-validate_required">                    
+                                  
+                    <input type="tel" class="amoforms_placeholder js-form-changes-skip text-input js-amoforms-font js-amoforms-color  amoforms-validate_required amoforms-validate_phone" name="fields[232435_1][317401]" placeholder="+7 (___) ___-__-__">      
+
+                    <div class="control-checkbox__body">
+                        <input type="checkbox" class="js-amoforms-font js-amoforms-color amoforms-validate_required" name="fields[479929_1]" value="on" data-value="on">
+                    </div>
+     
+                    <input type="hidden" name="form_id" id="form_id" value="651463">
+                    <input type="hidden" name="hash" value="87acd9c1bf3c35375145e13d2781cf63">
+                    <input type="hidden" name="user_origin" id="user_origin" value="{&quot;datetime&quot;:&quot;Sun Sep 06 2020 14:41:37 GMT+0300 (Москва, стандартное время)&quot;,&quot;referer&quot;:&quot;&quot;}">
+          
+                    <button class="amoforms__submit-button text-input js-form-changes-skip js-amoforms-font" type="submit" id="button_submit">
+                        <span class="amoforms__submit-button-text">Рассчитать стоимость проекта</span>
+                    </button>
+
+                    <input id="visitor_uid" type="hidden" name="visitor_uid" value="ad6d8759-a0dc-43df-8973-c03db7e357fb">
+                </form>
 
                 <form id="amoforms_formDiscount" class="col-12 col-lg-6 col-xl-5" action="https://forms.amocrm.ru/queue/add" method="POST">
                     <input type="text" name="fields[name_1]" placeholder="Ваше имя" required>      

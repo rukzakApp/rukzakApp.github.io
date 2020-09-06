@@ -138,8 +138,14 @@ $("#amoforms_formDiscount").submit(function(e) {
     
     var url = "https://forms.amocrm.ru/queue/add";
 
+    jQuery.ajaxPrefilter(function(options) {
+        if (options.crossDomain && jQuery.support.cors) {
+            options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+        }
+    });
+
     $.ajax({
-           type: "GET",
+           type: "POST",
            url: url,
            data: $("#amoforms_formDiscount").serialize(),
            success: function(data)
